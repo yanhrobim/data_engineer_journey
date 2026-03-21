@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Status-Em%20Andamento (Dia 1)-yellow" />
   <img src="https://img.shields.io/badge/Objetivo Principal-Data%20Engineer-black" />
 
-Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. Este espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
+Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. O espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
 
 ---
 
@@ -24,8 +24,8 @@ Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focad
 ## 🧠 O Caminho (Syllabus)
 
 ### 📅 Jornada de Aprendizado
-- **[SQL & Banco de Dados](#-️-sql--banco-de-dados-em-andamento)**
-- **[Python (Fundamentos e Engenharia de Dados)](#--python-processamento-e-manipulação-de-dados)**
+- **[SQL & Banco de Dados](#-️-sql--banco-de-dados)**
+- **[Python (Fundamentos e Engenharia de Dados)](#--python-fundamentos-e-engenharia-de-dados)**
 - **DBT & Modelagem de Dados (Planejado)**
 
 ### | 🛢️ SQL & Banco de Dados
@@ -36,7 +36,7 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 - [ ] Filtros Avançados.
 - [ ] Agregações e Agrupamentos *(GROUP BY, HAVING)*.
 - [ ] Joins e União de Tabelas *(INNER, LEFT, RIGHT, UNION)*.
-- Window Functions
+- [ ] Window Functions
 - [ ] CTEs (Common Table Expressions) x Subqueries x Views x Temporary Tables x Materialized Views
 
 ### | 🐍 Python (Fundamentos e Engenharia de Dados)
@@ -57,7 +57,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [ ] Integração com bancos de dados *(SQLAlchemy)*
     - [ ] Integração com APIs *(requests)*
 
-## | 🛠️ Stack da Jornada
+## 🛠️ Stack da Jornada
 
 | Categoria | Ferramentas / Linguagens |
 | :--- | :--- |
@@ -69,24 +69,27 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 
 ---
 
-## | 📈 Evolução Documentada
+## 📈 Evolução Documentada
 
 Cada etapa de estudo gera:
 
 - Código desenvolvido **(Python/SQL)**.
 - Desafios e exercícios realizados.
 - README documentando aprendizados e observações com as minhas próprias palavras.
-- Aplicação prática para aplicar a teoria aprendida.
+- Aplicação da teoria aprendida em projetos práticos.
 
 ---
 
 ## 🤝 Contribuições
 
 Este repositório é pessoal e voltado para aprendizado.
+
 Sugestões de melhorias são bem-vindas via **Issues** ou **Pull Requests**.
 
 ---
 
 ## 📬 Contato
 - **E-mail:** yanrobim@gmail.com
+
+---
 
