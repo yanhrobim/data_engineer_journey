@@ -65,7 +65,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 | **Bancos de Dados** | PostgreSQL |
 | **Processamento de Dados** | Pandas |
 | **Versionamento** | Git & GitHub |
-| **IDEs** | VS Code |
+| **IDEs** | VS Code / DBeaver |
 
 ---
 
