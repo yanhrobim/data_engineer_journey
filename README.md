@@ -32,7 +32,7 @@ Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focad
 
 Priorizando aprendizado em extração e transformação de dados em bancos relacionais.
 
-- [ x ] Comandos Básicos como: *(SELECT, FROM, WHERE)*. 
+- [x] Comandos Básicos como: *(SELECT, FROM, WHERE)*. 
 - [ ] Filtros Avançados.
 - [ ] Agregações e Agrupamentos *(GROUP BY, HAVING)*.
 - [ ] Joins e União de Tabelas *(INNER, LEFT, RIGHT, UNION)*.
