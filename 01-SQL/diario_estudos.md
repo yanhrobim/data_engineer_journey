@@ -41,7 +41,7 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 * Subconjuntos da linguagem e aprofundamento em DQL *(Data Query Language)*.
 * Comandos fundamentais da linguagem **SQL** (SELECT, FROM, WHERE).
 * Construção de filtros.
-* Uso de operadores para potencializar filtros.
+* Uso de operadores em filtros.
     * `>`
     * `<`
     * `AND`
@@ -50,12 +50,31 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 * Boas práticas iniciais como a substituição do `SELECT *`, com o objetivo de obter análises mais otimizadas, boa perfomace, e somente buscar dados necessários.
 
 **Análises Iniciais:**
-* Quantos pedidos foram entregues: **96,478** 
+* Quantos pedidos foram entregues: **96,478.** 
     * 96,478 pedidos entregues de 99,441 pedidos realizado.
 * Todos os estados onde possuímos clientes:  **Total de 27 estados.**
-* Total de Clientes: **99,441**
-    * Período de **2016-09-04** a **2018-10-17**
-* Descobrir quantos pedidos foram pagos com cartão de crédito, parcelando o pagamento em 2 vezes: **12,413**
+* Total de Clientes: **99,441.**
+    * Período de **2016-09-04** a **2018-10-17.**
+* Descobrir quantos pedidos foram pagos com cartão de crédito, parcelando o pagamento em 2 vezes: **12,413.**
 
+## Dia 3 (27/03/2026)
+
+
+* Pontencializando filtros com Operadores mais complexos. (LIKE, BETWEEN, IN)
+* Aplicando lógica em exercícios/desafios no SQL, para a prática da linguagem.
+
+**Aprendizados do dia:**
+* Uso de operadores mais complexos em queries de filtro com WHERE. (LIKE, BETWEEN, IN)
+* Aplicando 
+* LIKE transforma a sua query menos otimizada (Mais Pesado).
+* Pode ser utilizado o uso de Subquery no IN.
+
+**Análises para Prática:**
+
+* Filtro para obter SOMENTE clientes que moram em cidades que começam com: **"sao"**:
+    * Total de Clientes: **20,988.**
+    * Total de Cidades que começam com São: **224.**
+* Pedidos que foram pagos por cartão entre 200 á 400 reais:
+    * **11,468** foram pagos por cartão (incluindo débito ou cŕedito) com valores entre: ***R$ 200 - R$400***.
 
 
