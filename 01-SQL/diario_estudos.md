@@ -77,4 +77,20 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 * Pedidos que foram pagos por cartão entre 200 á 400 reais:
     * **11,468** foram pagos por cartão (incluindo débito ou cŕedito) com valores entre: ***R$ 200 - R$400***.
 
+## Dia 4 (30/03/26)
+
+* JOINs. (LEFT JOIN, INNER JOIN, RIGHT JOIN...)
+* Primary Key e Foreign Key. (Chaves Primárias e Chaves Estrangeiras)
+* Junções entre tabelas diferentes para cruzar dados na análise.
+
+**Aprendizados do dia:**
+
+* JOINs são principalmente utilizados para cruzar dados de tabelas diferentes que possuem colunas com alguma semelhança.
+    * **INNER JOIN**:
+    * **LEFT JOIN**:
+    * **RIGHT JOIN**:
+* **PK (Primary Key)**: Essa coluna, em qualquer tabela, os dados são totalmente uma identidade individual/distintos, sem duplicações. (Chave Primária)
+* **FK (Foreign Key)** : É a chave primária de uma outra tabela, presente em uma tabela diferente, utilizada para a comunicação/ligação entre tabelas.
+* Nem sempre a junção entre colunas de tabelas diferentes ocorre por **PK** e **FK**. Por ventura pode ocorrer em colunas (tabelas diferentes) em que possuem o mesmo tipo de dado. Ex: Tabela A possuí coluna `'Estado'`, e tabela B também possui coluna `'Estado'`.
+
 
