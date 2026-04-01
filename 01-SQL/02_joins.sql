@@ -87,7 +87,7 @@ HAVING COUNT(ot.order_id) < 200;
 -- Mostre apenas clientes cujo total de pedidos seja maior que 3.
 
 SELECT 
-		oc.customer_unique_id,
+		oc.customer_unique_id, -- Explicar o por que.
 		COUNT(oo.order_id) AS total_pedidos
 FROM  olist_customers oc
 LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id

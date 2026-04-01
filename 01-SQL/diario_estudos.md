@@ -79,11 +79,13 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 
 ## Dia 4 — 5 (30/03/26) e (31/03/26)
 
+* ADD IMG THAT EXPLAIN JOIN TYPES.
+
 * JOINs. (LEFT JOIN, INNER JOIN, RIGHT JOIN e FULL JOIN)
 * Primary Key e Foreign Key. (Chaves Primárias e Chaves Estrangeiras)
 * Junções entre tabelas diferentes para cruzar dados na análise.
 * Tipos de relação. (1:1, 1:N e N:N)
-* Agrupamento e Filtragem
+* Agrupamento e Filtragem:
     * GROUP BY
     * HAVING
 
@@ -91,8 +93,22 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 
 * JOINs são principalmente utilizados para cruzar dados de tabelas diferentes que possuem colunas com alguma semelhança.
 * **PK (Primary Key)**: Essa coluna, em qualquer tabela, os dados são totalmente uma identidade individual/distintos, sem duplicações. (Chave Primária)
-* **FK (Foreign Key)** : É a chave primária de uma outra tabela, presente em uma tabela diferente, utilizada para a comunicação/ligação entre tabelas.
+* **FK (Foreign Key)** : É a chave primária de uma outra tabela, presente em uma tabela diferente, principalmente utilizada para a comunicação/ligação entre tabelas.
 * Nem sempre a junção entre colunas de tabelas diferentes ocorre por **PK** e **FK**. Por ventura pode ocorrer em colunas (tabelas diferentes) em que possuem o mesmo tipo de dado. Ex: Tabela A possuí coluna `'Estado'`, e tabela B também possui coluna `'Estado'`.
 * Junções em diferentes tipos de relação.
 
+## Dia 6 (01/04/2026)
+
+* Window Functions (RANK)
+
+**Aprendizados do dia:**
+
+* Window Functions permite uma análise de dados eficente, possibilitando fazer métricas, agregações, cálculos dentro de partições ou linhas específicas. (Um GROUP BY a nível de linha)
+* Window Functions Syntax Components:
+    * ```sql 
+        window_function_name(arg1, arg2, ...) OVER (
+        [PARTITION BY partition_expression, ...]
+        [ORDER BY sort_expression [ASC | DESC], ...]
+        )
+        ```
 
