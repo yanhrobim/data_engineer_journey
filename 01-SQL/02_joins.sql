@@ -54,8 +54,11 @@ ORDER BY oc.customer_city
 --- onde a solução de um, deve-se ter coluna X priorizada, na solução de outro coluna Y.
 --- No caso de customer_id (Exercício 2) e seller_id (Exercício 3).
 
+
 -- 01-4. Crie um relatório que mostra o número de vendedores e clientes
 -- de cada cidade, incluindo todas as cidades, mesmo aquelas que possuem apenas vendedores, apenas clientes ou ambos.
+
+--- (FULL JOIN)
 
 SELECT 
 		oc.customer_city,
@@ -81,4 +84,13 @@ HAVING COUNT(ot.order_id) < 200;
 
 
 -- 01-6. Crie um relatório que mostra o total de pedidos por cliente a partir de 01/01/2018.
--- Mostre apenas clientes cujo total de pedidos seja maior que 15.
+-- Mostre apenas clientes cujo total de pedidos seja maior que 3.
+
+SELECT 
+		oc.customer_unique_id,
+		COUNT(oo.order_id) AS total_pedidos
+FROM  olist_customers oc
+LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id
+WHERE EXTRACT(YEAR FROM oo.order_purchase_timestamp) = 2018
+GROUP BY oc.customer_unique_id
+HAVING COUNT(oo.order_id) > 3
