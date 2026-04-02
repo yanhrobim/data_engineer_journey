@@ -97,9 +97,10 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 * Nem sempre a junção entre colunas de tabelas diferentes ocorre por **PK** e **FK**. Por ventura pode ocorrer em colunas (tabelas diferentes) em que possuem o mesmo tipo de dado. Ex: Tabela A possuí coluna `'Estado'`, e tabela B também possui coluna `'Estado'`.
 * Junções em diferentes tipos de relação.
 
-## Dia 6 (01/04/2026)
+## Dia 6 — 7 (01/04/2026)
 
-* Window Functions (RANK)
+* Window Functions.
+* Funções de Ranking. (ROW_NUMBER(), RANK(), DENSE_RANK())
 
 **Aprendizados do dia:**
 
@@ -112,3 +113,10 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
         )
         ```
 
+* Rankeando dados e utilização de Window Functions.
+
+    * **ROW_NUMBER()**: Não existe empate, a coluna criada sempre será sequencial. Porém, utiliza critérios implicítos para desempate, podendo ser um problema em análises.
+
+    * **RANK()**: Se houver dados com valores iguais, recebem a mesma posição, e a próxima qualificação respeita o empate. (Ex: Se dois valores são o primeiro lugar, o próximo valor recebe terceiro lugar como colocação.)
+
+    * **DENSE_RANK()**: Execução similar ao **RANK()**, porém não aceita espaços entre as colocações. (Ex: Se caso houver dois valores em primeiro lugar, o próximo valor recebe o segundo lugar como colocação.)
