@@ -97,7 +97,7 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
 * Nem sempre a junção entre colunas de tabelas diferentes ocorre por **PK** e **FK**. Por ventura pode ocorrer em colunas (tabelas diferentes) em que possuem o mesmo tipo de dado. Ex: Tabela A possuí coluna `'Estado'`, e tabela B também possui coluna `'Estado'`.
 * Junções em diferentes tipos de relação.
 
-## Dia 6 — 7 (01/04/2026)
+## Dia 6 — 7 (01/04/2026) e (02/04/2026)
 
 * Window Functions.
 * Funções de Ranking. (ROW_NUMBER(), RANK(), DENSE_RANK())
