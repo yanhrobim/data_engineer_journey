@@ -50,3 +50,13 @@ FROM olist_sellers os
 --- a data do pedido, mostrando também o custo anterior e o custo posterior
 --- utilizando LAG() e LEAD().
 --- (quantidade de linhas igual ao total de pedidos com frete)
+
+SELECT 	oc.customer_unique_id,
+		TO_CHAR(oo.order_purchase_timestamp, 'YYYY-MM-DD') AS order_date,
+		oi.freight_value AS frete_valor_atual,
+		LAG(oi.freight_value, 1, 0) OVER (ORDER BY oo.order_purchase_timestamp ASC) AS frete_anterior,
+		LEAD(oi.freight_value, 1, 0) OVER (ORDER BY oo.order_purchase_timestamp ASC) AS frete_posterior
+FROM olist_customers oc
+LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id 
+INNER JOIN olist_order_items oi ON oo.order_id = oi.order_id
+LIMIT 1000;

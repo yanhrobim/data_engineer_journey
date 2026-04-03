@@ -113,10 +113,13 @@ Afim de, simular um cenário próximo a realidade do cotidiano na área de dados
         )
         ```
 
-* Rankeando dados e utilização de Window Functions.
+* Rakeando dados e análises de com raking:
 
     * **ROW_NUMBER()**: Não existe empate, a coluna criada sempre será sequencial. Porém, utiliza critérios implicítos para desempate, podendo ser um problema em análises.
 
     * **RANK()**: Se houver dados com valores iguais, recebem a mesma posição, e a próxima qualificação respeita o empate. (Ex: Se dois valores são o primeiro lugar, o próximo valor recebe terceiro lugar como colocação.)
 
     * **DENSE_RANK()**: Execução similar ao **RANK()**, porém não aceita espaços entre as colocações. (Ex: Se caso houver dois valores em primeiro lugar, o próximo valor recebe o segundo lugar como colocação.)
+
+* Comparação de dados anteriores e posteriores com **LAG()** e **LEAD()**.
+* Divisão do conjunto de dados com **NTILE()**.
