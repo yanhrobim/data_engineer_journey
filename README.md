@@ -36,7 +36,7 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 - [x] Filtros Avançados.
 - [x] Agregações e Agrupamentos *(GROUP BY, HAVING)*.
 - [x] Joins e União de Tabelas *(INNER, LEFT, RIGHT, UNION)*.
-- [ ] Window Functions
+- [x] Window Functions
 - [ ] CTEs (Common Table Expressions) x Subqueries x Views x Temporary Tables x Materialized Views
 
 ### | 🐍 Python (Fundamentos e Engenharia de Dados)
