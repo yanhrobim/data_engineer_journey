@@ -36,40 +36,53 @@ ORDER BY ano
 - **Receita por mês**
 ```sql
 SELECT 
-		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mês,
-		SUM(oi.price) AS receita_gerada_mês
+		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mes,
+		SUM(oi.price) AS receita_gerada_mes
 FROM olist_order_items oi
 INNER JOIN olist_orders oo ON oo.order_id = oi.order_id
-GROUP BY mês
-ORDER BY mês ASC
+GROUP BY mes
+ORDER BY mes ASC
 ```
 
 - **Diferença em relação ao mês anterior**
 
 ```sql
 SELECT 
-		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mês,
-		SUM(oi.price) AS receita_gerada_mês,
-		LAG(SUM(oi.price)) OVER (ORDER BY DATE_TRUNC('month', oo.order_purchase_timestamp) ASC) AS mês_anterior
+		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mes,
+		SUM(oi.price) AS receita_gerada_mes,
+		LAG(SUM(oi.price)) OVER (ORDER BY DATE_TRUNC('month', oo.order_purchase_timestamp) ASC) AS mes_anterior
 FROM olist_order_items oi
 INNER JOIN olist_orders oo ON oo.order_id = oi.order_id
-GROUP BY mês
+GROUP BY mes
 ```
+
+**(Ainda Desenvolvendo...)**
 
 - **Percentual de crescimento mensal**
 
 ```sql
 SELECT 
-		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mês,
-		SUM(oi.price) AS receita_gerada_mês,
-		LAG(SUM(oi.price)) OVER (ORDER BY DATE_TRUNC('month', oo.order_purchase_timestamp) ASC) AS mês_anterior,
+		DATE_TRUNC('month', oo.order_purchase_timestamp) AS mes,
+		SUM(oi.price) AS receita_gerada_mes,
+		LAG(SUM(oi.price)) OVER (ORDER BY DATE_TRUNC('month', oo.order_purchase_timestamp) ASC) AS mes_anterior,
 	 	ROUND(((SUM(oi.price) - LAG(SUM(oi.price)) OVER (ORDER BY DATE_TRUNC('month', oo.order_purchase_timestamp) ASC))::NUMERIC / SUM(oi.price)) * 100, 2) AS porcentagem_crescimento
 FROM olist_order_items oi
 INNER JOIN olist_orders oo ON oo.order_id = oi.order_id
-GROUP BY mês
+GROUP BY mes
 ```
 
 - **Receita acumulada no ano (YTD)**
+
+```sql
+SELECT 
+		TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD') AS ano_mes_dia,
+		SUM(oi.price) AS receita_gerada_dia,
+		SUM(oi.price) +  LAG(SUM(oi.price), 1, 0) OVER (ORDER BY TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD')) AS receita_acumulada_ano
+FROM olist_order_items oi
+INNER JOIN olist_orders oo ON oi.order_id = oo.order_id
+GROUP BY ano_mes_dia
+ORDER BY ano_mes_dia
+```
 
 ---
 
