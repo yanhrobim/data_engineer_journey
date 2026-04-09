@@ -73,15 +73,59 @@ GROUP BY mes
 
 - **Receita acumulada no ano (YTD)**
 
+**(Em desenvolvimento...)**
 ```sql
+WITH receita_ano_2016 AS (
+	SELECT 
+			TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD') AS ano_mes_dia,
+			SUM(oi.price) AS receita_gerada_dia
+	FROM olist_order_items oi
+	INNER JOIN olist_orders oo ON oi.order_id = oo.order_id
+	WHERE EXTRACT(YEAR FROM oo.order_purchase_timestamp) = 2016
+	GROUP BY ano_mes_dia
+	ORDER BY ano_mes_dia
+),
+receita_acumulada_ano_2016 AS (
 SELECT 
-		TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD') AS ano_mes_dia,
-		SUM(oi.price) AS receita_gerada_dia,
-		SUM(oi.price) +  LAG(SUM(oi.price), 1, 0) OVER (ORDER BY TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD')) AS receita_acumulada_ano
-FROM olist_order_items oi
-INNER JOIN olist_orders oo ON oi.order_id = oo.order_id
-GROUP BY ano_mes_dia
-ORDER BY ano_mes_dia
+		ano_mes_dia,
+		receita_gerada_dia,
+		SUM(receita_gerada_dia) OVER (ORDER BY ano_mes_dia) AS receita_acumulada_ano
+FROM receita_ano_2016
+),
+receita_ano_2017 AS (
+	SELECT 
+			TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD') AS ano_mes_dia,
+			SUM(oi.price) AS receita_gerada_dia
+	FROM olist_order_items oi
+	INNER JOIN olist_orders oo ON oi.order_id = oo.order_id
+	WHERE EXTRACT(YEAR FROM oo.order_purchase_timestamp) = 2017
+	GROUP BY ano_mes_dia
+	ORDER BY ano_mes_dia
+),
+receita_acumulada_ano_2017 AS (
+SELECT 
+		ano_mes_dia,
+		receita_gerada_dia,
+		SUM(receita_gerada_dia) OVER (ORDER BY ano_mes_dia) AS receita_acumulada_ano
+FROM receita_ano_2017
+),
+receita_ano_2018 AS (
+	SELECT 
+			TO_CHAR(DATE_TRUNC('DAY', oo.order_purchase_timestamp), 'YYYY-MM-DD') AS ano_mes_dia,
+			SUM(oi.price) AS receita_gerada_dia
+	FROM olist_order_items oi
+	INNER JOIN olist_orders oo ON oi.order_id = oo.order_id
+	WHERE EXTRACT(YEAR FROM oo.order_purchase_timestamp) = 2018
+	GROUP BY ano_mes_dia
+	ORDER BY ano_mes_dia
+),
+receita_acumulada_ano_2018 AS (
+SELECT 
+		ano_mes_dia,
+		receita_gerada_dia,
+		SUM(receita_gerada_dia) OVER (ORDER BY ano_mes_dia) AS receita_acumulada_ano
+FROM receita_ano_2018
+)
 ```
 
 ---
