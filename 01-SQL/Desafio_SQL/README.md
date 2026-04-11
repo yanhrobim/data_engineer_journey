@@ -160,6 +160,7 @@ GROUP BY clientes
 ### 🧩 4. Segmentação por valor (RFM simplificado)
 
 - **Separe os clientes em 5 grupos com base no valor total gasto (do maior para o menor).**
+
 ```sql
 WITH valor_total_gasto_cliente AS (
 	SELECT 
@@ -184,6 +185,7 @@ SELECT * FROM grupo_por_valor_total_gasto;
 ### 🧩 5. Público para marketing
 
 - **Crie um relatório contendo apenas os clientes que pertencem - aos grupos 3, 4 e 5 (clientes de menor valor), para ações de marketing.**
+
 ```sql
 WITH valor_total_gasto_cliente AS (
 	SELECT 
@@ -217,6 +219,7 @@ SELECT * FROM clientes_menor_valor;
 ### 🧩 6. Top 10 produtos
 
 - **Identifique os 10 produtos que mais geraram receita na plataforma.**
+
 ```sql
 SELECT	
 		DISTINCT(oi.product_id) AS produto,
@@ -226,11 +229,14 @@ ORDER BY produto_receita_gerada DESC
 LIMIT 10;
 ```
 
+---
+
 ## 🌍 Análise Geográfica
 
 ### 🧩 7. Clientes de alta receita por localização
 
 - **Quais clientes de um determinado estado (ex: SP) já gastaram mais de 1000 em compras?**
+
 ```sql
 WITH valor_total_gasto_cliente AS (
 SELECT 	DISTINCT
@@ -250,3 +256,5 @@ ORDER BY estado DESC
 )
 SELECT * FROM valor_total_mais_1000_por_estado
 ```
+
+---
