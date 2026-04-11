@@ -4,7 +4,7 @@
   <a href="https://github.com/yanhrobim">
   <img src="https://img.shields.io/badge/GitHub-Yan Robim-181717?logo=github"/>
   </a>
-  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 10 (SQL)]-yellow" />
+  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 12 (SQL)]-yellow" />
   <img src="https://img.shields.io/badge/Objetivo Principal-Data%20Engineer-black" />
 
 Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. O espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
@@ -38,7 +38,7 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 - [x] Agregações e Agrupamentos *(GROUP BY, HAVING)*.
 - [x] Joins e União de Tabelas *(INNER, LEFT, RIGHT, UNION)*.
 - [x] Window Functions
-- [ ] CTEs (Common Table Expressions) x Subqueries x Views x Temporary Tables x Materialized Views
+- [x] CTEs (Common Table Expressions) x Subqueries x Views x Temporary Tables x Materialized Views
 
 ### | 🐍 Python (Fundamentos e Engenharia de Dados)
 
