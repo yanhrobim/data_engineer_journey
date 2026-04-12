@@ -1,6 +1,6 @@
 # 🔎 Prática Intensiva: Análises de Negócio (Olist E-commerce)
 
-<img src="https://img.shields.io/badge/Status-Em%20Andamento-yellow">
+<img src="https://img.shields.io/badge/Status-Concluído-green">
 
 ## 📝 Objetivo
 
