@@ -9,18 +9,18 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
 
 ## 📅 Registro Diário
 
-### **Dia 1 (24/03/2026)**
+### **| 🗓️ Dia 1 (24/03/2026)**
 
-**O que foi estudado:**
+**🖋️ O que foi estudado:**
 * Criação do Database **PostgreSQL** utilizando o Render.
 * Configuração da conexão do DBeaver ao Banco de Dados, e utilização da IDE (Ambiente de Desenvolvimento Integrado) como "Cliente" para execução de queries e gerenciamento do banco.
-* Criação do Schema e Tabelas do Database (`olist_datasets`).
+* Criação do Schema e Tabelas do Database.
 * Modelagem de tabelas 
     * Definição de **Primary Keys** e **Foreign Keys** entre as tabelas do dataset.
     * Identificação de chaves compostas (Ex: tabela `'olist_order_payments'`).
     * Aplicação de tipagem apropriada aos dados *(VARCHAR, TIMESTAMP, etc)*.
 
-**Aprendizados do dia:**
+**🧠 Aprendizados do dia:**
 
 * Conexão de uma Database IDE **(DBeaver)** e um Banco de Dados **(PostgreSQL)** .
 * Criação de Tabelas com **PK** e **FK**.
@@ -29,16 +29,15 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
 
 ---
 
-### **Dia 2 (25/02/2026)**
+### **| 🗓️ Dia 2 (25/02/2026)**
 
-**O que foi estudado:**
+**🖋️ O que foi estudado:**
 * Prática de comandos fundamentais. *(SELECT, FROM, WHERE)*
 * Queries para a exploração dos dados, entender melhor sobre o volume, comportamento (velocidade, otimização).
 * Aplicação de filtros básicos em diferentes cenários.
  
 
-
-**Aprendizados do dia:**
+**🧠 Aprendizados do dia:**
 
 * Subconjuntos da linguagem e aprofundamento em DQL *(Data Query Language)*.
 * Comandos fundamentais da linguagem **SQL**.
@@ -52,7 +51,7 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
     * O banco possuí um otimizador, que define a estrutura da sua query com o objetivo de deixa-la mais rápida.
 * Boas práticas iniciais como a substituição do `SELECT *`, com o objetivo de obter análises mais otimizadas, boa perfomance, e somente colunas necessárias.
 
-**Análises:**
+**📊 Análises:**
 * Quantos pedidos foram entregues: **96,478.** 
     * 96,478 pedidos entregues de 99,441 pedidos realizados.
 * Todos os estados onde possuímos clientes:  **Total de 27 estados.**
@@ -62,13 +61,13 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
 
 ---
 
-### Dia 3 (27/03/2026)
+### **| 🗓️ Dia 3 (27/03/2026)**
 
-**O que foi estudado:**
+**🖋️ O que foi estudado:**
 * Potencializando filtros com operadores mais avançados. *(LIKE, BETWEEN, IN)*
 * Aplicando lógica em exercícios/desafios no SQL, para a prática da linguagem.
 
-**Aprendizados do dia:**
+**🧠 Aprendizados do dia:**
 * Uso de operadores mais complexos em queries de filtro com WHERE. *(LIKE, BETWEEN, IN)*
 * **LIKE** transforma a sua query menos otimizada, principalmente quando utilizamos `%` na busca.
 * Pode ser utilizado o uso de Subquery no **IN**.
@@ -83,11 +82,11 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
 
 ---
 
-### Dia 4 — 5 (30/03/26) e (31/03/26)
+### **| 🗓️ Dia 4 — 5 (30/03/26) e (31/03/26)**
 
 ![Explicação JOINs em Imagem](/01-SQL/imagens_de_explicação/join_explanation.png)
 
-**O que foi estudado:**
+**🖋️ O que foi estudado:**
 * JOINs. *(LEFT, INNER, RIGHT e FULL)*
 * Primary Key e Foreign Key. (Chaves Primárias e Chaves Estrangeiras)
 * Junções entre tabelas diferentes para cruzar dados na análise.
@@ -96,7 +95,7 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
     * **GROUP BY**
     * **HAVING**
 
-**Aprendizados do dia:**
+**🧠 Aprendizados do dia:**
 
 
 * **PK (Primary Key)**: Essa coluna individualiza cada linha da tabela, sem permitir valores duplicados. (Chave Primária)
@@ -107,17 +106,17 @@ A fim de, simular um cenário próximo da realidade do cotidiano na área de dad
 
 ---
 
-### Dia 6 — 7 (01/04/2026) e (02/04/2026)
+### **| 🗓️ Dia 6 — 7 (01/04/2026) e (02/04/2026)**
 
 ![Window Function Explicação em Imagem](/01-SQL/imagens_de_explicação/window_function_explanation.webp)
 
-**O que foi estudado:**
+**🖋️ O que foi estudado:**
 * Window Functions.
 * Funções de Ranking. *(ROW_NUMBER( ), RANK( ), DENSE_RANK( ))*
 * *LAG( ) e LEAD( )*.
 * *NTILE( )*.
 
-**Aprendizados do dia:**
+**🧠 Aprendizados do dia:**
 
 * Window Functions permite fazer cálculos sem agrupar linhas. (Semelhante a um GROUP BY, porém sem juntar as linhas)
 * Window Functions Syntax Components:
