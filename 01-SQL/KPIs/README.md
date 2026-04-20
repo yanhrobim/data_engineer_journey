@@ -106,7 +106,7 @@ receita_acumulada_ano_2017 AS (
 SELECT 
 		ano_mes_dia,
 		receita_gerada_dia,
-		SUM(receita_gerada_dia * oi.order_item_id) OVER (ORDER BY ano_mes_dia) AS receita_acumulada_ano
+		SUM(receita_gerada_dia) OVER (ORDER BY ano_mes_dia) AS receita_acumulada_ano
 FROM receita_ano_2017
 ),
 receita_ano_2018 AS (
