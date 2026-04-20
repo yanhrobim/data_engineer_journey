@@ -152,7 +152,7 @@ FROM olist_customers oc
 LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id -- LEFT JOIN para unir clientes e seus pedidos.
 INNER JOIN olist_order_items oi ON oo.order_id = oi.order_id
 -- INNER JOIN para unir pedidos dos clientes e suas informações. (Como Preço, Frete, Produto, etc.)
-GROUP BY clientes
+GROUP BY cliente
 ```
 
 ---
@@ -170,7 +170,7 @@ WITH valor_total_gasto_cliente AS (
 	FROM olist_customers oc 
 	LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id -- LEFT JOIN para unir clientes e seus pedidos.
 	INNER JOIN olist_order_items oi ON oo.order_id = oi.order_id -- INNER JOIN para unir pedidos dos clientes e suas informações. (Como Preço, Frete, Produto, etc.)
-	GROUP BY clientes
+	GROUP BY cliente
 ),
 grupo_por_valor_total_gasto AS (
 	SELECT 	*,
@@ -196,7 +196,7 @@ WITH valor_total_gasto_cliente AS (
 	LEFT JOIN olist_orders oo ON oc.customer_id = oo.customer_id -- LEFT JOIN para unir clientes e seus pedidos.
 	INNER JOIN olist_order_items oi ON oo.order_id = oi.order_id
 	-- INNER JOIN para unir pedidos dos clientes e suas informações. (Como Preço, Frete, Produto, etc.)
-	GROUP BY clientes
+	GROUP BY cliente
 ),
 grupos_por_valor_gasto AS (
 	SELECT 

@@ -42,6 +42,12 @@ O Dataset possuí 7 tabelas:
   | └── 03_window_functions.sql  # Exercícios para aprender e entender sobre Window Functions.
   |
   ├── KPIs/
+  | ├── report -- Certos Resultados das Consultas (Queries) do Projeto.
+  | | ├── cliente_alto_valor_por_estado.csv
+  | | ├── crescimento_mensal_ytd.csv    # Clientes de Alto Valor por Estado.
+  | | ├── top10_products.csv    # Top 10 produtos em vendas.
+  | | ├── total_gasto_cliente_group.csv # RFM simplificado de acordo com o total gasto do cliente.
+  | | └── total_receita_gerada_ano.csv  # Receital total gerada a cada ano.
   | └── README.md             #  Perguntas de neǵocio e suas devidas queries de solução, em formato documentação.
   |
   ├── diario_estudos.md        # Registro diário da evolução do projeto
@@ -66,7 +72,7 @@ Em um cenário real, um dos papéis de quem trabalha com dados é transformar pe
 - **Produtos:** Quais produtos concentram a maior parte da receita?
 - **Geografia:** Onde se localiza os clientes de maior valor?
 
-Todas as respostas foram obtidas exclusivamente com SQL. As queries completas estão disponíveis em [KPIs](./KPIs/README.md).
+Todas as respostas foram obtidas exclusivamente com SQL. As queries completas estão disponíveis em [KPIs](./KPIs/README.md), juntamente sendo possível encontrar certos relatórios com as queries desenvolvidas do projeto em *`report`* .
 
 ### 📈 Relatórios de Receita
 - **KPI I - Receita Total Por Ano**
