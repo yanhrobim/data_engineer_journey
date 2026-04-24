@@ -6,7 +6,7 @@
 
 Prática intensiva de **SQL** construindo relatórios mais avançados de negócio utilizando o dataset da Olist.
 
-O foco é simular um cenário com problemas reais no cotiano de dados, apresentando soluções através do **SQL**, analisando informações como receita, comportamento de cliente, perfomance de produtos e análise por áreas geográficas.
+O foco é simular um cenário com problemas reais no cotidiano de dados, apresentando soluções através do **SQL**, analisando informações como receita, comportamento de cliente, perfomance de produtos e análise por áreas geográficas.
 
 ---
 
