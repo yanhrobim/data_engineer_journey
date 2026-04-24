@@ -47,7 +47,7 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 
 - **Fundamentos da Linguaguem**
-    - [ ] Variáveis, Tipos de Dados, Operadores
+    - [x] Variáveis, Tipos de Dados, Operadores
     - [ ] Estruturas condicionais *(if, else)*
     - [ ] Estruturas de repetição *(For)*
     - [ ] Funções e modularização de código
