@@ -11,8 +11,6 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 
 ### | 🗓️ Dia 1 (24/04/26)
 
-
-
 **🖋️ Tópicos da Aula:**
 - Introdução a linguagem de programação **Python**.
 - Tipos de Dados e Variáveis.
@@ -31,3 +29,18 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 
 ---
 
+
+### | 🗓️ Dia 2 (27/04/26)
+
+**🖋️ Tópicos da Aula:**
+- Exercícios aplicando comportamentos de Objetos Python.
+    - int()
+    - float()
+    - str()
+    - bool()
+- TypeError, TypeCheck, Type Conversion, try-except e if.
+
+**🧠 Aprendizados do dia:**
+- Comportamentos de Objetos como:
+    - (**) para operações de potência com Objetos int() e float().
+    - (//) para descobrirmos o quociente de uma divisão inteira em Objetos int().
