@@ -4,9 +4,9 @@
 
 # 1. Escreva um programa que soma dois números inteiros inseridos pelo usuário.
 
-# valor_1 = int(input("Digite um número para soma: "))
-# valor_2 = int(input("Digite o segundo número para soma: "))
-# print(f"O valor da soma é: {valor_1 + valor_2}")
+valor_1 = int(input("Digite um número para soma: "))
+valor_2 = int(input("Digite o segundo número para soma: "))
+print(f"O valor da soma é: {valor_1 + valor_2}")
 
 
 # 2. Crie um programa que receba um número do usuário e calcule o resto da divisão desse número por 5.
