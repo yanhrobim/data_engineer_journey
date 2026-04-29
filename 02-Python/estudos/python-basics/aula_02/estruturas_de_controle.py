@@ -35,8 +35,9 @@
 # # =========================
 # O processo de verificar o tipo de uma váriavel.
 
-numero_ponto_flutuante = 10
-if isinstance(numero_ponto_flutuante, float):
+numero_ponto_flutuante = float(input("Digite um número de ponto flutuante: "))
+if isinstance(numero_ponto_flutuante, float):       # isinstance() pode verificar o tipo de dado de uma váriavel passada. Semelhante a type().
+                                                    # Aqui tem o objetivo de verificar se a variável passada como paramêtro tem o tipo de dado float().
     print("A resposta passada é um float()!")
 else:
     print("A resposta passada não é um float()!")
