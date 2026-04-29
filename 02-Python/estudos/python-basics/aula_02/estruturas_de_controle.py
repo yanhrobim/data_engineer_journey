@@ -13,3 +13,19 @@ else:                # Se der tudo certo e não ocorrer exeções na execução,
 finally:             # Independente se der errado ou certo, faça isso:
     print("____________________________________________________")
 
+
+# # =========================
+# #         TypeError
+# # =========================
+# Erro para métodos utilizados no tipo de dado errado.
+# Tipos de Dados possuem métodos que podem ser executados em outros tipos de dados, ou não (Ex: int() e float()), o TypeError justamente gera um erro e sinaliza quando você utiliza o método não compatível com aquele tipo de dado em específico.
+
+texto_1 = "Data Engineer"
+try:
+    dividir = texto_1 / 2
+except TypeError as e:
+    print(f"Ocorreu o seguinte erro: {e}")
+    print("Ops, parece que você escreveu um metódo para o tipo de dado errado!")
+else:
+    print(texto_1)
+
