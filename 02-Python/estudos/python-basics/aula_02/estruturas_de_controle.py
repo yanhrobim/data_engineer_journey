@@ -43,3 +43,16 @@ else:
     print("A resposta passada não é um float()!")
     print(f"Na verdade o tipo de {numero_ponto_flutuante} é: {type(numero_ponto_flutuante)}")
 
+# # =========================
+# #     TypeConversion
+# # =========================
+# Também conhecida como Casting, pode referenciar ou mudar o tipo de uma váriavel.
+ 
+
+numero_int = input("Digite um número inteiro: ")
+numero_float = input("Digite um número de ponto flutuante: ")
+soma = float(numero_int) + numero_float
+print(soma)
+
+# Em Python podemos mudar o tipo de uma váriavel para outro, com o TypeConversion, ou também conhecido como 'casting'.
+# Além de mudar, também referenciar antes mesmo de tal valor chegar a ser executado na soma, adicionando o tipo de dado que deve ser armazenado pela váriavel. Ex: numero_float = (float(input("Digite um número de ponto flutuante: ")))
