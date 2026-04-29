@@ -30,17 +30,24 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 ---
 
 
-### | 🗓️ Dia 2 (27/04/26)
+### | 🗓️ Dia 2 — 4 (27/04/26)
 
 **🖋️ Tópicos da Aula:**
-- Exercícios aplicando comportamentos de Objetos Python.
+- Exercícios aplicando comportamentos dos objetos de tipos primitivos em Python:
     - int()
     - float()
     - str()
     - bool()
-- TypeError, TypeCheck, Type Conversion, try-except e if.
+Estruturas de Controle:
+    - TypeError
+    - TypeCheck
+    - Type Conversion
+    - try-except
+    - if
 
 **🧠 Aprendizados do dia:**
 - Comportamentos de Objetos como:
-    - (**) para operações de potência com Objetos int() e float().
-    - (//) para descobrirmos o quociente de uma divisão inteira em Objetos int().
+    - (**, /, //, +, -, *) para fazer operações aritméricas númericas com tipos de dados int() e float().
+    - (AND, OR, !=, ==, NOT) operadores lógicos para comparar dados booleanos.
+    - (.upper(), .lower(), .split(), .strip()) para a manipulação de strings.
+
