@@ -1,6 +1,7 @@
 # ==========================================
 #      EXERCICÍCIOS BOOLEANOS(bool)
 # ==========================================
+# Operadores lógicos, que sempre comparam alguma coisa com outra.
 
 # 1. Escreva um programa que avalie duas expressões booleanas inseridas pelo usuário e retorne o resultado da operação AND entre elas.
 
