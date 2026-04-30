@@ -30,7 +30,7 @@ print(f"A potência do valor base {valor1} com o expoente de {valor2} tem o resu
 # # 4. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 
 graus_celcius = float(input("Digite uma temperatura em Celcius para ser convertida a Fahrenheit: "))
-temperatura_fahrenheit = graus_celcius * 1.8 + 32    # Também existe uma formúla alternativa sendo: valor1 * 1,8 + 32.
+temperatura_fahrenheit = graus_celcius * 1.8 + 32    # Também existe uma formúla alternativa sendo: valor1 * 9 / 5 + 32.
 print(f"A temperatura de {graus_celcius} Graus Celsius é igual a: {temperatura_fahrenheit} em Fahrenheit!")
 
 # 5. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
