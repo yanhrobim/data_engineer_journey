@@ -49,9 +49,9 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 - **Fundamentos da Linguaguem**
     - [x] Variáveis, Tipos de Dados, Operadores
     - [x] Estruturas condicionais *(if, else)*
+    - [x] Tratamento de erros e exceções *(TypeError, ValueError)*
     - [ ] Estruturas de repetição *(For)*
     - [ ] Funções e modularização de código
-    - [x] Tratamento de erros e exceções *(TypeError, ValueError)*
     - [ ] Programação Orientada a Objetos *(POO)*
 
 - **Engenharia de Dados**
