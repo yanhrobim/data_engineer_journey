@@ -8,14 +8,14 @@
 # garantir que a entrada seja numérica, tratando qualquer ValueError. 
 # Imprima o resultado em Fahrenheit ou uma mensagem de erro se a entrada não for válida.
 
-# graus_celcius = input("Digite uma temperatura em Celcius para ser convertida a Fahrenheit (float) : ")
-# try:
-#     temperatura_fahrenheit = float(graus_celcius) * 1.8 + 32
-# except ValueError as e:
-#         print(f"Ops! Parece que o valor informado não é um número de ponto flutuante (float)! Detalhes do Erro: {e}")
-#         print(f"O valor passado: '{graus_celcius}' Tem o tipo de: {type(graus_celcius)}")
-# else:
-#     print(f"A temperatura de {graus_celcius} Graus Celsius é igual a: {temperatura_fahrenheit:.2f} em Fahrenheit!")
+graus_celcius = input("Digite uma temperatura em Celcius para ser convertida a Fahrenheit (float) : ")
+try:
+    temperatura_fahrenheit = float(graus_celcius) * 1.8 + 32
+except ValueError as e:
+        print(f"Ops! Parece que o valor informado não é um número de ponto flutuante (float)! Detalhes do Erro: {e}")
+        print(f"O valor passado: '{graus_celcius}' Tem o tipo de: {type(graus_celcius)}")
+else:
+    print(f"A temperatura de {graus_celcius} Graus Celsius é igual a: {temperatura_fahrenheit:.2f} em Fahrenheit!")
 
 
 #Exercício 22: Verificador de Palíndromo
@@ -74,6 +74,31 @@ else:
 # Utilize if-elif-else para realizar a operação matemática baseada no operador fornecido. 
 # Imprima o resultado ou uma mensagem de erro apropriada.
 
+entrada_numerica_1 = input("Digite um valor númerico para a operação de matemática: ")
+entrada_numerica_2 = input("Digite o segundo valor númerico para a operação de matemática: ")
+operacao = input("Digite a operação mátematica de sua preferência (Multiplicação(*), Divisão(/), Soma(+), Subtração(-) ): ").lower() # Adição do .lower() pois se o usuário escrever tanto SOMA, SomA, Soma, soma, irá ser considerado como resposta e a operação de soma será escolhida.
+try:
+    if operacao == "soma" or operacao == "+":
+        soma = float(entrada_numerica_1) + float(entrada_numerica_2)
+        print(f"A soma de {entrada_numerica_1} + {entrada_numerica_2} é igual a: {soma:.2f}")
+
+    if operacao == "multiplicacao" or operacao == "multiplicação" or operacao == "*":
+        multiplicacao = float(entrada_numerica_1) * float(entrada_numerica_2)
+        print(f"A multiplicação de {entrada_numerica_1} por {entrada_numerica_2} é igual a: {multiplicacao:.1f}")
+
+    if operacao == "divisao" or operacao == "divisão" or operacao == "/":
+        divisao = float(entrada_numerica_1) / float(entrada_numerica_2)
+        print(f"A divisão de {entrada_numerica_1} dividido por {entrada_numerica_2} é igual a: {divisao:.2f}")
+
+    if operacao == "subtracao" or operacao == "subtração" or operacao == "-":
+            subtracao = float(entrada_numerica_1) - float(entrada_numerica_2)
+            print(f"A subtracao de {entrada_numerica_1} - {entrada_numerica_2} é igual a: {subtracao:.2f}")
+except ValueError as e:
+    print(f"O valor passado não é um valor númerico! Detalhes do Erro: {e}")
+except ZeroDivisionError as e:
+      print("O valor 0 não é aceito para a operação de divisão como divisor!")
+
+    
 
 # Exercício 24: Classificador de Números
 #Escreva um programa que solicite ao usuário para digitar um número. 
