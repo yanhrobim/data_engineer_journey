@@ -24,6 +24,43 @@ else:
 # Utilize try-except para garantir que a entrada seja uma string. 
 # Dica: Utilize a função isinstance() para verificar o tipo da entrada.
 
+import string
+
+palavra_user = 'A mala nada na lama!'
+# Preciso adicionar estes comandos no input(), pois assim que o usuário responder a resposta seja capturada sem espaços e em minúsculo. 
+# Caso não tiver estes comandos para a manipulação de string, a resposta do usuário será diferente de todas as maneiras com a váriavel 'palavra_invertida' por conter espaços e ter a possibilidade de conter letras em maiúsculo.
+# Sobre a pontuação, é preciso importar um módulo do Python chamado 'string' para importarmos o método 'string.punctuation'. 
+# Este método, contém dentro dele todos caracteres espesciais como: '!'; '?'; '+'; '.'; etc.  
+# Com translate() e str.maketrans() consigo fazer uma manipulação de string para remover (mais especificada trocar por '' que significa nada) tudo aquilo apontado pelo 'string.punctuation'. 
+
+try:
+        if isinstance(palavra_user, str):
+                palavra_user_limpeza = palavra_user.lower().replace(" ", "").strip().translate(str.maketrans('', '', string.punctuation))
+                # Caso não tiver estes comandos para a manipulação de string, a resposta do usuário será diferente de todas as maneiras com a váriavel 'palavra_invertida' por conter espaços e ter a possibilidade de conter letras em maiúsculo.
+                # Sobre a regra da pontuação, é preciso importar um módulo do Python chamado 'string' para importarmos o método 'string.punctuation'. 
+                # Este método, contém dentro dele todos caracteres espesciais como: '!'; '?'; '+'; '.'; etc.  
+                # Com translate() e str.maketrans() consigo fazer uma manipulação de string para remover (mais especificada trocar por '' que significa nada) tudo aquilo apontado pelo 'string.punctuation'. 
+                # Os outros métodos ajudam a formatar a string para a verificação desconsiderar espaços e pontuações. 
+                # (.replace() para remover espaços (no meio da string), .strip() para remover espaços inicio e fim, .lower() para transformar toda string em minúsculas)
+
+
+                palavra_invertida = palavra_user_limpeza[::-1]
+                # [::-1] tem o objetivo de percorrer a string inserida pelo usuário de forma alternativa (de trás para frente).
+                # (Imaginando que a string passada é uma lista) Com -1 sinalizamos que em vez de andar um para frente, vamos andar um para trás. Seria por exemplo uma operação de subtração, se temos 7 caracteres na string, começamos pelo 7 e vamos andando para trás 7-1 = 6 -1 = 5, assim por diante. Invés de 1,2,3,5,6,7.
+
+
+
+        else:
+             raise ValueError
+
+except ValueError:
+        print(f"O valor passado não é uma String!")
+else: 
+    if palavra_invertida == palavra_user_limpeza:
+        print("A palavra é um palíndromo!")
+    else:
+        print("A palavra não é um palindromo!")
+
 
 # Exercício 23: Calculadora Simples
 # Desenvolva uma calculadora simples que aceite duas entradas numéricas e um operador (+, -, *, /) do usuário. 
