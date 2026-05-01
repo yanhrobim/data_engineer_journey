@@ -26,7 +26,7 @@ else:
 
 import string
 
-palavra_user = ""
+palavra_user = "A mala nada na lama"
 # Preciso adicionar estes comandos no input(), pois assim que o usuário responder a resposta seja capturada sem espaços e em minúsculo. 
 # Caso não tiver estes comandos para a manipulação de string, a resposta do usuário será diferente de todas as maneiras com a váriavel 'palavra_invertida' por conter espaços e ter a possibilidade de conter letras em maiúsculo.
 # Sobre a pontuação, é preciso importar um módulo do Python chamado 'string' para importarmos o método 'string.punctuation'. 
