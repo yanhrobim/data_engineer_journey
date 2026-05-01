@@ -107,19 +107,21 @@ except ZeroDivisionError as e:
 
 numero_user = input("Digite um número para descobrir se é positivo ou negativo: ")
 
-if int(numero_user) > 0:
-    print(f"O número {numero_user} é positivo!")
-if int(numero_user) < 0:
-    print(f"O número {numero_user} é negativo!")
-if int(numero_user) == 0:
-    print(f"O número {numero_user} é zero!")
-if int(numero_user) % 2 == 0:                   # Para descobrir se um número é par ou impar utilizamos o método '%', que em um objeto int() executa uma divisão e retorna o resto.
-                                                # A lógica consiste em algo básico, se a divisão do número inserido por 2 ter o resto igual a zero, o número é par pois é uma divisão exata.
-                                                # Números impares deixam o resto igual a 1.    
-    print(f"O número {numero_user} é par!")       
-else:
-    print(f"O número {numero_user} é impar!")
-
+try:
+    if int(numero_user) > 0:
+        print(f"O número {numero_user} é positivo!")
+    if int(numero_user) < 0:
+        print(f"O número {numero_user} é negativo!")
+    if int(numero_user) == 0:
+        print(f"O número {numero_user} é zero!")
+    if int(numero_user) % 2 == 0:                   # Para descobrir se um número é par ou impar utilizamos o método '%', que em um objeto int() executa uma divisão e retorna o resto.
+                                                    # A lógica consiste em algo básico, se a divisão do número inserido por 2 ter o resto igual a zero, o número é par pois é uma divisão exata.
+                                                    # Números impares deixam o resto igual a 1.    
+        print(f"O número {numero_user} é par!")       
+    else:
+        print(f"O número {numero_user} é impar!")
+except ValueError as e:
+     print("O valor inserido não é um valor númerico!")
 
 # Exercício 25: Conversão de Tipo com Validação
 # Crie um script que solicite ao usuário uma lista de números separados por vírgula. 
