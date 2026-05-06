@@ -7,7 +7,6 @@ try:
         nome_usuario = str(input("Digite seu nome: ")).strip()
 
         nome_para_verificação = nome_usuario.strip().replace(" ", "")
-        print(nome_para_verificação)
 
         if nome_para_verificação.isalpha():      # Condição que impede que o nome seja algum valor númerico. Ex: 10 
                                                 # O comando isalpha() garante que na resposta (string) contenha somente respostas com valores alfabéticos, retornando True para aqueles valores que só possuem letras e False para valores que possuem números, espaços ou caracteres especiais.
@@ -34,12 +33,6 @@ try:
         else:
             pass
 
-        if not salario_usuario.strip().isdigit():       # isdigit() percorre a resposta do input, e tem o principal objetivo de encontrar SOMENTE valores númericos. Se tiver somente valores númericos ele retorna True, se não, retorna False.
-                                                        # Resumidamente, se a condição de ter somente valores númericos NÃO FOR atendida, retorna o raise, e se for, o else.
-            raise ValueError
-        else:
-            pass
-
     except ValueError as e:
         print("Ops! Parece que você inseriu uma resposta diferente de um valor númerico no salário! Digite um valor númerico!")
         print(f"Detalhes do Erro: {e}")
@@ -53,15 +46,11 @@ try:
         else:
             pass
 
-        if not bonus_usuario.isdigit():       # isdigit() percorre a resposta do input, e tem o principal objetivo de encontrar SOMENTE valores númericos. Se tiver somente valores númericos ele retorna True, se não, retorna False.
-                                                      # Resumidamente, se a condição de ter somente valores númericos NÃO FOR atendida, retorna o raise, e se for, o else.
-            raise ValueError
-        else:
-            pass
 
     except ValueError as e:
         print(f"Você digitou o bônus com o valor do tipo errado!")
         print(f"Detalhes do erro: {e}")
+
 except Exception as e:
     print(f"Ocorreu uma execeção! Detalhes da parte do erro: {e}")
 else:
