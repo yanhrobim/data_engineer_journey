@@ -47,7 +47,12 @@ Estruturas de Controle:
 
 **🧠 Aprendizados do dia:**
 - Comportamentos de Objetos como:
-    - (**, /, //, +, -, *) para fazer operações aritméricas númericas com tipos de dados int() e float().
-    - (AND, OR, !=, ==, NOT) operadores lógicos para comparar dados booleanos.
+    - (**, /, //, +, -, *) para fazer operações aritméticas númericas com tipos de dados int() e float().
+    - (AND, OR, !=, ==, NOT) operadores lógicos.
     - (.upper(), .lower(), .split(), .strip()) para a manipulação de strings.
+    - Alterando tipo de váriaveis com TypeConversion, e referenciando o tipo que a váriavel deve conter no input().
+    - try-except no planejamento e tratamento de erros de um código, antecipando possíveis falhas além do que é esperado. (Como TypeError, ValueError, etc.)
+    - Estruturando controle de fluxos através de condições com if.
+    - Adição de constantes para a definição de valores fixos dentro de um código/programa.
+
 
