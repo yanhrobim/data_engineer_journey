@@ -7,9 +7,11 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 
 ---
 
-## 📅 Registro Diário
+## 📝 Registro Por Aula
 
-### | 🗓️ Dia 1 (24/04/26)
+### | 📚 Aula 01 
+
+#### **Dia 1 (24/04/26)**
 
 **🖋️ Tópicos da Aula:**
 - Introdução a linguagem de programação **Python**.
@@ -19,7 +21,7 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
     - float()
     - bool()
 
-**🧠 Aprendizados do dia:**
+**🧠 Aprendizados da aula:**
 - Python é uma linguagem interpretada que serve de meio de comunicação entre o usuário e computador.
 - Cada variável possuí um valor e cada valor possuí um tipo de dados.
 - Quando utilizamos variáveis estamos armazenando e salvando-as em nossa memória RAM.
@@ -30,7 +32,9 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 ---
 
 
-### | 🗓️ Dia 2 — 4 (27/04/26)
+### | 📚 Aula 02 
+
+#### **Dia 2 — 8 (27/04/26 há 06/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Exercícios aplicando comportamentos dos objetos de tipos primitivos em Python:
@@ -45,7 +49,7 @@ Estruturas de Controle:
     - try-except
     - if
 
-**🧠 Aprendizados do dia:**
+**🧠 Aprendizados da aula:**
 - Comportamentos de Objetos como:
     - (**, /, //, +, -, *) para fazer operações aritméticas númericas com tipos de dados int() e float().
     - (AND, OR, !=, ==, NOT) operadores lógicos.
@@ -54,5 +58,20 @@ Estruturas de Controle:
     - try-except no planejamento e tratamento de erros de um código, antecipando possíveis falhas além do que é esperado. (Como TypeError, ValueError, etc.)
     - Estruturando controle de fluxos através de condições com if.
     - Adição de constantes para a definição de valores fixos dentro de um código/programa.
+
+---
+
+
+### | 📚 Aula 3 
+
+#### **Dia 9 (07/05/26)**
+
+**🖋️ Tópicos da Aula:**
+- Controles de Fluxo.
+    - IF
+    - FOR
+    - WHILE
+- DEBUG
+- Básica introdução a listas e dicionários.
 
 
