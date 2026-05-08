@@ -51,6 +51,15 @@ elif temperatura > 26:
 # como `log = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}`, 
 # escreva um programa que imprima a mensagem se a severidade for 'ERROR'.
 
+log = {"timestamp": '2021-06-23 10:00:00',
+       'level': 'ERROR', 
+       'message': 'Falha na conexão!'}
+
+if log["level"] == 'ERROR':     # Para a criação da condição através do dicionário precisamos referenciar o dicionário e a coluna que deve ser filtrada entre colchetes.
+                                # Referenciando a coluna específica, aplicamos a condição, no caso sendo se for igual a 'ERROR'.
+    print(f"Mensagem de Erro: {log['message']}")        # Logicamente, se condição for cumprida, este print é executado.
+
+
 ### Exercício 4: Validação de Dados de Entrada
 # Antes de processar os dados de usuários em um sistema de recomendação, 
 # você precisa garantir que cada usuário tenha idade entre 18 e 65 anos e tenha 
