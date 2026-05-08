@@ -74,4 +74,11 @@ Estruturas de Controle:
 - DEBUG
 - Básica introdução a listas e dicionários.
 
+**🧠 Aprendizados da aula:**
+- Aplicar o DEBUG nos permite encontrar erros de forma mais fácil na aplicação. Essa facilidade se encontra em rodar o código linha por linha para entender onde e quando o erro acontece.
+- Estruturas de Controle de Fluxo é tudo aquilo que impede o seu código de seguir em linha reta de cima para baixo.
+    - `if` impede o fluxo padrão do código desviando o caminho através de condições.
+    - `for` impede o fluxo padrão do código prendendo-o em um loop até deixa-lo voltar ao fluxo.
+    - Um dos maiores exemplos de controle de fluxo na Engenharia de Dados são os chamados Workflows ou Pipelines, que definem o caminho/fluxo dos dados seguindo lógicas de controle de fluxo.
+
 
