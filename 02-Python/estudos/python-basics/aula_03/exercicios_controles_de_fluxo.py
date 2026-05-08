@@ -30,6 +30,20 @@ else:
 # Temperatura >= 18°C e <= 26°C é 'Normal'
 # Temperatura > 26°C é 'Alta'
 
+# variavel temperatura
+# classificar temperatura como baixa. Se for menos que 18.
+# classificar temperatura como norma. Se for menos que 18.
+# classificar temperatura como baixa. Se for menos que 18.
+
+temperatura = 20
+
+if temperatura < 18:
+    print("Temperatura está Baixa!")
+elif temperatura >= 18 and temperatura <= 26:
+    print("Temperatura está Normal!")
+elif temperatura > 26:
+    print("Temperatura está Alta!")
+
 
 ### Exercício 3: Filtragem de Logs por Severidade
 # Você está analisando logs de uma aplicação e precisa filtrar mensagens 
