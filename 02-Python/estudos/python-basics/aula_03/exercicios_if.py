@@ -66,9 +66,58 @@ if log["level"] == 'ERROR':     # Para a criação da condição através do dic
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
+# informacoes usuario
+# aplicar condição com regra de negocio.
+# regras de negocio: 1: 18 a 65 anos idade. 2:Email válido (com '@' e com '.com')
+# se tiver tudo certo "dados corretos" 
+# se nao, o que está errado.
+
+# 1. Minha Solução! (Pelo último exercício ter sido com dict, eu também tive a interpretação que este seria também,  e consequentemente fiz uma solução diferente da apresentada na aula!)
+usuario = {"idade": 18,
+           "email": "joao@gmail.com"}
+
+if usuario["idade"] >= 18 and usuario['idade'] <= 65:   # Condição de idade entre 18 a 65 anos.
+                                                        # Aplico primeiro está condição, visando que se ela já estiver errada, nem é preciso verificar o email.
+
+    if '@' in usuario['email']  and "." in usuario['email']:    
+
+
+        print("Dados de usuário válidos!") # Se as duas verificações retornarem números diferentes de -1, quer dizer que o email está válido e roda o bloco deste if.
+
+    else:
+        print("Email está inválido!")
+else:
+    print("Idade está inválida, a idade precisa ser entre 18 a 65 anos!")
+
+# 2. Solução da Aula
+idade = 25  # Exemplo de valor, substitua com input do usuário se necessário
+email = "usuario@exemplo.com"  # Exemplo de valor, substitua com input do usuário se necessário
+
+if not 18 <= idade <= 65:
+    print("Idade fora do intervalo permitido")
+elif "@" not in email or "." not in email:
+    print("Email inválido")
+else:
+    print("Dados de usuário válidos")
+
+
 ### Exercício 5: Detecção de Anomalias em Dados de Transações
 # Você está trabalhando em um sistema de detecção de fraude e precisa identificar 
 # transações suspeitas. Uma transação é considerada suspeita se o valor for superior 
 # a R$ 10.000 ou se ocorrer fora do horário comercial (antes das 9h ou depois das 18h). 
 # Dada uma transação como `transacao = {'valor': 12000, 'hora': 20}`, verifique se ela é suspeita.
+
+
+valor = input("Digite o valor da transação (Insira com casas decimais): ")
+hora = input("Digite o horário da transação: ")
+transacao = {"valor": valor,
+           "hora": hora}
+
+if float(transacao['valor']) > 10.000:
+    print("Está transação é suspeita, não foi possível faze-la!")
+elif int(transacao['hora']) < 9 and int(transacao['hora']) > 18:
+    print("Está transação é suspeita, não foi possível faze-la!")
+else:
+    print("A transação não é suspeita, foi aprovada com sucesso!")
+
 
