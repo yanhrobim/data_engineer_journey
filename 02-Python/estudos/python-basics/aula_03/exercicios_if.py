@@ -110,7 +110,7 @@ else:
 
 valor = input("Digite o valor da transação (Insira com casas decimais): ")
 hora = input("Digite o horário da transação: ")
-transacao = {"valor": valor,        # Dict criado para praticar mais com este formato de dados :)
+transacao = {"valor": valor,        # Dict criado apenas para praticar mais com este formato de dados :)
            "hora": hora}
 
 if float(transacao['valor']) > 10.000:
