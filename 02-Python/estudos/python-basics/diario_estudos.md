@@ -80,5 +80,6 @@ Estruturas de Controle:
     - `if` impede o fluxo padrão do código desviando o caminho através de condições.
     - `for` impede o fluxo padrão do código prendendo-o em um loop até deixa-lo voltar ao fluxo.
     - Um dos maiores exemplos de controle de fluxo na Engenharia de Dados são os chamados Workflows ou Pipelines, que definem o caminho/fluxo dos dados seguindo lógicas de controle de fluxo.
+- FOR individualiza cada elemento de uma sequência iterável ou qualquer valor que seja iterável, e executa aquilo definido com cada elemento de forma sequencial até o último e para.
 
 
