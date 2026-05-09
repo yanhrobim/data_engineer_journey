@@ -7,7 +7,17 @@
 # ======================
 
 ### Exercício 6. Contagem de Palavras em Textos
-# Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
+# Objetivo:** Dado um texto, contar quantas vezes cada letra aparece nele.
+
+texto = "Três pratos de trigo para três tigres tristes"
+lista_t = []
+
+for palavra_t in texto:
+   
+   if "t" in palavra_t.lower().strip().replace(" ", ""):
+    lista_t.append(palavra_t.lower())
+    contagem = lista_t.count("t")
+print(contagem)
 
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
