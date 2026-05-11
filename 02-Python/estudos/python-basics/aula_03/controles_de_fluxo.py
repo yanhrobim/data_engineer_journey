@@ -29,9 +29,9 @@ else:
 #          FOR
 # ======================
 # O FOR itera sobre uma sequência ou qualquer valor iterável.
-# Ele consegue iterar sobre qualquer valor que consiga percorrer um elemento por vez, seja uma string, uma lista, ou um dicionário.
+# Ele consegue iterar sobre qualquer valor que tenha uma sequência de elementos, seja uma string, uma lista, ou um dicionário.
 # Resumidamente, o FOR é aquele que percorre um elemento por vez, executa o código naquele elemento de forma individual, 
-# parte o próximo até não haver mais elementos. 
+# parte para o próximo até não haver mais elementos. 
 # Por isso é um loop, se haver mais, executa aquilo que foi definido, se não haver mais, para.
 
 # Prática com Código.
