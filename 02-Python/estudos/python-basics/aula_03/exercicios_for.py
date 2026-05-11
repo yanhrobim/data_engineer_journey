@@ -58,6 +58,21 @@ usuarios_campo_vazio = [user for user in usuarios if "" in user.values()]
 ### Exercício 9. Extração de Subconjuntos de Dados
 # Objetivo:** Dada uma lista de números, extrair apenas aqueles que são pares.
 
+# Meu Raciocínio:
+# Lista com valores númericos.
+# Iterar cada elemento da lista.
+# Adicionar condição de somente ter valores pares. (Se um valor númerico dividido por 2 ter o resto 0, ele é par!)
+# '%' para adquirir o resto de uma divisão.
+
+lista_de_numeros = [2, 1, 6, 10, 15, 17, 20, 26, 100]
+lista_numeros_pares = [numero for numero in lista_de_numeros if numero % 2 == 0]
+
+# OU
+
+lista_numeros_pares = []
+for numero in lista_de_numeros:
+  if numero % 2 == 0:
+    lista_numeros_pares.append(numero)
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
