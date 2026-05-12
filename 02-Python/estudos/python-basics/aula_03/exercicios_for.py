@@ -76,3 +76,27 @@ for numero in lista_de_numeros:
 
 ### Exercício 10. Agregação de Dados por Categoria
 # Objetivo:** Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
+
+# Meu Raciocínio:
+# Lista de dicionários com vendas, contendo categoria e valor.
+# Iterar com FOR sobre a lista, e individualizar cada elemento (dict).
+# Extrair cada categoria individualmente.
+# Somar todo o valor que envolve aquela categoria.
+
+vendas = [
+    {"categoria": "eletrônicos", "valor": 1200},
+    {"categoria": "livros", "valor": 200},
+    {"categoria": "eletrônicos", "valor": 800},
+    {"categoria": "livros", "valor": 300}
+]
+
+total_por_categoria = {}    # Dict vázio pensando em futuramente armazenar os valores.
+
+for venda in vendas:        # Individualizando cada elemento.
+    categorias = venda['categoria']     # Extraindo categorias, de forma individual.
+    valor = venda['valor']              # Extraindo valores, de forma individual.
+    if categorias in total_por_categoria:       # Já existe categoria no dicionário vazio?
+      total_por_categoria[categorias] += valor  # Se sim, faça isso! (Some o valor que ja está armazenado com a categoria)
+    else:
+      total_por_categoria[categorias] = valor   # Se não, faça isso. (Adicione a categoria e valor.)
+
