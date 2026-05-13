@@ -93,10 +93,52 @@ vendas = [
 total_por_categoria = {}    # Dict vázio pensando em futuramente armazenar os valores.
 
 for venda in vendas:        # Individualizando cada elemento.
-    categorias = venda['categoria']     # Extraindo categorias, de forma individual.
+    categoria = venda['categoria']     # Extraindo categorias, de forma individual.
     valor = venda['valor']              # Extraindo valores, de forma individual.
-    if categorias in total_por_categoria:       # Já existe categoria no dicionário vazio?
-      total_por_categoria[categorias] += valor  # Se sim, faça isso! (Some o valor que ja está armazenado com a categoria)
+    if categoria in total_por_categoria:       # Se existir valor de categoria no dicionário vázio:
+      total_por_categoria[categoria] += valor  # Some o valor atual com o que ja está armazenado com a categoria.
     else:
-      total_por_categoria[categorias] = valor   # Se não, faça isso. (Adicione a categoria e valor.)
+      total_por_categoria[categoria] = valor   # Se não existir valor, adicione a categoria e valor.
 
+
+# Bônus para a prática. Abaixo são exercícios bônus para fins de aprendizado, visando que tive dificuldades no exercício 10.
+# Pedi a uma IA para criar exercícios para mim praticar justamente o que mais tive dificuldade.
+
+# Exercício 11. Média Por Aluno
+# Dado uma lista de dicionários com nome e nota de alunos, calcule a média de notas por aluno 
+# considerando que o mesmo aluno pode aparecer várias vezes.
+
+# Uma lista de dicionários com alunos, contendo dados de nome e nota.
+# Individualizar cada elemento da lista de dicionários. (Resumidamente, iterar todos os dicionários)
+# Adicionar aluno e nota no dicionário.
+# Adicionar caso tiver mais valores, como nota.
+# Após todas as notas tiverem armazenadas, fazer a média. (Soma das notas dividido pela quantidade de notas)
+
+notas = [
+    {"aluno": "Ana", "nota": 8},
+    {"aluno": "Carlos", "nota": 6},
+    {"aluno": "Henry", "nota": 8},
+    {"aluno": "Ana", "nota": 10},
+    {"aluno": "Carlos", "nota": 4},
+    {"aluno": "Henry", "nota": 1}
+]
+
+media_notas = {}
+
+for aluno in notas:
+  nome = aluno['aluno']   # Todos os valores da chave aluno, armazenados nesta váriavel.
+  nota = aluno['nota']    # Todos os valores da chave nota, armazenados nesta váriavel.
+  if nome in media_notas:
+    media_notas[nome]['notas'] += nota
+    media_notas[nome]['quantidade_bimestre'] += 1
+  else:
+    media_notas[nome] = {'notas': nota, 'quantidade_bimestre': 1}
+
+for aluno, dados in media_notas.items():
+  media = dados['notas'] / dados['quantidade_bimestre']
+  media_notas[aluno] = {"notas" :dados['notas'], "quantidade_bimestre": dados['quantidade_bimestre'], "média": media}
+print(media_notas)
+
+
+# Exercício 12. População 
+# Dado uma lista de dicionários com país e população de cidades, calcule a população total por país.
