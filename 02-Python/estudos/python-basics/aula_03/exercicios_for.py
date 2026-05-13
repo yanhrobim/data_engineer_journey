@@ -137,8 +137,11 @@ for aluno in notas:
 for aluno, dados in media_notas.items():
   media = dados['notas'] / dados['quantidade_bimestre']
   media_notas[aluno] = {"notas" :dados['notas'], "quantidade_bimestre": dados['quantidade_bimestre'], "média": media}
-print(media_notas)
 
+# Resposta:
+# {'Ana': {'notas': 18, 'quantidade_bimestre': 2, 'média': 9.0}, 
+# 'Carlos': {'notas': 10, 'quantidade_bimestre': 2, 'média': 5.0}, 
+# 'Henry': {'notas': 9, 'quantidade_bimestre': 2, 'média': 4.5}}
 
 # Exercício 12. População 
 # Dado uma lista de dicionários com país e população de cidades, calcule a população total por país.
