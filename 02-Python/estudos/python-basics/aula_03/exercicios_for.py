@@ -108,6 +108,7 @@ for venda in vendas:        # Individualizando cada elemento.
 # Dado uma lista de dicionários com nome e nota de alunos, calcule a média de notas por aluno 
 # considerando que o mesmo aluno pode aparecer várias vezes.
 
+# Meu Raciocínio:
 # Uma lista de dicionários com alunos, contendo dados de nome e nota.
 # Individualizar cada elemento da lista de dicionários. (Resumidamente, iterar todos os dicionários)
 # Adicionar aluno e nota no dicionário.
@@ -145,3 +146,34 @@ for aluno, dados in media_notas.items():
 
 # Exercício 12. População 
 # Dado uma lista de dicionários com país e população de cidades, calcule a população total por país.
+
+# Meu Raciocínio:
+# Lista de Dicionários contendo dados de nome do país e população (valor númerico).
+# Se objetivo é calcular população total POR país, temos que iterar a lista de dicionários e individualizar todos elementos.
+# Adicionar cada país de forma individual a um dicionário, pois trabalharemos com chave e valor, e cada país sera chave. (Lista, não faz sentido aqui)
+# Porém, como condição precisamos adicionar caso não ter valor no dicionário, pois se ter, precisa somar os novos dados
+# e não sobrescrever os antigos. (Condição if/else)
+
+cidades = [
+    {"pais": "Brasil", "populacao": 2000000},
+    {"pais": "Argentina", "populacao": 1500000},
+    {"pais": "Chile", "populacao": 1000000},
+    {"pais": "Brasil", "populacao": 3000000},
+    {"pais": "Argentina", "populacao": 500000},
+    {"pais": "Chile", "populacao": 500000}
+]
+
+populacao_total = {}
+
+for cidade in cidades:
+  pais = cidade['pais']
+  populacao = cidade['populacao']
+  if not pais in populacao_total:
+    populacao_total[pais] = populacao     #  '=' este sinal significa que estamos criando uma nova chave (coluna), com um
+                                          # um valor definido (váriavel). (Com dict neste contexto)
+  else:
+    populacao_total[pais] += populacao    # '+=' este sinal significa que estamos adicionando e somando algum valor a uma
+                                          # chave que ja deve estar criada, caso não, gera erro. (Além de não sobrescrever os antigos dados)
+
+# Resposta:
+# {'Brasil': 5000000, 'Argentina': 2000000, 'Chile': 1500000}
