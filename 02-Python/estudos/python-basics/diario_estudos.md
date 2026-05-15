@@ -64,7 +64,7 @@ Estruturas de Controle:
 
 ### | 📚 Aula 3 
 
-#### **Dia 9 (08/05/26)**
+#### **Dia 9 — 13 (08/05/26 há 15/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Controles de Fluxo.
@@ -81,5 +81,6 @@ Estruturas de Controle:
     - `for` impede o fluxo padrão do código prendendo-o em um loop até deixa-lo voltar ao fluxo.
     - Um dos maiores exemplos de controle de fluxo na Engenharia de Dados são os chamados Workflows ou Pipelines, que definem o caminho/fluxo dos dados seguindo lógicas de controle de fluxo.
 - FOR individualiza cada elemento de uma sequência iterável ou qualquer valor que seja iterável, e executa aquilo definido com cada elemento de forma sequencial até o último e para.
+- WHILE basicamente enquanto tal condição for verdadeira, ele executa o código dentro do bloco em forma de loop, apenas é abortado se condição não for verdadeira ou se rolar um erro.
 
 
