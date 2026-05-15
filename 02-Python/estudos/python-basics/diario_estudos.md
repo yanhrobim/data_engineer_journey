@@ -77,10 +77,14 @@ Estruturas de Controle:
 **🧠 Aprendizados da aula:**
 - Aplicar o DEBUG nos permite encontrar erros de forma mais fácil na aplicação. Essa facilidade se encontra em rodar o código linha por linha para entender onde e quando o erro acontece.
 - Estruturas de Controle de Fluxo é tudo aquilo que impede o seu código de seguir em linha reta de cima para baixo.
-    - `if` impede o fluxo padrão do código desviando o caminho através de condições.
+    - `if` impede o fluxo padrão do código desviando o caminho se condição for verdadeira.
     - `for` impede o fluxo padrão do código prendendo-o em um loop até deixa-lo voltar ao fluxo.
     - Um dos maiores exemplos de controle de fluxo na Engenharia de Dados são os chamados Workflows ou Pipelines, que definem o caminho/fluxo dos dados seguindo lógicas de controle de fluxo.
 - FOR individualiza cada elemento de uma sequência iterável ou qualquer valor que seja iterável, e executa aquilo definido com cada elemento de forma sequencial até o último e para.
-- WHILE basicamente enquanto tal condição for verdadeira, ele executa o código dentro do bloco em forma de loop, apenas é abortado se condição não for verdadeira ou se rolar um erro.
+- WHILE basicamente enquanto tal condição for verdadeira, ele executa o código dentro do bloco em forma de loop, apenas é abortado se condição não for verdadeira, se rolar um erro ou um break intencional.
+- A diferença de FOR e WHILE:
+    - **FOR:** Tem um começo e fim do loop definido. (Ex: Uma lista, primeiro valor da lista é o começo, último valor é o fim do loop.)
+    - **WHILE:** Não tem um fim definido, caso condição imposta não mudar o loop é infinito.
+        - Exercício 5 demonstra muito como utilizar `while` para se fazer uma iteração de uma lista através do index, para transformar condição e abortar o WHILE através de uma *"regra de negócio"* (500).
 
 
