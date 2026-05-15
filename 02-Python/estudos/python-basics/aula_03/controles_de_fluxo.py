@@ -56,3 +56,25 @@ print(lista)
 # ======================
 #         WHILE
 # ======================
+
+# O WHILE é que basicamente enquanto tal condição for verdadeira, 
+# ele executa o código dentro do bloco em forma de loop, apenas é abortado se condição não for verdadeira 
+# ou se rolar um erro.
+
+# A diferença do FOR e WHILE, é que o FOR ele tem sempre um começo e fim definido, 
+# você sabe quando deve e irá acabar o loop, mas o WHILE pode rodar infinitamente se tal condição não mudar.
+
+import time
+
+licao_de_casa = 10
+
+while licao_de_casa > 0:
+    print("Iniciando mais uma liçaõ de casa...")
+    time.sleep(5)
+    licao_de_casa -= 1
+    print("Terminei mais uma lição de casa...")
+print("Terminei todas lições de casa....")
+
+# É importante dentro de WHILE sempre colocar dentro do bloco algo que diretamente mude a condição em algum período específico, 
+# caso contrário, o bloco roda infinitamente.
+
