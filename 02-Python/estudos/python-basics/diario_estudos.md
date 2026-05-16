@@ -64,7 +64,7 @@ Estruturas de Controle:
 
 ### | 📚 Aula 3 
 
-#### **Dia 9 — 13 (08/05/26 há 15/05/26)**
+#### **Dia 9 — 14 (08/05/26 há 16/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Controles de Fluxo.
