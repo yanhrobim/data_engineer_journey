@@ -43,19 +43,23 @@ try:
             print("Salário verificado e correto!")
             break
 
-    try:
-        bonus_usuario = input("Digite seu bônus: ")
+    while True:
+        try:
+            bonus_usuario = input("Digite seu bônus: ")
 
-        if float(bonus_usuario) < 0 or float(bonus_usuario) == 0:
-            raise ValueError("O valor do bônus não poder ser igual ou menor que 0! Não foi possível fazer o bônus 2024 ;( Tente novamente!")
-            
-        else:
-            pass
+            if float(bonus_usuario) < 0 or float(bonus_usuario) == 0:
+                raise ValueError("O valor do bônus não poder ser igual ou menor que 0! Não foi possível fazer o bônus 2024 ;( Tente novamente!")
+                
+            else:
+                pass
 
 
-    except ValueError as e:
-        print(e)
+        except ValueError as e:
+            print(e)
         
+        else:
+            print("Bonûs verificado e correto!")
+            break
 
 except Exception as e:
     print(f"Ocorreu uma execeção! Detalhes da parte do erro: {e}")
