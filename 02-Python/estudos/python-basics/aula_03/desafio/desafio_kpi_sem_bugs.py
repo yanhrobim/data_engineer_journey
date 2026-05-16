@@ -27,17 +27,21 @@ try:
             break       # Para quebrar o loop infinito, quando não ocorrer nenhuma exeção no try, o else é rodado com um 'break' que trava o loop.
                         # Lógicamente, se chegar neste else, significa que o valor está correto.
 
-    try:
-        salario_usuario = input("Digite seu salário: ") # não pode ser negativo. não pode ser vázio. não pode ser string
+    while True:
+        try:
+            salario_usuario = input("Digite seu salário: ") # não pode ser negativo. não pode ser vázio. não pode ser string
 
-        if float(salario_usuario) < 0 or float(salario_usuario) == 0:
-            raise ValueError("O valor do salário não pode ser negativo ou zero! Tente novamente!")
+            if float(salario_usuario) < 0 or float(salario_usuario) == 0:
+                raise ValueError("O valor do salário não pode ser negativo ou zero! Tente novamente!")
+            else:
+                pass
+
+        except ValueError as e:
+            print(e)
+
         else:
-            pass
-
-    except ValueError as e:
-        print(e)
-
+            print("Salário verificado e correto!")
+            break
 
     try:
         bonus_usuario = input("Digite seu bônus: ")
