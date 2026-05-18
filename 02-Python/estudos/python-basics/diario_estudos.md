@@ -23,7 +23,7 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 
 **🧠 Aprendizados da aula:**
 - Python é uma linguagem interpretada que serve de meio de comunicação entre o usuário e computador.
-- Cada variável possuí um valor e cada valor possuí um tipo de dados.
+- Cada variável possui um valor e cada valor possui um tipo de dados.
 - Quando utilizamos variáveis estamos armazenando e salvando-as em nossa memória RAM.
 - Tudo em Python é Objeto e Estrutura de Dados.
 - Boas práticas com nomes de variávies.
@@ -87,4 +87,24 @@ Estruturas de Controle:
     - **WHILE:** Não tem um fim definido, caso condição imposta não mudar o loop é infinito.
         - Exercício 5 demonstra muito como utilizar `while` para se fazer uma iteração de uma lista através do index, para transformar condição e abortar o WHILE através de uma *"regra de negócio"* (500).
 
+---
+
+
+### | 📚 Aula 3 
+
+#### **Dia 15 (18/05/26)**
+
+**🖋️ Tópicos da Aula:**
+- Tipos complexos e Type Hint.
+    - Dicionários
+    - Listas
+    - Dataframes
+    - Tabelas
+    - Excel
+
+**🧠 Aprendizados da aula:**
+- **Tipagem Python:**
+    - Python é um exemplo de linguagem com tipagem dinâmica, onde não precisamos declarar os tipos explicitamente no código, pois são reconhecidos no processo de execução. A linguagem dinâmica pode oferecer flexibilidade e rapidez no desenvolvimento, porém pode aumentar os riscos de gerar problemas de tipos que somente serão encontrados no processo de execução.
+    - Além da tipagem dinâmica, Python possui uma tipagem forte. Portanto, se uma variável for atribuída a um tipo, não pode simplesmente trata-la como outro, sem antes mudar o tipo dela explicitamente. (Ex: Somar 3 + "3". Somar um **int** com uma **string**)
+- Com Type Hint conseguimos declarar um tipo esperado explicitamente no código (Ex: nome_usuario: str = "Zezeca"). A principal utilização do Type Hint no código é gerar uma melhor interpretação do código para quem lê, tanto para leitura humana quanto para ferramentas, a fim de gerar melhor comunicação.
 
