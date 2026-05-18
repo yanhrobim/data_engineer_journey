@@ -4,7 +4,7 @@
   <a href="https://github.com/yanhrobim">
   <img src="https://img.shields.io/badge/GitHub-Yan Robim-181717?logo=github"/>
   </a>
-  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 30 (Python)]-yellow" />
+  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 31 (Python)]-yellow" />
   <img src="https://img.shields.io/badge/Objetivo Principal-Data%20Engineer-black" />
 
 Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. O espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
@@ -51,6 +51,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [x] Estruturas condicionais *(if, else)*
     - [x] Tratamento de erros e exceções *(TypeError, ValueError)*
     - [x] Estruturas de repetição *(For)*
+    - [ ] Tipos complexos e Type Hint. (Dicionários, Listas, DataFrames, etc.)
     - [ ] Funções e modularização de código
     - [ ] Programação Orientada a Objetos *(POO)*
 
