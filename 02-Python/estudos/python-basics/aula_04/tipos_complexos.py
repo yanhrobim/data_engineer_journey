@@ -3,7 +3,7 @@
 # ================
 # Estrutura de Dados.
 
-# 1. List
+# 1. Exemplo List
 
 nome: str = "Ryan"
 idade: int = 15
@@ -57,3 +57,10 @@ print(lista_ex)
 #       DICT
 # ================
 # Estrutura de Dados.
+# Muito semelhante a lista, porém a principal diferença é a estrutura sendo chave-valor.
+
+# Exemplo Dict
+
+filme_marvel = {"Nome": "The Amazing Spider Man",
+                "Ano": 2012,
+                "Marca": "Marvel"}

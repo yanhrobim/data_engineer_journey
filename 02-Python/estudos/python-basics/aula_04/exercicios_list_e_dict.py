@@ -5,20 +5,25 @@
 
 # 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
 
-lista_numeros_1_a_10 =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista_numeros_1_a_10: list =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for numero in lista_numeros_1_a_10:
     numero_ao_quadrado =  numero ** 2
     print(numero_ao_quadrado)
 
+
 # 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
 
-lista_linguagem_programação = ["Python", "Java", "C++", "JavaScript"]
+lista_linguagem_programação: list = ["Python", "Java", "C++", "JavaScript"]
 index_c = lista_linguagem_programação.index("C++")  
 lista_linguagem_programação.pop(index_c)    # Removi 'C++' com pop() e index para a prática, mas certamente o método remove()
                                             # também conseguiria encontrar o item e remove-lo da lista.
 lista_linguagem_programação.append("Ruby")
 print(lista_linguagem_programação)
 
+
+# ================
+#       DICT
+# ================
 
 # 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 
