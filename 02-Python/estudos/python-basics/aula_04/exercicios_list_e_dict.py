@@ -12,6 +12,13 @@ for numero in lista_numeros_1_a_10:
 
 # 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
 
+lista_linguagem_programação = ["Python", "Java", "C++", "JavaScript"]
+index_c = lista_linguagem_programação.index("C++")  
+lista_linguagem_programação.pop(index_c)    # Removi 'C++' com pop() e index para a prática, mas certamente o método remove()
+                                            # também conseguiria encontrar o item e remove-lo da lista.
+lista_linguagem_programação.append("Ruby")
+print(lista_linguagem_programação)
+
 
 # 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
 
