@@ -5,6 +5,10 @@
 
 # 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
 
+lista_numeros_1_a_10 =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for numero in lista_numeros_1_a_10:
+    numero_ao_quadrado =  numero ** 2
+    print(numero_ao_quadrado)
 
 # 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
 
