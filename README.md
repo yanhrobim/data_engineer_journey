@@ -51,7 +51,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [x] Estruturas condicionais *(if, else)*
     - [x] Tratamento de erros e exceções *(TypeError, ValueError)*
     - [x] Estruturas de repetição *(For)*
-    - [ ] Tipos complexos e Type Hint. (Dicionários, Listas, DataFrames, etc.)
+    - [x] Tipos complexos e Type Hint. (Dicionários, Listas, DataFrames, etc.)
     - [ ] Funções e modularização de código
     - [ ] Programação Orientada a Objetos *(POO)*
 
