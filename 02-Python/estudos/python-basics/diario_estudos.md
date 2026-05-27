@@ -105,6 +105,31 @@ Estruturas de Controle:
 **🧠 Aprendizados da aula:**
 - **Tipagem Python:**
     - Python é um exemplo de linguagem com tipagem dinâmica, onde não precisamos declarar os tipos explicitamente no código, pois são reconhecidos no processo de execução. A linguagem dinâmica pode oferecer flexibilidade e rapidez no desenvolvimento, porém pode aumentar os riscos de gerar problemas de tipos que somente serão encontrados no processo de execução.
-    - Além da tipagem dinâmica, Python possui uma tipagem forte. Portanto, se uma variável for atribuída a um tipo, não pode simplesmente trata-la como outro, sem antes mudar o tipo dela explicitamente. (Ex: Somar 3 + "3". Somar um **int** com uma **string**)
+    - Além da tipagem dinâmica, Python possui uma tipagem forte. Portanto, se uma variável for atribuída a um tipo, não pode simplesmente trata-la como outro, sem antes mudar o tipo dela explicitamente. (Ex: Somar 3 + "3". Somar um **int** com uma **string**).
 - Com Type Hint conseguimos declarar um tipo esperado explicitamente no código (Ex: nome_usuario: str = "Zezeca"). A principal utilização do Type Hint no código é gerar uma melhor interpretação do código para quem lê, tanto para leitura humana quanto para ferramentas, a fim de gerar melhor comunicação.
 - Listas e Dicionários são estruturas de dados, onde podemos armazenar dados e valores. A principal diferença de lista para o dicionário é a sua estrutura e organização, onde a lista são ordenadas e organizadas através de index, porém no dicionário existe a organização e ordenação por chave-valor onde cada valor pertence a uma chave, e cada chave armazena valor.
+Principais Métodos Lista:
+    - `append()` — Adiciona um item ao final da lista.
+    - `extend()` — Adiciona um iterável (lista, sequência, etc) dentro da lista
+    - `insert()` — Adiciona um item em um index específico
+    - `remove()` — Remove o primeiro item encontrado com o valor passado
+    - `pop()` — Remove o último item da lista de forma eficiente. Aceita index como parâmetro, porém perde a vantagem de performance.
+    - `index()` — Retorna o index de um valor específico na lista.
+    - `count()` — Conta quantas vezes um valor aparece na lista.
+    - `sort()` — Ordena os itens da lista.
+    - `reverse()` — Reverte a sequência da lista.
+    - `copy()` — Retorna uma cópia da lista original.
+    - `clear()` — Remove todos os itens da lista.
+
+
+- Principais Métodos Dict:
+    - `get()` — Acessa o valor de uma chave. Aceita parâmetro default para definir o que retornar caso a chave não exista, evitando erros no código.
+    - `keys()` — Retorna uma visualização dinâmica com todas as chaves do dicionário.
+    - `values()` — Retorna uma visualização dinâmica com todos os valores do dicionário.
+    - `items()` — Retorna uma visualização dinâmica com todos os pares chave-valor. Muito utilizado em loops for.
+    - `update()` — Atualiza o valor de uma chave existente ou cria a chave caso não exista. Diferente do append() de lista, sobrescreve o valor anterior.
+    - `pop()` — Remove uma chave-valor pelo nome da chave, acessando-a diretamente de forma eficiente.
+    - `popitem()` — Remove o último par chave-valor inserido no dicionário.
+    - `setdefault()` — Cria uma chave com valor padrão se ela não existir. Se já existir, preserva o valor original.
+    - `copy()` — Retorna uma cópia do dicionário original.
+    - `clear()` — Remove todos os itens do dicionário.
