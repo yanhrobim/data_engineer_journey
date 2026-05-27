@@ -63,4 +63,61 @@ print(lista_ex)
 
 filme_marvel = {"Nome": "The Amazing Spider Man",
                 "Ano": 2012,
-                "Marca": "Marvel"}
+                "Marca": "Marvel"
+}
+
+# filme_marvel.clear()  # Limpa o dicionário. (Literalmente, tira tudo que há dentro dele)
+
+copy_dict = filme_marvel.copy()     # Mesmo objetivo do método copy() em listas.
+
+nome_get = filme_marvel.get("Bilheteria") # o método get() nos permite pegar o valor de uma chave em um dict. No caso passando ela como parâmetro ao método.
+print(nome_get)
+
+key_não_existente = filme_marvel.get("Bilheteria", "NULL")    
+# O get() possuí um segundo parâmetro, o 'default', com ele conseguimos dizer ao método o que fazer se caso tal chave não existir ou não conter valor dentro de dicionário.
+# No get() acima deste, quando não estabelecemos o parâmetro, ele nos retornaria None como padrão.
+# Este parâmetro torna este método rico em manipular dicionários, por abrir bastante portas a normalizar valores faltantes, criar novas chaves, etc.
+print(key_não_existente)
+
+dict_view = filme_marvel.items() 
+# { O método items() bem complexamente retorna nossas chaves e valores do dicionário em uma forma de visualização, uma forma dinâmica.
+# Dinâmica pois não é uma cópia, se mudarmos chave A, o dicionário é modificado da mesma forma. }  Explicação Seguindo a Documentação.
+# Basicamente, é retorna nossas chaves e valores, poderiamos por exemplo manipular estes valores com iter(), reversed()
+# porém temos uma forma mais fácil de fazer este mesmo tipo de manipulação, sendo o loop for.
+# Por isso em um loop for quando utilizamos .items() passamos dois valores, um sendo para a chave(str) e outro para valor(Any), justamente o que é o método retorna. (Possível visualizar isto passando o mouse acima do método)
+
+chaves_dict = filme_marvel.keys()
+print(chaves_dict)
+# O método keys() de forma complexa tem a mesma explicação do items() (segundo a documentação do Python),
+# porém existe a diferença em que ao invés de retornar todos os itens presentes no dicionário, retorna somente as chaves.
+
+
+filme_marvel.pop("Marca")   # O método pop() tem o objetivo de remover chave-valor de um dicionário.
+                            # O método acessa a chave passada como parâmetro e a apaga, limpa, remove do dict. (Semelhante ao método remove() de list, porém mais eficiente por acessar a chave diretamente.)
+print(filme_marvel)         # Também possuí o parâmetro 'default'.
+
+filme_marvel.popitem()      # O método popitem() remove a última chave-valor do dict.
+print(filme_marvel)
+
+filme_marvel.setdefault("vezes_assistidas", 0) 
+# O método setdefault assim como o parâmetro 'default' em outros métodos é muito útilizavel para normalizar valores faltantes ou criar chaves.
+# Passamos a chave que queremos "criar" e o valor que iremos ter como padrão quando chave for criada.
+# Se chave passada existir, não faz exatamente nada, preserva o que já temos.
+# Se não, o método cria a chave e o valor padrão.
+
+print(filme_marvel)
+
+filme_marvel.update({
+    "Ano": 2012,
+    "Marca": "Marvel"
+})   # O método update() é muito semelhante ao método append() de list, porém existe uma diferença que muda tudo.
+     # O update() atualiza o dicionário, ou cria aquilo que ainda não existe, com o append() não atualizamos e sim adicionamos mais valores,
+     # com o update() se valor existir, é sobrescrevido pelo novo valor.
+     # Bem importante ter esta diferença em mente pelo risco de perder dados antigos.
+
+print(filme_marvel)
+
+valores = filme_marvel.values()
+print(valores)
+# O método values() de forma complexa tem a mesma explicação do items() (segundo a documentação do Python),
+# porém existe a diferença em que ao invés de retornar todos os itens presentes no dicionário, retorna somente os valores.
