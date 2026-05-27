@@ -81,7 +81,7 @@ print("Total da lista de compras:", total)
 # 6. Eliminação de Duplicatas 
 # Objetivo: Dada uma lista de emails, remover todos os duplicados.
 
-emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+emails: dict = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
 for email in emails:    # Fazemos uma iteração sobre a lista, assim indidualizando cada elemento.
     if emails.count(email) > 1:  # O filtro aqui consiste em, contar email (com count) dentro da lista emails, 
                                  # se o count() retornar que tal email possuí maior que valor 1, ele executa bloco do if.
@@ -89,3 +89,13 @@ for email in emails:    # Fazemos uma iteração sobre a lista, assim indidualiz
         emails.remove(email)     # Remove o email que está duplicado.
 
 print(emails)
+
+# 7. Filtragem de Dados
+# Objetivo: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+
+idades: list = [22, 15, 30, 17, 18]
+for idade in idades:
+    if idade <= 18:
+        idades.remove(idade)
+
+print(idades)
