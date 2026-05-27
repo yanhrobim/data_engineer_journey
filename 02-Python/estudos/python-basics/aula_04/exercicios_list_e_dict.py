@@ -82,3 +82,10 @@ print("Total da lista de compras:", total)
 # Objetivo: Dada uma lista de emails, remover todos os duplicados.
 
 emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+for email in emails:    # Fazemos uma iteração sobre a lista, assim indidualizando cada elemento.
+    if emails.count(email) > 1:  # O filtro aqui consiste em, contar email (com count) dentro da lista emails, 
+                                 # se o count() retornar que tal email possuí maior que valor 1, ele executa bloco do if.
+                                    
+        emails.remove(email)     # Remove o email que está duplicado.
+
+print(emails)
