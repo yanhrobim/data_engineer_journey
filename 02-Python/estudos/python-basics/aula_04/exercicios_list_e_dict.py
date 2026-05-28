@@ -3,7 +3,7 @@
 # ================
 
 
-# 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado.
+# 1. Crie uma lista com os números de 1 a 10 e use um loop para imprimir cada número elevado ao quadrado. (Jornada de Dados)
 
 lista_numeros_1_a_10: list =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 for numero in lista_numeros_1_a_10:
@@ -11,7 +11,7 @@ for numero in lista_numeros_1_a_10:
     print(numero_ao_quadrado)
 
 
-# 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
+# 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby". (Jornada de Dados)
 
 lista_linguagem_programação: list = ["Python", "Java", "C++", "JavaScript"]
 index_c = lista_linguagem_programação.index("C++")  
@@ -25,7 +25,7 @@ print(lista_linguagem_programação)
 #       DICT
 # ================
 
-# 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
+# 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação. (Jornada de Dados)
 
 livros: dict = {"titulo": "A arte da imperfeição", "autor": "Bréne Brown", "ano_de_publicacao": "2020"}
 
@@ -34,7 +34,7 @@ print(f"Autor do livro: {livros['autor']}")
 print(f"Ano de publicação do livro: {livros['ano_de_publicacao']}")
 
 
-# 4. Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+# 4. Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário. (Jornada de Dados)
 # Iremos precisar de um dict para armazenar o número de ocorrências.
 ## Neste dict, cada letra deve ser uma chave.
 ## O valor desta chave é o número de vezes que tal letra está na frase.
@@ -59,7 +59,7 @@ for letra in frase:
 print(contagem)
 
 
-# 5. Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
+# 5. Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras. (Jornada de Dados)
 
 lista_de_compras: list = ["maçã", "banana", "cereja"]
 valores: dict = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
@@ -78,7 +78,7 @@ print("Total da lista de compras:", total)
 #   Exercícios Intermediários e Mais Avançados
 # ===================================================
 
-# 6. Eliminação de Duplicatas 
+# 6. Eliminação de Duplicatas (Jornada de Dados)
 # Objetivo: Dada uma lista de emails, remover todos os duplicados.
 
 emails: dict = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
@@ -90,7 +90,7 @@ for email in emails:    # Fazemos uma iteração sobre a lista, assim indidualiz
 
 print(emails)
 
-# 7. Filtragem de Dados
+# 7. Filtragem de Dados (Jornada de Dados)
 # Objetivo: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
 idades: list = [22, 15, 30, 17, 18]
@@ -99,3 +99,30 @@ for idade in idades:
         idades.remove(idade)
 
 print(idades)
+
+# 8. Construção de KPI. (Alura)
+# O setor de RH da sua empresa te pediu uma ajuda para analisar as idades dos funcionários de 4 setores da empresa. 
+# Para isso, ele te forneceu os seguintes dados:
+
+idades_funcionarios: dict = {'Setor A': [22, 26, 30, 30, 35, 38, 40, 56, 57, 65],
+                             'Setor B': [22, 24, 26, 33, 41, 49, 50, 54, 60, 64],
+                             'Setor C': [23, 26, 26, 29, 34, 35, 36, 41, 52, 56],
+                             'Setor D': [19, 20, 25, 27, 34, 39, 42, 44, 50, 65]}
+
+# Sabendo que cada setor tem 10 funcionários, construa um código que calcule a média de idade de cada setor, 
+# a idade média geral entre todos os setores e quantas pessoas estão acima da idade média geral.
+
+# 1. Saber a idade média de cada setor em individual.
+# 2. Descobrir a idade média dentre todos os setores, A, B, etc.
+# 3. Descobrir quantos funcionários estão acima da idade média que foi obtida anteriormente.
+
+media_cada_setor = {}
+media_geral = {}
+
+for setor, idades in idades_funcionarios.items():
+    media_cada_setor[setor] = sum(idades) / len(idades)
+
+media_geral['media_geral'] = (sum(media_cada_setor.values())) / len(media_cada_setor.values())
+
+
+
