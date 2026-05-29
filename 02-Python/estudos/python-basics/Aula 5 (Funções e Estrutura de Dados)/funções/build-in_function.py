@@ -23,8 +23,8 @@ soma_vendas = sum(vendas_anual.values())
 #  2. LEN()
 # A built-in function len() faz a contagem de elementos em uma determinada sequência, algo iterável.
 
-qtd_meses = len(vendas_anual.values())  # É importante dizer que não é preciso necessariamente passar para o len()
-                                # algo que seja iterável.
+qtd_meses = len(vendas_anual.values())  # É importante dizer que não é preciso necessariamente passar listas,
+                                        # pode ser tudo aquilo que seja iterável.
 
 # Resposta: 12 (Quantidade de Meses)
 
@@ -78,3 +78,49 @@ def contar_caractere_parâmetro_return(palavra):
 
 qtd_caractere, situacao = contar_caractere_parâmetro_return(palavra="paralelepípedo")
 print(f"Você digitou uma palavra com {qtd_caractere} caracteres. Ela é uma {situacao}")
+
+# =======================
+#      FUNCÃO LAMBDA
+# =======================
+# Funções lambdas são funções que não precisam ser nomeadas como as que criamos com def, por isso são chamadas também de funções anônimas.
+# Uma função lambda pode ser executada em apenas uma linha de código.
+
+# 1. Exemplo Com Uma Função Normal
+
+numero: int = 11
+def par_ou_impar_func(numero):
+    divisao = numero % 2
+    if divisao == 0:
+        print("Par!")
+    else:
+        print("Impar!")
+
+par_ou_impar_func(numero)
+
+# 2. Com uma função lambda
+
+par_ou_impar = lambda numero: numero % 2    # Basicamente, número é o parâmetro que definimos que a função deve receber.
+                                            # Em seguida a o parâmetro que definimos, após ':' definimos a métrica que será
+                                            # executada, a lógica, etc.
+resultado = par_ou_impar(11)
+if resultado == 0:
+        print(f"O número {numero} é Par!")
+else:
+        print(f"O número {numero} é impar!")
+
+
+# 3. MAP()
+# Com o map() conseguimos potencializar o lambda a executar funções em iteráveis, seria individualizar cada elemento como fazemos com um loop FOR.
+
+precos: list = [29.90, 149.99, 89.50, 12.00, 199.90]
+aumento =  0.10 # 10%
+
+aumento_valores = map(lambda preco: preco * aumento + preco, precos) # Aqui map permite que pegamos cada valor da lista individualmente, 
+                                                                     # para descobrirmos o 10% de cada valor.   
+
+# O map() precisa ser convertido a uma iterável, 
+# pois caso não transformamos o resultado com o list() não conseguimos visualizar os valores obtidos.
+# Caso contrário, ele nos retorna uma objeto map, mas não as respostas.
+
+print(list(aumento_valores))
+
