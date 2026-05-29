@@ -90,7 +90,7 @@ Estruturas de Controle:
 ---
 
 
-### | 📚 Aula 3 
+### | 📚 Aula 4
 
 #### **Dia 15 — 20 (18/05/26 há 29/05/26)
 
@@ -133,3 +133,4 @@ Principais Métodos Lista:
     - `setdefault()` — Cria uma chave com valor padrão se ela não existir. Se já existir, preserva o valor original.
     - `copy()` — Retorna uma cópia do dicionário original.
     - `clear()` — Remove todos os itens do dicionário.
+
