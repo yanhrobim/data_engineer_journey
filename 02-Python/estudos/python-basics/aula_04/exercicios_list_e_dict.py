@@ -143,3 +143,17 @@ for idades in idades_funcionarios.values():
 
 media_geral = {"media_geral": media_geral}   # 38.865
 funcionarios_acima_media = {"funcionarios_acima_da_media": funcionarios_acima_media}  # 18
+
+# 9. Análise de Estoque (Pedi ao Claude para me dar exercícios sobre os assuntos da aula para prática) 
+# Uma livraria quer analisar o seu estoque. Os dados são:
+
+estoque_livraria: dict = {
+    'Ficção': [45, 12, 78, 33, 90, 22],
+    'Terror': [15, 8, 42, 67, 11, 55],
+    'Romance': [30, 25, 88, 44, 19, 72],
+    'Tecnologia': [60, 35, 17, 91, 28, 43]
+}
+
+# Objetivo: Cada número representa a quantidade de exemplares de um livro diferente dentro do gênero. 
+# Construa um código que calcule o total de exemplares por gênero, o total geral do estoque, 
+# e qual gênero tem o maior estoque.
