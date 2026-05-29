@@ -92,7 +92,7 @@ Estruturas de Controle:
 
 ### | 📚 Aula 3 
 
-#### **Dia 15 (18/05/26)**
+#### **Dia 15 — 20 (18/05/26 há 29/05/26)
 
 **🖋️ Tópicos da Aula:**
 - Tipos complexos e Type Hint.
