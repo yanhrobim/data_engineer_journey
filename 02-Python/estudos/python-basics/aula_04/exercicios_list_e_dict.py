@@ -100,7 +100,7 @@ for idade in idades:
 
 print(idades)
 
-# 8. Construção de KPI. (Alura)
+# 8. Análise de Idade por Setor. (Alura)
 # O setor de RH da sua empresa te pediu uma ajuda para analisar as idades dos funcionários de 4 setores da empresa. 
 # Para isso, ele te forneceu os seguintes dados:
 
@@ -112,17 +112,34 @@ idades_funcionarios: dict = {'Setor A': [22, 26, 30, 30, 35, 38, 40, 56, 57, 65]
 # Sabendo que cada setor tem 10 funcionários, construa um código que calcule a média de idade de cada setor, 
 # a idade média geral entre todos os setores e quantas pessoas estão acima da idade média geral.
 
-# 1. Saber a idade média de cada setor em individual.
+# Racíocinio:
+# 1. Saber a idade média de cada setor em individual.  
 # 2. Descobrir a idade média dentre todos os setores, A, B, etc.
 # 3. Descobrir quantos funcionários estão acima da idade média que foi obtida anteriormente.
 
-media_cada_setor = {}
-media_geral = {}
-
-for setor, idades in idades_funcionarios.items():
-    media_cada_setor[setor] = sum(idades) / len(idades)
-
-media_geral['media_geral'] = (sum(media_cada_setor.values())) / len(media_cada_setor.values())
+media_cada_setor: dict = {}
 
 
+for setor, idades in idades_funcionarios.items():       # Iterando as chaves e valores do dict, com .items()
+                                                        # Armazenamos cada chave em "setor" e cada valor em "idades".
+    media_cada_setor[setor] = sum(idades) / len(idades) 
+    # Aqui criamos uma chave no dict vázio, que armazena o nome de cada setor. A cada loop um setor é criado como chave dentro do dict vázio.
+    # Criando a nossa chave, o valor é criado após uma seção de cálculos, onde somamos todos os valores obtidos no dict 
+    # (no caso uma lista de valores númericos) com sum() e contamos com len() a quantidade de valores que possuí, dividimos a soma pela quantidade e este valor é retornado como valor da chave.
 
+
+media_geral = (sum(media_cada_setor.values())) / len(media_cada_setor.values()) # Seguindo a mesma lógica com sum() e len().
+                                                                                # Aqui somamos todos os valores (todas as idades) e dividimos pela quantidade de valores presentes (quantidade de funcionários).
+
+funcionarios_acima_media: int = 0
+
+for idades in idades_funcionarios.values():
+    for idade in idades:    # Iteramos a lista de idades, individualizando cada elemento.
+        if idade > media_geral: # Se idade for maior que media geral:
+            funcionarios_acima_media += 1  # Com o operador '+=', fazemos que a cada idade que passar no filtro
+                                           # será contabilzado +1 na váriavel.
+
+# Respostas em forma dict:
+
+media_geral = {"media_geral": media_geral}   # 38.865
+funcionarios_acima_media = {"funcionarios_acima_da_media": funcionarios_acima_media}  # 18
