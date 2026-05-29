@@ -71,7 +71,7 @@ Estruturas de Controle:
     - IF
     - FOR
     - WHILE
-- DEBUG
+- DEBUG.
 - Básica introdução a listas e dicionários.
 
 **🧠 Aprendizados da aula:**
@@ -96,11 +96,9 @@ Estruturas de Controle:
 
 **🖋️ Tópicos da Aula:**
 - Tipos complexos e Type Hint.
+- Introdução a Estrutura de Dados.
     - Dicionários
     - Listas
-    - Dataframes
-    - Tabelas
-    - Excel
 
 **🧠 Aprendizados da aula:**
 - **Tipagem Python:**
@@ -141,7 +139,15 @@ Principais Métodos Lista:
 
 **🖋️ Tópicos da Aula:**
     - Built-in function.
-    - Criação de Funções
+    - Criação de Funções.
         - Com Retorno
         - Sem Retorno
-    - Funções Lambda
+    - Funções Lambda.
+    - Estrutura de Dados
+        - List Comprehension
+        - Dict Comprehension
+        - Lista de Tuplas
+
+**🧠 Aprendizados da aula:**
+    - **Built-in functions:** São funções embutidas e disponibilizadas pelo próprio Python, e podem ser utilizadas a qualquer momento. Alguns exemplos de **Built-in functions** como: `type(), list(), sum(), len()`.
+    - Funções são uma sequência de instruções que criamos em um bloco de código para executar tarefas específicas. Além disso, podem ser reutilzidas em diferentes partes do nosso código.
