@@ -151,3 +151,5 @@ Principais Métodos Lista:
 **🧠 Aprendizados da aula:**
     - **Built-in functions:** São funções embutidas e disponibilizadas pelo próprio Python, e podem ser utilizadas a qualquer momento. Alguns exemplos de **Built-in functions** como: `type(), list(), sum(), len()`.
     - Funções são uma sequência de instruções que criamos em um bloco de código para executar tarefas específicas. Além disso, podem ser reutilzidas em diferentes partes do nosso código.
+    - Funções lambdas não precisam ser definidas como fazemos com funções normais com o def, por isso muito chamda de funções anônimas, além disso ela pode ser definida apenas em uma linha de código.
+        - O `map()` pode potencializar o lambda, fazendo com que possamos executar funções anônimas com o lambda em iteráveis. O map() é muito semelhante a um FOR, ele não é um loop, mas individualiza cada elemento de iteráveis para o lambda executar o que foi instruído.
