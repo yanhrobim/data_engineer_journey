@@ -134,3 +134,14 @@ Principais Métodos Lista:
     - `copy()` — Retorna uma cópia do dicionário original.
     - `clear()` — Remove todos os itens do dicionário.
 
+---
+
+### | 📚 Aula 5
+#### Dia 21 (30/05/26)
+
+**🖋️ Tópicos da Aula:**
+    - Built-in function.
+    - Criação de Funções
+        - Com Retorno
+        - Sem Retorno
+    - Funções Lambda
