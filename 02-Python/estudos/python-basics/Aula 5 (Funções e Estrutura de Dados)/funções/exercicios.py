@@ -337,8 +337,92 @@ calculo_pontos(gols_marcados, gols_sofridos)
 #
 # "Com base nos gastos definidos, uma viagem de [dias] dias para [cidade]
 #  saindo de Recife custaria [gastos] reais"
- 
 
+# Meu raciocínio:
+# 1. Primeiro, temos que entender que uma função vai complementar a outra no final, então não temos que criar uma função de gastos de hotel, pensando nos gastos de gasolina.
+# 2. Regras de Negócio:
+    # Regra de Negócio: Cada dia no hotel é igual a 150,00 reais. 
+    # Regra de Negócio: O consumo do carro de gasolina é 14 kilometros é igual a 1 litro.
+    # Regra de Negócio: O valor da gasolina é 5 reais = 1 litro.
+    # Regra de Negócio: Passeio e alimentação é 200 para Salvador, 300 para Fortaleza, e segue a sequência.
+    # Regra de Negócio: A distância em kms é: 850 para salvador, 800 para Forteleza e segue a sequência.
+
+# 3. Criar uma função que recebe uma váriavel, e retorna o resultado de 150,00 multiplicado pelos dias que será a viagem.
+# 4. Criar uma função para os gastos da gasolina, considerando os kms de cada cidade, o carro faz 14 km = por 1 litro, e 5 reais é um litro.
+    # A fórmula para litros é: Quantidade consumo carro DIVIDIDO(/) por Quantidade de km que teremos que percorrer.
+    # A fórmula para descobrir os gastos é: valor da gasolina MULTIPLICADO(*) por litros que precisamos.
+
+# 5. Criar uma função para gastos em passeios, considerando o mesmo gasto em todos os dias de cada cidade segundo a lista.
+# 6. Todas as funções devem retornar uma váriavel contendo um valor númerico que significa os gastos e no final,
+# somar todos os gastos e devolver o print.
+
+def gastos_hotel(quantidade_dias: int):
+    
+    gastos_com_hotel = 150.00 * quantidade_dias
+    return gastos_com_hotel
+
+def gastos_gasolina(cidade_viagem: str, consumo_carro: float, valor_gasolina: float):
+    
+    cidades = ["Salvador", "Fortaleza", "Natal", "Aracaju"] # Estas são as cidades que podemos viajar.
+    
+    distancias = [850, 800, 300, 550]   # Estas são as distâncias de cada cidade, nessa lista o index 0 é a distância da primeira cidade da lista de cidades, assim por diante.
+    
+    cidade_user_index = cidades.index(cidade_viagem)    # Aqui descobrimos a posição/index que a cidade escolhida de viagem está na lista.
+                                                    # Ex: Salvador retornaria 0.
+    cidade_distancia =  list(zip(cidades, distancias))  
+    # Tendo em vista, que na lista de cidade cada posição significa uma distância na lista de distância,
+    # junto as duas listas com zip, e cada cidade tem sua respectiva distância, seguindo a lógica que expliquei.
+    # Ex: (Salvador, 850)
+
+    cidade_viagem = cidade_distancia[cidade_user_index] 
+    # Aqui descobrimos qual a cidade que iremos ir dentro da lista passada e também possuímos a distância dela no index 1.
+    # Digo index pois a váriavel está assim: ("Cidade", Distância). Está como tupla.
+
+    # Precisamos descobrir o index da cidade em 'cidade_user_index' para encontramos a cidade que desejamos ir dentro da lista de cidades disponíveis.
+    # Com o index, sinalizamos a tupla que o zip() devolve, qual o valor que queremos ter para os cálculos.
+
+    quantidade_de_litros = cidade_viagem[1] / consumo_carro # Como eu disse index 1, possuí a distância. Esta divisão retorna a quantidade litros que precisamos para ir até a cidade desejada.
+    
+    gastos_com_gasolina = valor_gasolina * quantidade_de_litros
+
+    return gastos_com_gasolina  * 2 # Considerando ida e volta.
+
+def gastos_passeio(cidade_viagem: str, quantidade_dias: int):
+
+    cidades = ["Salvador", "Fortaleza", "Natal", "Aracaju"]
+
+    lazer_valores = [200, 400, 250, 300]
+
+    cidade_user_index = cidades.index(cidade_viagem)
+
+    cidade_valor_lazer =  list(zip(cidades, lazer_valores))
+
+    cidade_viagem = cidade_valor_lazer[cidade_user_index]
+
+    gasto_com_passeios = cidade_viagem[1] * quantidade_dias
+
+    return gasto_com_passeios
+
+def calculo_gastos_com_viagem(cidade_viagem: str, 
+                              quantidade_dias: int, 
+                              consumo_carro: int, 
+                              valor_gasolina: int):    # Simulando um pipeline :)
+
+    gastos_com_hotel = gastos_hotel(quantidade_dias)
+    gastos_com_gasolina = gastos_gasolina(cidade_viagem, consumo_carro, valor_gasolina)
+    gastos_com_passeio = gastos_passeio(cidade_viagem, quantidade_dias)
+    gasto_total = gastos_com_hotel + gastos_com_gasolina + gastos_com_passeio
+    print(f"Com base nos gastos definidos, uma viagem de {dias} dias para a cidade de {cidade} saindo de Recife custaria {round(gasto_total, 2)} reais")
+
+cidade = "Salvador"
+dias = 3
+consumo_carro = 14  # O exercício não pede estas váriaveis, mais adicionei para deixar a função mais aberta outros cenaŕios.
+gasolina = 5.0  # Mesmo caso da váriavel acima.
+
+calculo_gastos_com_viagem(cidade_viagem=cidade,
+                          quantidade_dias=dias,
+                          consumo_carro=consumo_carro,
+                          valor_gasolina=gasolina)
  
 # Questão 10
 # Você iniciou um estágio em uma empresa que trabalha com processamento de
