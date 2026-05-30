@@ -15,14 +15,14 @@
 # "A lista possui [tam] números em que o maior número é [maior] e o menor
 #  número é [menor]. A soma dos valores pares presentes nela é igual a [soma]"
 
-# Meu racíocinio:
+# Meu raciocínio:
 # 1. Descobrir o tamanho da lista, resumidamente, quantos valores tem a lista.
 # 2. Descobrir o maior valor da lista e menor valor. (max() e min())
 # 3. Somar todos os valores que a lista contém.
 # 4. Colocar todas as respostas em váriaveis, sendo: tam, maior, menor e soma.
 # 5. Exibir no print.
 
-lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+lista: list = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
 
 tam = len(lista)
 maior = max(lista)
@@ -46,7 +46,7 @@ print(f"A lista possui {tam} números em que o maior número é {maior} e o meno
 # [...]
 # 7 x 10 = 70
   
-# Meu racíocinio:
+# Meu raciocínio:
 # 1. Criar uma função que receba um número como parâmetro, de preferência int.
 # 2. O exercício não pede nada relacionado a retorno, ou se iremos precisar da resposta, 
 # então apenas fazemos os prints para sinalizar os resultados.
@@ -65,7 +65,7 @@ def tabuada(numero: int):
     print(f"{numero} x 9 = {numero * 9}")
     print(f"{numero} x 10 = {numero * 10}")
 
-numero = 4
+numero: int = 4
 tabuada(4)
 
 # Questão 3
@@ -74,20 +74,20 @@ tabuada(4)
 #
 # Utilize o return na função e salve a nova lista na variável mult_3.
  
-# Meu racíocinio:
+# Meu raciocínio:
 # 1. Criar uma função que receba um parâmetro sendo a iterável list.
 # 2. Criação de uma lista vázia, sendo a lista que futuramente será populada com os valores múltiplos por 3.
 # 3. Individualizar cada elemento da lista.
 # 4. Após a individualização, fazer uma condição, sendo: Se número da lista dividido por 3 resultar em resto 0, adicionar este número na lista.
 # 5. O retorno da função deve ser a lista.
 
-lista_valores_numericos = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+lista_valores_numericos: list = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
 
 def multiplo_3(lista_de_valores_numericos: list[int]):
     lista_multiplo_3 = []
     for numero in lista_de_valores_numericos:
-        if numero % 3 == 0:
-            lista_multiplo_3.append(numero)
+        if numero % 3 == 0:     # Se resultado que for armazenado em numero for maior que zero, executa o bloco.
+            lista_multiplo_3.append(numero) # Adicionamos os números que passamos pelo filtro.
     
     return lista_multiplo_3
 
@@ -101,7 +101,7 @@ print(mult_3)
 # Lembre-se de utilizar as funções lambda e map() para calcular
 # o quadrado de cada elemento da lista.
  
-lista_quadrados = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+lista_quadrados: int = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 quadrado_numero = map(lambda numero: numero ** 2, lista_quadrados)  # map() para permitir o lambda lidar com iteráveis.
 # Quando queremos fazer algo relacionado a potência em Python utilzamos: '**'.
@@ -125,18 +125,18 @@ print(list(quadrado_numero))    # list() para vermos o nosso resultado.
 # Retorne a média para apresentar o texto:
 # "Nota da manobra: [media]"
  
-# Meu racíocinio:
+# Meu raciocínio:
 # 1. Receber 5 váriaveis que contém valores númericos, que representa as notas.
 # 2. Adicionar as notas em uma lista vázia.
 # 3. Dentre as 5 notas, excluir a maior nota e a menor. (max() e min())
 # 4. Fazer uma média com as notas que sobraram.
 # 5. Retornar a váriavel que possui o valor de média.
 
-nota_1 = int(input("Digite sua primeira nota: "))
-nota_2 = int(input("Digite sua segunda nota: "))
-nota_3 = int(input("Digite sua terceira nota: "))
-nota_4 = int(input("Digite sua quarta nota: "))
-nota_5 = int(input("Digite sua quinta nota: "))
+nota_1: int = int(input("Digite sua primeira nota: "))
+nota_2: int = int(input("Digite sua segunda nota: "))
+nota_3: int = int(input("Digite sua terceira nota: "))
+nota_4: int = int(input("Digite sua quarta nota: "))
+nota_5: int = int(input("Digite sua quinta nota: "))
 
 def nota_skatista(n1: int, n2: int, n3: int, n4: int, n5: int):
     lista_notas = [n1, n2, n3, n4, n5]
@@ -176,7 +176,7 @@ def media_estudante(notas_estudante: list):
         print(f"O(a) estudante obteve uma media de {media}, com a sua maior nota de {maior_nota} pontos e a menor nota de {menor_nota} pontos e foi {situacao}!")
 
 
-lista_notas = [3, 5, 4, 4]
+lista_notas: list = [3, 5, 4, 4]
 media_estudante(lista_notas) 
 
 # Questão 7
@@ -193,7 +193,7 @@ media_estudante(lista_notas)
 # Dica: Utilize a função map para mapear os nomes e sobrenomes
 # e as funções de string para tratar o texto.
  
-# Meu racíocinio:
+# Meu raciocínio:
 # 1. Individualizar nome por nome e sobrenome, e colocar todos em lower().
 # 2. Obter a primeira letra de cada nome e sobrenome e adicionar upper().
 # 3. Após estiverem manipulados e corretos, concatenar em formato Nome Sobrenome. (Com map())
@@ -204,8 +204,8 @@ media_estudante(lista_notas)
 
 # 1. List Comprehension
 
-nomes = ["joão", "MaRia", "JOSÉ"]
-sobrenomes = ["SILVA", "souza", "Tavares"]
+nomes: list = ["joão", "MaRia", "JOSÉ"]
+sobrenomes: list = ["SILVA", "souza", "Tavares"]
 
 
 nomes = [nome[:1].upper() + nome[1:].lower() for nome in nomes]
@@ -221,8 +221,8 @@ print(list(nome_sobrenome))
 
 # 2. Função lambda + map()
 
-nomes = ["joão", "MaRia", "JOSÉ"]
-sobrenomes = ["SILVA", "souza", "Tavares"]
+nomes: list = ["joão", "MaRia", "JOSÉ"]
+sobrenomes: list = ["SILVA", "souza", "Tavares"]
 
 nomes_corretos = map(lambda nome: nome[:1].upper() + nome[1:].lower(), nomes)
     # Explicando um pouco sobre o código, uma string podemos trata-la com index.
@@ -260,8 +260,61 @@ print(list(nome_sobrenome))
 #
 # Provável texto exibido:
 # "A pontuação do time foi de [pontos] e seu aproveitamento foi de [aprov]%"
- 
 
+# Meu raciocínio:
+# 1. Criar uma função que recebe duas listas de inteiros como parâmetros.
+# 2. Regras de négocio:
+    # "Regras de Neǵocio": Vitoria = 3.
+    # "Regras de Neǵocio": Empate = 1.
+    # "Regras de Neǵocio": Vitoria = 0.
+    # "Regras de Neǵocio": Se gol marcado for maior que gol sofrido, o time venceu.
+    # "Regras de Neǵocio": Se gol marcado for menor que gol sofrido, time perdeu.
+    # "Regras de Neǵocio": Se a quantidade de gol sofrido e gol marcado for a mesma, houve empate.
+
+# 3. Descobrir a quantidade total de pontos que o time obteve no campeonato.
+    # Criar uma váriavel de pontos para ser populada com dados. Começando o loop com valor = 0, 
+    # porém a medida que condições forem atendidas, pontos vão subindo. Caso vitoria + 3, caso empate + 1.
+    # Para isso, precisamos comparar cada valor númerico individualmente, porém entre duas listas.
+
+# 4. Para descobrir o aproveitamento em porcetagem:
+    # Cada valor númerico dentro da lista, significa uma partida. Ex: index 1 das duas listas, é igual uma partida no campeonato.
+    # Para o calculo a lógica é: Quantidade de Pontos do Time Dividido Pela Quantidade Total Que Eles Poderiam Ter Feito. 
+    # Formúla em Python: (len(gols_marcados)). Recebemos valor e fazemos: vitoria * resultado de len().
+    # Após obtermos um resultado na lógica acima, armazenar em uma váriavel e dividir a quantidade de pontos do time
+    # pelo valor obtido.
+
+
+ 
+gols_marcados = [2, 1, 3, 1, 0]
+gols_sofridos = [1, 2, 2, 1, 3]
+
+def calculo_pontos(gols_marcados: list[int], gols_sofridos: list[int]):
+    pontos = 0
+
+    for marcado, sofrido in zip(gols_marcados, gols_sofridos):
+    # Uma leve introdução ao zip(). Basicamente o zip() nos permite trabalhar com dois iteráveis em um único FOR.
+    # Bem resumidamente, ele cria um par entre os iteráveis fornecidos, sendo pela sequẽncia no qual estão impostos dentro da estrutura de dados.
+    # Se for lista, index 1 com index 1, se for dicionário chave 1 com chave 1. Não precisa necessariamente ser 
+    # dois iteráveis iguais, mas a lógica de par é a mesma. Ex: Lista index 1, Dicionário Chave 1.
+    # Uma observação, é que ele não possuí um limite de parâmetros, e segue o número de parâmetros que você impôs no For.
+        if marcado > sofrido:
+            pontos += 3
+        if marcado == sofrido:
+            pontos += 1
+
+# Não adicionei nada relacionado a derrota, pois isso iria mais poluir a organização do código, a lógica é clara, se for derrota não acontece nada pois é zero da mesma forma.
+
+
+    maior_pontuacao = 3 * len(gols_marcados)  
+    # Aqui o número é 3, pois se queremos descobrir a maior pontuação que o time
+    # poderia ter feito, ele teria ganhado todas as partidas.
+
+    aproveitamento = pontos / maior_pontuacao
+
+    print(f"A pontuação do time foi de {pontos} e seu aproveitamento foi de {round(aproveitamento, 2)}%")
+
+calculo_pontos(gols_marcados, gols_sofridos) 
+    
  
 # Questão 9
 # Você recebeu o desafio de criar um código que calcula os gastos de uma viagem
