@@ -101,6 +101,13 @@ print(mult_3)
 # Lembre-se de utilizar as funções lambda e map() para calcular
 # o quadrado de cada elemento da lista.
  
+lista_quadrados = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+quadrado_numero = map(lambda numero: numero ** 2, lista_quadrados)  # map() para permitir o lambda lidar com iteráveis.
+# Quando queremos fazer algo relacionado a potência em Python utilzamos: '**'.
+# Após o operador, precisamos dizer qual o valor númerico que será a potência da váriavel. Na nossa situação sendo ao quadrado (potência 2).
+
+print(list(quadrado_numero))    # list() para vermos o nosso resultado.
 
 # -------------------------------------------------------------
 # APLICANDO A PROJETOS
