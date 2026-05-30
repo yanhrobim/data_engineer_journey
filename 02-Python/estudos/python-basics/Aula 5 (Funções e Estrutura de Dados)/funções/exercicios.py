@@ -105,7 +105,7 @@ def multiplo_3(lista_de_valores_numericos: list[int]):
     return lista_multiplo_3
 
 mult_3 = multiplo_3(lista_valores_numericos)
-print(f"Os valores múltiplos por 3 dentre os valores númericos passados na lista são: {mult_3}")
+print(f"Os valores múltiplos por 3 dentre os valores númericos passados na lis são: {mult_3}")
 
 # Questão 4
 # Crie uma lista dos quadrados dos números da seguinte lista:
@@ -121,6 +121,10 @@ quadrado_numero = map(lambda numero: numero ** 2, lista_quadrados)  # map() para
 # Após o operador, precisamos dizer qual o valor númerico que será a potência da váriavel. Na nossa situação sendo ao quadrado (potência 2).
 
 print(list(quadrado_numero))    # list() para vermos o nosso resultado.
+
+# Resposta:
+
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
 # -------------------------------------------------------------
 # APLICANDO A PROJETOS
