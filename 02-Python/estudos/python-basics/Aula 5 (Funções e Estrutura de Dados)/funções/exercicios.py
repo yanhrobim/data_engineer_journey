@@ -29,20 +29,44 @@ maior = max(lista)
 menor = min(lista)
 soma_valores = sum(lista)
 
-print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}") 
+print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}.") 
+
+# Resposta:
+# A lista possui 17 números em que o maior número é 99 e o menor número é 11. A soma dos valores pares presentes nela é igual a 743.
 
 # Questão 2
 # Escreva uma função que gere a tabuada de um número inteiro de 1 a 10,
 # de acordo com a escolha da pessoa usuária.
 # Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:
+
 #
 # Tabuada do 7:
 # 7 x 0 = 0
 # 7 x 1 = 7
 # [...]
 # 7 x 10 = 70
- 
- 
+  
+# Meu racíocinio:
+# 1. Criar uma função que receba um número como parâmetro, de preferência int.
+# 2. O exercício não pede nada relacionado a retorno, ou se iremos precisar da resposta, 
+# então apenas fazemos os prints para sinalizar os resultados.
+
+
+def tabuada(numero: int):
+    print(f"{numero} x 0 = {numero * 0}")
+    print(f"{numero} x 1 = {numero * 1}")
+    print(f"{numero} x 2 = {numero * 2}")
+    print(f"{numero} x 3 = {numero * 3}")
+    print(f"{numero} x 4 = {numero * 4}")
+    print(f"{numero} x 5 = {numero * 5}")
+    print(f"{numero} x 6 = {numero * 6}")
+    print(f"{numero} x 7 = {numero * 7}")
+    print(f"{numero} x 8 = {numero * 8}")
+    print(f"{numero} x 9 = {numero * 9}")
+    print(f"{numero} x 10 = {numero * 10}")
+
+numero = 4
+tabuada(4)
 
 # Questão 3
 # Crie uma função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
