@@ -356,18 +356,18 @@ calculo_pontos(gols_marcados, gols_sofridos)
 # 6. Todas as funções devem retornar uma váriavel contendo um valor númerico que significa os gastos e no final,
 # somar todos os gastos e devolver o print.
 
-def gastos_hotel(quantidade_dias: int):
+def gastos_hotel(quantidade_dias: float):
     
     gastos_com_hotel = 150.00 * quantidade_dias
     return gastos_com_hotel
 
 def gastos_gasolina(cidade_viagem: str, consumo_carro: float, valor_gasolina: float):
     
-    cidades = ["Salvador", "Fortaleza", "Natal", "Aracaju"] # Estas são as cidades que podemos viajar.
+    cidades: list = ["Salvador", "Fortaleza", "Natal", "Aracaju"] # Estas são as cidades que podemos viajar.
     
-    distancias = [850, 800, 300, 550]   # Estas são as distâncias de cada cidade, nessa lista o index 0 é a distância da primeira cidade da lista de cidades, assim por diante.
+    distancias: list = [850, 800, 300, 550]   # Estas são as distâncias de cada cidade, nessa lista o index 0 é a distância da primeira cidade da lista de cidades, assim por diante.
     
-    cidade_user_index = cidades.index(cidade_viagem)    # Aqui descobrimos a posição/index que a cidade escolhida de viagem está na lista.
+    cidade_user_index = cidades.index(cidade_viagem.strip().replace(" ", ""))    # Aqui descobrimos a posição/index que a cidade escolhida de viagem está na lista.
                                                     # Ex: Salvador retornaria 0.
     cidade_distancia =  list(zip(cidades, distancias))  
     # Tendo em vista, que na lista de cidade cada posição significa uma distância na lista de distância,
@@ -389,9 +389,9 @@ def gastos_gasolina(cidade_viagem: str, consumo_carro: float, valor_gasolina: fl
 
 def gastos_passeio(cidade_viagem: str, quantidade_dias: int):
 
-    cidades = ["Salvador", "Fortaleza", "Natal", "Aracaju"]
+    cidades: list = ["Salvador", "Fortaleza", "Natal", "Aracaju"]
 
-    lazer_valores = [200, 400, 250, 300]
+    lazer_valores: list = [200, 400, 250, 300]
 
     cidade_user_index = cidades.index(cidade_viagem)
 
@@ -414,15 +414,15 @@ def calculo_gastos_com_viagem(cidade_viagem: str,
     gasto_total = gastos_com_hotel + gastos_com_gasolina + gastos_com_passeio
     print(f"Com base nos gastos definidos, uma viagem de {dias} dias para a cidade de {cidade} saindo de Recife custaria {round(gasto_total, 2)} reais")
 
-cidade = "Salvador"
-dias = 3
-consumo_carro = 14  # O exercício não pede estas váriaveis, mais adicionei para deixar a função mais aberta outros cenaŕios.
-gasolina = 5.0  # Mesmo caso da váriavel acima.
+cidade = input("Qual a cidade que você deseja ir? Escolha entre: [Salvador, Fortaleza, Natal, Aracaju] ")
+dias: int = input("Quantos diárias você pretende ter? ")
+consumo_carro: float = input("Quantos Km seu carro corre para gastar 1 litro? ")  # O exercício não pede estas váriaveis, mais adicionei para deixar a função mais aberta outros cenaŕios.
+gasolina: float = input("Qual o valor da gasolina? ")  # Mesmo caso da váriavel acima.
 
 calculo_gastos_com_viagem(cidade_viagem=cidade,
-                          quantidade_dias=dias,
-                          consumo_carro=consumo_carro,
-                          valor_gasolina=gasolina)
+                          quantidade_dias=int(dias),
+                          consumo_carro=float(consumo_carro),
+                          valor_gasolina=float(gasolina))
  
 # Questão 10
 # Você iniciou um estágio em uma empresa que trabalha com processamento de
