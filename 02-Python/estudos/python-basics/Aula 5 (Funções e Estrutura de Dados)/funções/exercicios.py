@@ -162,8 +162,22 @@ print(f"Nota da manobra: {nota_final_skatista}")
 # Para testar o comportamento da função, os dados podem ser exibidos em um texto:
 # "O(a) estudante obteve uma media de [media], com a sua maior nota de [maior]
 #  pontos e a menor nota de [menor] pontos e foi [situacao]"
- 
- 
+
+def media_estudante(notas_estudante: list):
+    maior_nota = max(notas_estudante)
+    menor_nota = min(notas_estudante)
+    media = sum(notas_estudante) / len(notas_estudante)
+
+    if media >= 5:
+        situacao = "Aprovado(a)"
+        print(f"O(a) estudante obteve uma media de {media}, com a sua maior nota de {maior_nota} pontos e a menor nota de {menor_nota} pontos e foi {situacao}!")
+    else:
+        situacao = "Reprovado(a)"
+        print(f"O(a) estudante obteve uma media de {media}, com a sua maior nota de {maior_nota} pontos e a menor nota de {menor_nota} pontos e foi {situacao}!")
+
+
+lista_notas = [3, 5, 4, 4]
+media_estudante(lista_notas) 
 
 # Questão 7
 # Você recebeu uma demanda para tratar 2 listas com os nomes e sobrenomes de cada
