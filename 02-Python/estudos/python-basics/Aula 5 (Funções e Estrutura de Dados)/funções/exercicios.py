@@ -74,7 +74,25 @@ tabuada(4)
 #
 # Utilize o return na função e salve a nova lista na variável mult_3.
  
- 
+# Meu racíocinio:
+# 1. Criar uma função que receba um parâmetro sendo a iterável list.
+# 2. Criação de uma lista vázia, sendo a lista que futuramente será populada com os valores múltiplos por 3.
+# 3. Individualizar cada elemento da lista.
+# 4. Após a individualização, fazer uma condição, sendo: Se número da lista dividido por 3 resultar em resto 0, adicionar este número na lista.
+# 5. O retorno da função deve ser a lista.
+
+lista_valores_numericos = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+
+def multiplo_3(lista_de_valores_numericos: list[int]):
+    lista_multiplo_3 = []
+    for numero in lista_de_valores_numericos:
+        if numero % 3 == 0:
+            lista_multiplo_3.append(numero)
+    
+    return lista_multiplo_3
+
+mult_3 = multiplo_3(lista_valores_numericos)
+print(mult_3)
 
 # Questão 4
 # Crie uma lista dos quadrados dos números da seguinte lista:
@@ -82,7 +100,6 @@ tabuada(4)
 #
 # Lembre-se de utilizar as funções lambda e map() para calcular
 # o quadrado de cada elemento da lista.
- 
  
 
 # -------------------------------------------------------------
