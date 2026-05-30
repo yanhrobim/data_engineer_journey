@@ -15,8 +15,22 @@
 # "A lista possui [tam] números em que o maior número é [maior] e o menor
 #  número é [menor]. A soma dos valores pares presentes nela é igual a [soma]"
 
- 
- 
+# Meu racíocinio:
+# 1. Descobrir o tamanho da lista, resumidamente, quantos valores tem a lista.
+# 2. Descobrir o maior valor da lista e menor valor. (max() e min())
+# 3. Somar todos os valores que a lista contém.
+# 4. Colocar todas as respostas em váriaveis, sendo: tam, maior, menor e soma.
+# 5. Exibir no print.
+
+lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+
+tam = len(lista)
+maior = max(lista)
+menor = min(lista)
+soma_valores = sum(lista)
+
+print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}") 
+
 # Questão 2
 # Escreva uma função que gere a tabuada de um número inteiro de 1 a 10,
 # de acordo com a escolha da pessoa usuária.
