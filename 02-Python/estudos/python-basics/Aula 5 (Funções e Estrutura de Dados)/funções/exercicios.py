@@ -1,0 +1,160 @@
+# =============================================================
+# HORA DA PRÁTICA - Funções
+# =============================================================
+
+
+# Questão 1
+# Escreva um código que lê a lista abaixo e faça:
+# lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+#
+# - A leitura do tamanho da lista
+# - A leitura do maior e menor valor
+# - A soma dos valores da lista
+#
+# Ao final exiba uma mensagem dizendo:
+# "A lista possui [tam] números em que o maior número é [maior] e o menor
+#  número é [menor]. A soma dos valores pares presentes nela é igual a [soma]"
+
+ 
+ 
+# Questão 2
+# Escreva uma função que gere a tabuada de um número inteiro de 1 a 10,
+# de acordo com a escolha da pessoa usuária.
+# Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:
+#
+# Tabuada do 7:
+# 7 x 0 = 0
+# 7 x 1 = 7
+# [...]
+# 7 x 10 = 70
+ 
+ 
+
+# Questão 3
+# Crie uma função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
+# [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+#
+# Utilize o return na função e salve a nova lista na variável mult_3.
+ 
+ 
+
+# Questão 4
+# Crie uma lista dos quadrados dos números da seguinte lista:
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+# Lembre-se de utilizar as funções lambda e map() para calcular
+# o quadrado de cada elemento da lista.
+ 
+ 
+
+# -------------------------------------------------------------
+# APLICANDO A PROJETOS
+# -------------------------------------------------------------
+ 
+# Questão 5
+# Você foi contratado(a) como cientista de dados de uma associação de skate.
+# Para analisar as notas recebidas dos(as) skatistas em algumas competições
+# ao longo do ano, você precisa criar um código que calcula a pontuação dos(as) atletas.
+# Para isso, o seu código deve receber 5 notas digitadas pelas pessoas juradas.
+#
+# Para calcular a pontuação de um(a) skatista, você precisa eliminar a maior
+# e a menor pontuação dentre as 5 notas e tirar a média das 3 notas que sobraram.
+#
+# Retorne a média para apresentar o texto:
+# "Nota da manobra: [media]"
+ 
+ 
+
+# Questão 6
+# Para atender a uma demanda de uma instituição de ensino para a análise do
+# desempenho de seus(suas) estudantes, você precisa criar uma função que receba
+# uma lista de 4 notas e retorne:
+# - maior nota
+# - menor nota
+# - média
+# - situação (Aprovado(a) ou Reprovado(a))
+#
+# Para testar o comportamento da função, os dados podem ser exibidos em um texto:
+# "O(a) estudante obteve uma media de [media], com a sua maior nota de [maior]
+#  pontos e a menor nota de [menor] pontos e foi [situacao]"
+ 
+ 
+
+# Questão 7
+# Você recebeu uma demanda para tratar 2 listas com os nomes e sobrenomes de cada
+# estudante concatenando-as para apresentar seus nomes completos na forma "Nome Sobrenome".
+#
+# As listas são:
+# nomes = ["joão", "MaRia", "JOSÉ"]
+# sobrenomes = ["SILVA", "souza", "Tavares"]
+#
+# O texto exibido ao fim deve ser parecido com:
+# "Nome completo: Ana Silva"
+#
+# Dica: Utilize a função map para mapear os nomes e sobrenomes
+# e as funções de string para tratar o texto.
+ 
+ 
+
+# Questão 8
+# Como cientista de dados em um time de futebol, você precisa implementar novas
+# formas de coleta de dados sobre o desempenho de jogadores e do time como um todo.
+#
+# Escreva uma função chamada calcula_pontos que recebe como parâmetros duas listas
+# de números inteiros, representando os gols marcados e sofridos pelo time em cada
+# partida do campeonato.
+#
+# A função deve retornar a pontuação do time e o aproveitamento em percentual,
+# levando em consideração que:
+# - Vitória vale 3 pontos
+# - Empate vale 1 ponto
+# - Derrota vale 0 pontos
+#
+# Para calcular o aproveitamento: razão entre a pontuação do time
+# pela pontuação máxima que ele poderia receber.
+#
+# Para teste, utilize:
+# gols_marcados = [2, 1, 3, 1, 0]
+# gols_sofridos = [1, 2, 2, 1, 3]
+#
+# Provável texto exibido:
+# "A pontuação do time foi de [pontos] e seu aproveitamento foi de [aprov]%"
+ 
+
+ 
+# Questão 9
+# Você recebeu o desafio de criar um código que calcula os gastos de uma viagem
+# para uma das quatro cidades partindo de Recife:
+# Salvador, Fortaleza, Natal e Aracaju.
+#
+# - Custo da diária do hotel: R$ 150,00 (todas as cidades)
+# - Consumo do carro: 14 km/l
+# - Valor da gasolina: R$ 5,00 o litro
+# - Gastos com passeios e alimentação por dia: [200, 400, 250, 300] (respectivamente)
+# - Distâncias de Recife até cada cidade: [850, 800, 300, 550] km
+#
+# Crie três funções:
+# - gasto_hotel: calcula os gastos com hotel
+# - gasto_gasolina: calcula os gastos com gasolina
+# - gasto_passeio: calcula os gastos com passeio e alimentação
+#
+# Para testar, simule uma viagem de 3 dias para Salvador partindo de Recife.
+# Considere a viagem de ida e volta de carro.
+#
+# "Com base nos gastos definidos, uma viagem de [dias] dias para [cidade]
+#  saindo de Recife custaria [gastos] reais"
+ 
+
+ 
+# Questão 10
+# Você iniciou um estágio em uma empresa que trabalha com processamento de
+# linguagem natural (NLP). Sua líder requisitou que você criasse um trecho de
+# código que recebe uma frase digitada pela pessoa usuária e filtre apenas as
+# palavras com tamanho maior ou igual a 5, exibindo-as em uma lista.
+#
+# Dica: utilize as funções lambda e filter() para filtrar essas palavras.
+# Para tratar a frase use replace() para trocar ',' '.' '!' e '?' por espaço.
+# https://docs.python.org/pt-br/3/library/functions.html#filter
+#
+# Use a frase "Aprender Python aqui na Alura é muito bom" para testar o código.
+ 
