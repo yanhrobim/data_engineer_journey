@@ -441,7 +441,6 @@
 # 2. Utilizar o método split() para separar as palavras da frase e individualizar todas as palavras.
 # 3. Adicionar uma condição, com len, onde len(palavra) deve retornar maior que 5.
 # 4. Adicionar as palavras que possuem tamanho maior ou igual a 5.
-# 
 
 frase =  "Aprender Python aqui na Alura é muito bom"
 palavras = frase.split()
