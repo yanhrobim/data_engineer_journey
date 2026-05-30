@@ -29,7 +29,7 @@ maior = max(lista)
 menor = min(lista)
 soma_valores = sum(lista)
 
-print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}.") 
+print(f"A lista possui {tam} números em que, o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}.") 
 
 # Resposta:
 # A lista possui 17 números em que o maior número é 99 e o menor número é 11. A soma dos valores pares presentes nela é igual a 743.
@@ -68,6 +68,19 @@ def tabuada(numero: int):
 numero: int = 4
 tabuada(4)
 
+# Resposta de Exemplo:
+# 4 x 0 = 0
+# 4 x 1 = 4
+# 4 x 2 = 8
+# 4 x 3 = 12
+# 4 x 4 = 16
+# 4 x 5 = 20
+# 4 x 6 = 24
+# 4 x 7 = 28
+# 4 x 8 = 32
+# 4 x 9 = 36
+# 4 x 10 = 40
+
 # Questão 3
 # Crie uma função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
 # [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
@@ -92,7 +105,7 @@ def multiplo_3(lista_de_valores_numericos: list[int]):
     return lista_multiplo_3
 
 mult_3 = multiplo_3(lista_valores_numericos)
-print(mult_3)
+print(f"Os valores múltiplos por 3 dentre os valores númericos passados na lista são: {mult_3}")
 
 # Questão 4
 # Crie uma lista dos quadrados dos números da seguinte lista:
