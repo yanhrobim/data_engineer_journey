@@ -193,7 +193,49 @@ media_estudante(lista_notas)
 # Dica: Utilize a função map para mapear os nomes e sobrenomes
 # e as funções de string para tratar o texto.
  
- 
+# Meu racíocinio:
+# 1. Individualizar nome por nome e sobrenome, e colocar todos em lower().
+# 2. Obter a primeira letra de cada nome e sobrenome e adicionar upper().
+# 3. Após estiverem manipulados e corretos, concatenar em formato Nome Sobrenome. (Com map())
+
+# OBS: A medida que fui desenvolvendo a solução, descobri dois métodos para a solução da questão.
+# Sendo 1 solução com list comprehension + lambda e map() e outra utilizando função lambda e map() três vezes.
+
+
+# 1. List Comprehension
+
+nomes = ["joão", "MaRia", "JOSÉ"]
+sobrenomes = ["SILVA", "souza", "Tavares"]
+
+
+nomes = [nome[:1].upper() + nome[1:].lower() for nome in nomes]
+    # Explicando um pouco sobre o código, uma string podemos trata-la com index.
+    # Quando fazemos [:1] significa que queremos pegar a primeira letra de uma string, faço isso e entrego ela ao upper() para deixa-la em maiúsculo.
+    # Quando fazemos [1:] significa que queremos ter tudo aquilo apartir do index 1. Ou seja, apagamos a primeira letra de cada nome.
+    # Como fim, concatenamos as strings manipuladas.
+
+sobrenomes = [sobrenome[:1].upper() + sobrenome[1:].lower() for sobrenome in sobrenomes]
+
+nome_sobrenome = map(lambda nome, sobrenome: nome + " " + sobrenome, nomes, sobrenomes)
+print(list(nome_sobrenome))
+
+# 2. Função lambda + map()
+
+nomes = ["joão", "MaRia", "JOSÉ"]
+sobrenomes = ["SILVA", "souza", "Tavares"]
+
+nomes_corretos = map(lambda nome: nome[:1].upper() + nome[1:].lower(), nomes)
+    # Explicando um pouco sobre o código, uma string podemos trata-la com index.
+    # Quando fazemos [:1] significa que queremos pegar a primeira letra de uma string, faço isso e entrego ela ao upper() para deixa-la em maiúsculo.
+    # Quando fazemos [1:] significa que queremos ter tudo aquilo apartir do index 1. Ou seja, apagamos a primeira letra de cada nome.
+    # Como fim, concatenamos as strings manipuladas.
+
+sobrenomes_corretos = map(lambda sobrenome: sobrenome[:1].upper() + sobrenome[1:].lower(), sobrenomes)
+
+nome_sobrenome = map(lambda nome, sobrenome: nome + " " + sobrenome, nomes_corretos, sobrenomes_corretos)
+
+print(list(nome_sobrenome))
+
 
 # Questão 8
 # Como cientista de dados em um time de futebol, você precisa implementar novas
