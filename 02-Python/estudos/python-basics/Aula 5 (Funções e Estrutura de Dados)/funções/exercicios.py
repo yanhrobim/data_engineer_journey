@@ -1,113 +1,113 @@
-# =============================================================
-# HORA DA PRÁTICA - Funções
-# =============================================================
+# # =============================================================
+# # HORA DA PRÁTICA - Funções
+# # =============================================================
 
 
-# Questão 1
-# Escreva um código que lê a lista abaixo e faça:
+# # Questão 1
+# # Escreva um código que lê a lista abaixo e faça:
+# # lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+# #
+# # - A leitura do tamanho da lista
+# # - A leitura do maior e menor valor
+# # - A soma dos valores da lista
+# #
+# # Ao final exiba uma mensagem dizendo:
+# # "A lista possui [tam] números em que o maior número é [maior] e o menor
+# #  número é [menor]. A soma dos valores pares presentes nela é igual a [soma]"
+
+# # Meu racíocinio:
+# # 1. Descobrir o tamanho da lista, resumidamente, quantos valores tem a lista.
+# # 2. Descobrir o maior valor da lista e menor valor. (max() e min())
+# # 3. Somar todos os valores que a lista contém.
+# # 4. Colocar todas as respostas em váriaveis, sendo: tam, maior, menor e soma.
+# # 5. Exibir no print.
+
 # lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
-#
-# - A leitura do tamanho da lista
-# - A leitura do maior e menor valor
-# - A soma dos valores da lista
-#
-# Ao final exiba uma mensagem dizendo:
-# "A lista possui [tam] números em que o maior número é [maior] e o menor
-#  número é [menor]. A soma dos valores pares presentes nela é igual a [soma]"
 
-# Meu racíocinio:
-# 1. Descobrir o tamanho da lista, resumidamente, quantos valores tem a lista.
-# 2. Descobrir o maior valor da lista e menor valor. (max() e min())
-# 3. Somar todos os valores que a lista contém.
-# 4. Colocar todas as respostas em váriaveis, sendo: tam, maior, menor e soma.
-# 5. Exibir no print.
+# tam = len(lista)
+# maior = max(lista)
+# menor = min(lista)
+# soma_valores = sum(lista)
 
-lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]
+# print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}.") 
 
-tam = len(lista)
-maior = max(lista)
-menor = min(lista)
-soma_valores = sum(lista)
+# # Resposta:
+# # A lista possui 17 números em que o maior número é 99 e o menor número é 11. A soma dos valores pares presentes nela é igual a 743.
 
-print(f"A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma_valores}.") 
+# # Questão 2
+# # Escreva uma função que gere a tabuada de um número inteiro de 1 a 10,
+# # de acordo com a escolha da pessoa usuária.
+# # Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:
 
-# Resposta:
-# A lista possui 17 números em que o maior número é 99 e o menor número é 11. A soma dos valores pares presentes nela é igual a 743.
-
-# Questão 2
-# Escreva uma função que gere a tabuada de um número inteiro de 1 a 10,
-# de acordo com a escolha da pessoa usuária.
-# Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:
-
-#
-# Tabuada do 7:
-# 7 x 0 = 0
-# 7 x 1 = 7
-# [...]
-# 7 x 10 = 70
+# #
+# # Tabuada do 7:
+# # 7 x 0 = 0
+# # 7 x 1 = 7
+# # [...]
+# # 7 x 10 = 70
   
-# Meu racíocinio:
-# 1. Criar uma função que receba um número como parâmetro, de preferência int.
-# 2. O exercício não pede nada relacionado a retorno, ou se iremos precisar da resposta, 
-# então apenas fazemos os prints para sinalizar os resultados.
+# # Meu racíocinio:
+# # 1. Criar uma função que receba um número como parâmetro, de preferência int.
+# # 2. O exercício não pede nada relacionado a retorno, ou se iremos precisar da resposta, 
+# # então apenas fazemos os prints para sinalizar os resultados.
 
 
-def tabuada(numero: int):
-    print(f"{numero} x 0 = {numero * 0}")
-    print(f"{numero} x 1 = {numero * 1}")
-    print(f"{numero} x 2 = {numero * 2}")
-    print(f"{numero} x 3 = {numero * 3}")
-    print(f"{numero} x 4 = {numero * 4}")
-    print(f"{numero} x 5 = {numero * 5}")
-    print(f"{numero} x 6 = {numero * 6}")
-    print(f"{numero} x 7 = {numero * 7}")
-    print(f"{numero} x 8 = {numero * 8}")
-    print(f"{numero} x 9 = {numero * 9}")
-    print(f"{numero} x 10 = {numero * 10}")
+# def tabuada(numero: int):
+#     print(f"{numero} x 0 = {numero * 0}")
+#     print(f"{numero} x 1 = {numero * 1}")
+#     print(f"{numero} x 2 = {numero * 2}")
+#     print(f"{numero} x 3 = {numero * 3}")
+#     print(f"{numero} x 4 = {numero * 4}")
+#     print(f"{numero} x 5 = {numero * 5}")
+#     print(f"{numero} x 6 = {numero * 6}")
+#     print(f"{numero} x 7 = {numero * 7}")
+#     print(f"{numero} x 8 = {numero * 8}")
+#     print(f"{numero} x 9 = {numero * 9}")
+#     print(f"{numero} x 10 = {numero * 10}")
 
-numero = 4
-tabuada(4)
+# numero = 4
+# tabuada(4)
 
-# Questão 3
-# Crie uma função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
-# [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
-#
-# Utilize o return na função e salve a nova lista na variável mult_3.
+# # Questão 3
+# # Crie uma função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:
+# # [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+# #
+# # Utilize o return na função e salve a nova lista na variável mult_3.
  
-# Meu racíocinio:
-# 1. Criar uma função que receba um parâmetro sendo a iterável list.
-# 2. Criação de uma lista vázia, sendo a lista que futuramente será populada com os valores múltiplos por 3.
-# 3. Individualizar cada elemento da lista.
-# 4. Após a individualização, fazer uma condição, sendo: Se número da lista dividido por 3 resultar em resto 0, adicionar este número na lista.
-# 5. O retorno da função deve ser a lista.
+# # Meu racíocinio:
+# # 1. Criar uma função que receba um parâmetro sendo a iterável list.
+# # 2. Criação de uma lista vázia, sendo a lista que futuramente será populada com os valores múltiplos por 3.
+# # 3. Individualizar cada elemento da lista.
+# # 4. Após a individualização, fazer uma condição, sendo: Se número da lista dividido por 3 resultar em resto 0, adicionar este número na lista.
+# # 5. O retorno da função deve ser a lista.
 
-lista_valores_numericos = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
+# lista_valores_numericos = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]
 
-def multiplo_3(lista_de_valores_numericos: list[int]):
-    lista_multiplo_3 = []
-    for numero in lista_de_valores_numericos:
-        if numero % 3 == 0:
-            lista_multiplo_3.append(numero)
+# def multiplo_3(lista_de_valores_numericos: list[int]):
+#     lista_multiplo_3 = []
+#     for numero in lista_de_valores_numericos:
+#         if numero % 3 == 0:
+#             lista_multiplo_3.append(numero)
     
-    return lista_multiplo_3
+#     return lista_multiplo_3
 
-mult_3 = multiplo_3(lista_valores_numericos)
-print(mult_3)
+# mult_3 = multiplo_3(lista_valores_numericos)
+# print(mult_3)
 
-# Questão 4
-# Crie uma lista dos quadrados dos números da seguinte lista:
-# [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-#
-# Lembre-se de utilizar as funções lambda e map() para calcular
-# o quadrado de cada elemento da lista.
+# # Questão 4
+# # Crie uma lista dos quadrados dos números da seguinte lista:
+# # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# #
+# # Lembre-se de utilizar as funções lambda e map() para calcular
+# # o quadrado de cada elemento da lista.
  
-lista_quadrados = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# lista_quadrados = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-quadrado_numero = map(lambda numero: numero ** 2, lista_quadrados)  # map() para permitir o lambda lidar com iteráveis.
-# Quando queremos fazer algo relacionado a potência em Python utilzamos: '**'.
-# Após o operador, precisamos dizer qual o valor númerico que será a potência da váriavel. Na nossa situação sendo ao quadrado (potência 2).
+# quadrado_numero = map(lambda numero: numero ** 2, lista_quadrados)  # map() para permitir o lambda lidar com iteráveis.
+# # Quando queremos fazer algo relacionado a potência em Python utilzamos: '**'.
+# # Após o operador, precisamos dizer qual o valor númerico que será a potência da váriavel. Na nossa situação sendo ao quadrado (potência 2).
 
-print(list(quadrado_numero))    # list() para vermos o nosso resultado.
+# print(list(quadrado_numero))    # list() para vermos o nosso resultado.
 
 # -------------------------------------------------------------
 # APLICANDO A PROJETOS
@@ -125,7 +125,30 @@ print(list(quadrado_numero))    # list() para vermos o nosso resultado.
 # Retorne a média para apresentar o texto:
 # "Nota da manobra: [media]"
  
- 
+# Meu racíocinio:
+# 1. Receber 5 váriaveis que contém valores númericos, que representa as notas.
+# 2. Adicionar as notas em uma lista vázia.
+# 3. Dentre as 5 notas, excluir a maior nota e a menor. (max() e min())
+# 4. Fazer uma média com as notas que sobraram.
+# 5. Retornar a váriavel que possui o valor de média.
+
+nota_1 = int(input("Digite sua primeira nota: "))
+nota_2 = int(input("Digite sua segunda nota: "))
+nota_3 = int(input("Digite sua terceira nota: "))
+nota_4 = int(input("Digite sua quarta nota: "))
+nota_5 = int(input("Digite sua quinta nota: "))
+
+def nota_skatista(n1: int, n2: int, n3: int, n4: int, n5: int):
+    lista_notas = [n1, n2, n3, n4, n5]
+    maior_e_menor_nota = [max(lista_notas), min(lista_notas)]
+    lista_notas = [numero for numero in lista_notas if numero not in maior_e_menor_nota]
+    media_skatista = sum(lista_notas) / len(lista_notas)
+
+    return round(media_skatista, 2)
+
+nota_final_skatista = nota_skatista(nota_1, nota_2, nota_3, nota_4, nota_5)
+print(f"Nota da manobra: {nota_final_skatista}")
+
 
 # Questão 6
 # Para atender a uma demanda de uma instituição de ensino para a análise do
