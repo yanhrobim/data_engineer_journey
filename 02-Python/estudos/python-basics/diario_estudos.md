@@ -153,3 +153,4 @@ Principais Métodos Lista:
     - Funções são uma sequência de instruções que criamos em um bloco de código para executar tarefas específicas. Além disso, podem ser reutilzidas em diferentes partes do nosso código.
     - Funções lambdas não precisam ser definidas como fazemos com funções normais com o def, por isso muito chamda de funções anônimas, além disso ela pode ser definida apenas em uma linha de código.
         - O `map()` pode potencializar o lambda, fazendo com que possamos executar funções anônimas com o lambda em iteráveis. O map() é muito semelhante a um FOR, ele não é um loop, mas individualiza cada elemento de iteráveis para o lambda executar o que foi instruído.
+    - Nos exercícios tive uma leve introdução ao `zip()`, para a solução de um dos exercícios presentes.
