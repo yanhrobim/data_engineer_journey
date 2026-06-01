@@ -462,4 +462,4 @@ calculo_gastos_com_viagem(cidade_viagem=cidade,
 frase =  "Aprender Python aqui na Alura é muito bom"
 palavras = frase.split()
 lista_palavras = [palavra for palavra in palavras if len(palavra) >= 5]
-print(f"As palavras que possuem mais ou igual a 5 caracteres dentro da frase são: {lista_palavras}")
+print(lista_palavras)
