@@ -57,4 +57,27 @@ print(produtos)
 # =================
 #      TUPLAS
 # =================
+# São uma estrutura de dados imutáveis (Não podem conter alterações, remoções ou modificações após criadas.) para armazenar
+# vários itens em uma única variável, sendo frequentemente utilizadas para garantir que os dados não sejam
+# modificados.
 
+# 1. Exemplo: Colocando ID aos produtos na lista de listas.
+# O ID deve ser a primeira letra do produto + número de 0 a 999.
+
+import random
+
+ids = []
+
+def gerar_numeros():
+    numeros = random.randint(0, 999)
+    return numeros
+
+for produto in produtos:        # Fiz com a lista de listas 'produtos' com o objetivo para praticar mais com a estrutura.
+                                # Porém, o código também poderia ser feito com a lista 'nome_produto' e um range(len()).
+    if str(produto[0]).isalpha():
+        ids.append((produto[0], produto[0][0] + str(gerar_numeros())))
+
+print(ids)
+
+# Resposta:
+# [('Sorvete', 'S67'), ('Arroz', 'A783'), ('Feijão', 'F279'), ('Leite', 'L194'), ('Pão', 'P533')]
