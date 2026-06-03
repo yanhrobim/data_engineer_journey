@@ -77,7 +77,31 @@ for produto in produtos:        # Fiz com a lista de listas 'produtos' com o obj
     if str(produto[0]).isalpha():
         ids.append((produto[0], produto[0][0] + str(gerar_numeros())))
 
-print(ids)
+# ids[2][1] = "F245"  # Exemplo de linha de código que no mostra que os dados armazenados em tupla, não podem ser alterados, atualizados, ou removidos.
+# O erro gerado:
+# TypeError: 'tuple' object does not support item assignment
 
 # Resposta:
 # [('Sorvete', 'S67'), ('Arroz', 'A783'), ('Feijão', 'F279'), ('Leite', 'L194'), ('Pão', 'P533')]
+
+
+# ===========================
+#     LIST COMPREHENSION
+# ===========================
+# Uma List Comprehension não é uma estrutura de dados necessariamente, e sim uma sintaxe para criar uma lista normal porém seguindo padrões.
+# Não deixa de ser uma lista normal, porém é criada seguindo alguns padrões como de loops for, condições if-else. 
+# Além disso, List Comprehension é frequentemente utilizada para evitar linhas e linhas de código de um loop for e condições,
+# pois pode ser criada em apenas uma linha.
+
+# 1. Exemplo List Comprehesion. (Obter a porcentagem de quanto o valor dos produtos aumentou)
+
+porcentagem_de_aumento = [round(valores[1][0] - valores[1][2] / valores[1][0] / 100 * 100, 2) for valores in produtos]  # Pode ser qualquer passado qualquer objeto iterável.
+# Enetendo a lógica por trás, para se obter uma porcentagem entre três valores, você deve ter a formúla: 
+# valor inicial - valor final; Após a subtração dividir por 100. Com o resultado, multiplica-lo por cem para obter a porcetagem.
+# Tendo isso em vista, com valores[1][0] pego o primeiro valor de todas as listas de valores, e o oposto com valores[1][2] (último valor).
+# Aplico a lógica do cálculo e aplico um round() para ter uma visualização em duas casas decimais.
+
+add_porcentagem_caractere = list(map(lambda valor: str(valor) + "%", porcentagem_de_aumento))
+# Com este lambda adiciono a porcetagem, mas não é totalmente necessário. Apenas fiz para uma melhor visualização :)
+
+
