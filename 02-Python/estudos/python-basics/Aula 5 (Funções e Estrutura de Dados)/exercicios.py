@@ -39,11 +39,13 @@ glicemia = [
     86, 96, 103, 88, 155, 52, 89, 73
 ]
 
-glicemia_rotulo = ["Normal" if dados >= 70 and dados <=99 
-                   else "Hipoglicemia" 
-                   "Alterada" if dados >=100 and dados <=125
+rotulo = ["Normal" if dados >= 70 and dados <=99 
+                   else "Hipoglicemia" if dados < 70
+                   else "Alterada" if dados >=100 and dados <=125
                    else "Diabetes" for dados in glicemia]   
-# Para simular um 'elif' dentro de uma list comprehension é preciso que você faça mais de um if-else dentro, após o else, adicionar mais um 1 if-else.
+# Para simular um 'elif' dentro de uma list comprehension é preciso que você faça mais de um if-else dentro, após o else, adicionar mais um 1 if (Condição). OBS: No último else, não aplicar.
+
+glicemia_rotulo = list(zip(rotulo, glicemia))
 print(glicemia_rotulo)
 
 # 3. Um e-commerce possui as seguintes listas:
