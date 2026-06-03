@@ -43,7 +43,7 @@ for preco in range(0, len(produto_precos_juntos), 3):
 # Observação sobre lista de listas.
 # Caso queira pegar especifico valor em uma lista de lista:
 
-print(produto_precos[1][0]) # Em termos de hirárquia, primeiro vem o index da lista que desejamos o valor, depois o valor que queremos.
+produto_precos[1][0] # Em termos de hirárquia, primeiro vem o index da lista que desejamos o valor, depois o valor que queremos.
 
 produtos = []
 
@@ -101,7 +101,14 @@ porcentagem_de_aumento = [round(valores[1][0] - valores[1][2] / valores[1][0] / 
 # Tendo isso em vista, com valores[1][0] pego o primeiro valor de todas as listas de valores, e o oposto com valores[1][2] (último valor).
 # Aplico a lógica do cálculo e aplico um round() para ter uma visualização em duas casas decimais.
 
-add_porcentagem_caractere = list(map(lambda valor: str(valor) + "%", porcentagem_de_aumento))
-# Com este lambda adiciono a porcetagem, mas não é totalmente necessário. Apenas fiz para uma melhor visualização :)
+# 2. Situação de List Comprehension com if-else. (Obter somente os produtos que teve procentagem maior que 10%)
+
+produtos_porcentagem = list(map(lambda produtos, porcentagem: produtos.append(porcentagem), produtos, porcentagem_de_aumento))
+# Aplico um lambda() e map() para adicionar as porcetagens a nossa lista de produtos.
+
+porcentagem_maior_10 = [produto[0] for produto in produtos if produto[2] > 10]
+# Em termos de index: produto[0] =  nome do produto. Ex: "Feijão". 
+# produto[2] = porcentagem que foi adicionada acima. Ex: "7.5"; 
+
 
 
