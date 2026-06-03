@@ -32,12 +32,19 @@ print(vendas_2022)
 # Crie uma lista de tuplas usando list comprehension contendo:
 # - o rótulo
 # - e o valor da glicemia.
-#
-# glicemia = [
-#     129, 82, 60, 97, 101, 65, 62, 167,
-#     87, 53, 58, 92, 66, 120, 109, 62,
-#     86, 96, 103, 88, 155, 52, 89, 73
-# ]
+
+glicemia = [
+    129, 82, 60, 97, 101, 65, 62, 167,
+    87, 53, 58, 92, 66, 120, 109, 62,
+    86, 96, 103, 88, 155, 52, 89, 73
+]
+
+glicemia_rotulo = ["Normal" if dados >= 70 and dados <=99 
+                   else "Hipoglicemia" 
+                   "Alterada" if dados >=100 and dados <=125
+                   else "Diabetes" for dados in glicemia]   
+# Para simular um 'elif' dentro de uma list comprehension é preciso que você faça mais de um if-else dentro, após o else, adicionar mais um 1 if-else.
+print(glicemia_rotulo)
 
 # 3. Um e-commerce possui as seguintes listas:
 #
