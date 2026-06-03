@@ -49,7 +49,6 @@ produtos = []
 
 for nome_p, preco_p in zip(nome_produto, produto_precos):
     produtos.append([nome_p, preco_p])
-print(produtos)
 
 # Resposta:
 # [['Sorvete', [20.0, 21.0, 25.0]], ['Arroz', [18.0, 22.0, 27.0]], ['Feijão', [9.0, 11.0, 14.0]], ['Leite', [5.0, 6.0, 7.5]], ['Pão', [8.0, 9.5, 12.0]]].
@@ -95,10 +94,10 @@ for produto in produtos:        # Fiz com a lista de listas 'produtos' com o obj
 
 # 1. Exemplo List Comprehesion. (Obter a porcentagem de quanto o valor dos produtos aumentou)
 
-porcentagem_de_aumento = [round(valores[1][0] - valores[1][2] / valores[1][0] / 100 * 100, 2) for valores in produtos]  # Pode ser qualquer passado qualquer objeto iterável.
-# Enetendo a lógica por trás, para se obter uma porcentagem entre três valores, você deve ter a formúla: 
-# valor inicial - valor final; Após a subtração dividir por 100. Com o resultado, multiplica-lo por cem para obter a porcetagem.
-# Tendo isso em vista, com valores[1][0] pego o primeiro valor de todas as listas de valores, e o oposto com valores[1][2] (último valor).
+porcentagem_de_aumento = [round(((valores[1][2] - valores[1][0]) / valores[1][0]) * 100, 2) for valores in produtos]  # Pode ser qualquer passado qualquer objeto iterável.
+# Entendo a lógica por trás, para se obter uma porcentagem de aumento entre dois valores, a fórmula é:
+# (valor final - valor inicial) / valor inicial * 100
+# Tendo isso em vista, com valores[1][2] pego o último valor (valor final) de todas as listas de valores, e o oposto com valores[1][0] (valor inicial).
 # Aplico a lógica do cálculo e aplico um round() para ter uma visualização em duas casas decimais.
 
 # 2. Situação de List Comprehension com if-else. (Obter somente os produtos que teve procentagem maior que 10%)
@@ -110,5 +109,34 @@ porcentagem_maior_10 = [produto[0] for produto in produtos if produto[2] > 10]
 # Em termos de index: produto[0] =  nome do produto. Ex: "Feijão". 
 # produto[2] = porcentagem que foi adicionada acima. Ex: "7.5"; 
 
+# ===========================
+#     DICT COMPREHENSION
+# ===========================
+# Mesma lógica de list comprehension, porém o que muda é que a estrutura de dados utilizada é dicionário.
+
+colunas_dict = ["Nome", "Preço_Periodos", "Aumento_Porcentagem"]
+
+lista_completa = [nome_produto, produto_precos, porcentagem_de_aumento, ids]
+# Fiz esta 'lista_completa' pois é necessária o uso dela para praticar com dict comprehension.
 
 
+produtos_dict = {colunas_dict[index]: lista_completa[index] for index in range(len(colunas_dict))}
+
+# Resposta Dict Comprehension:
+# {'Nome': ['Sorvete', 'Arroz', 'Feijão', 'Leite', 'Pão'], 
+# 'Preço_Periodos': [[20.0, 21.0, 25.0], [18.0, 22.0, 27.0], [9.0, 11.0, 14.0], [5.0, 6.0, 7.5], [8.0, 9.5, 12.0]], 
+# 'Aumento_Porcentagem': [25.0, 50.0, 55.56, 50.0, 50.0]}
+
+# Além do dict, no código foi feito a lista 'produtos' que sinalizada cada produto, preços e porcentagem em uma lista. (Lista de listas)
+
+# [['Sorvete', [20.0, 21.0, 25.0], 25.0], 
+# ['Arroz', [18.0, 22.0, 27.0], 50.0], 
+# ['Feijão', [9.0, 11.0, 14.0], 55.56], 
+# ['Leite', [5.0, 6.0, 7.5], 50.0], 
+# ['Pão', [8.0, 9.5, 12.0], 50.0]]
+
+
+# Existe sim uma possibilidade de colocar estes valores em um dict, porém, sairiamos do objetivo: Dict Comprehension.
+
+print(produtos)
+print(produtos_dict)
