@@ -77,6 +77,7 @@ for produto in produtos:        # Fiz com a lista de listas 'produtos' com o obj
     if str(produto[0]).isalpha():
         ids.append((produto[0], produto[0][0] + str(gerar_numeros())))
 
+
 # ids[2][1] = "F245"  # Exemplo de linha de código que no mostra que os dados armazenados em tupla, não podem ser alterados, atualizados, ou removidos.
 # O erro gerado:
 # TypeError: 'tuple' object does not support item assignment
