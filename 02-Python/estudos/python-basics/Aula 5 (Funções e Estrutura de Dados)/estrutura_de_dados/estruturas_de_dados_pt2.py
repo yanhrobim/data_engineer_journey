@@ -53,6 +53,7 @@ for nome_p, preco_p in zip(nome_produto, produto_precos):
 # Resposta:
 # [['Sorvete', [20.0, 21.0, 25.0]], ['Arroz', [18.0, 22.0, 27.0]], ['Feijão', [9.0, 11.0, 14.0]], ['Leite', [5.0, 6.0, 7.5]], ['Pão', [8.0, 9.5, 12.0]]].
 
+
 # =================
 #      TUPLAS
 # =================
@@ -108,6 +109,7 @@ produtos_porcentagem = list(map(lambda produtos, porcentagem: produtos.append(po
 porcentagem_maior_10 = [produto[0] for produto in produtos if produto[2] > 10]
 # Em termos de index: produto[0] =  nome do produto. Ex: "Feijão". 
 # produto[2] = porcentagem que foi adicionada acima. Ex: "7.5"; 
+
 
 # ===========================
 #     DICT COMPREHENSION
