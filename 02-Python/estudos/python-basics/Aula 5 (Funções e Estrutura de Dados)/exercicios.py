@@ -19,7 +19,9 @@ vendas = [
 ]
 
 vendas_2022 = [venda for venda in vendas if venda[0] == "2022" and venda[1] > 6000]
-print(vendas_2022)
+# A lógica desta list comprehension é individualizar cada tupla presente na lista de tuplas, e através do index executar os filtros.
+# Entendendo sobre a lista de tuplas, o index[0] são os anos, e index[1] são os valores.
+# print(vendas_2022)
 
 
 # 2. Uma clínica analisa dados de glicemia e deseja rotular os valores:
@@ -45,26 +47,38 @@ rotulo = ["Normal" if dados >= 70 and dados <=99
                    else "Diabetes" for dados in glicemia]   
 # Para simular um 'elif' dentro de uma list comprehension é preciso que você faça mais de um if-else dentro, após o else, adicionar mais um 1 if (Condição). OBS: No último else, não aplicar.
 
-glicemia_rotulo = list(zip(rotulo, glicemia))
-print(glicemia_rotulo)
+glicemia_rotulo = list(zip(rotulo, glicemia))   # Método zip() para juntar o rotulo que foi gerado na list comprehension
+                                                # com seus respectivos valores.
+# print(glicemia_rotulo)
 
 # 3. Um e-commerce possui as seguintes listas:
-#
-# id = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-#
-# quantidade = [15, 12, 1, 15, 2, 11, 2, 12, 2, 4]
-#
-# preco = [93.0, 102.0, 18.0, 41.0, 122.0,
-#           14.0, 71.0, 48.0, 14.0, 144.0]
+
+ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+quantidade = [15, 12, 1, 15, 2, 11, 2, 12, 2, 4]
+
+preco = [93.0, 102.0, 18.0, 41.0, 122.0,
+          14.0, 71.0, 48.0, 14.0, 144.0]
 #
 # Crie uma lista de tuplas contendo:
 # - id
 # - quantidade
 # - preço
 # - valor total (quantidade * preço)
-#
 # A primeira tupla deve ser o cabeçalho:
 # ('id', 'quantidade', 'preco', 'total')
+
+# Meu raciocínio:
+# 1. Objetivo: Juntar todos os valores em uma tupla e criar uma coluna chamada 'total' com o cálculo de quantidade * preco.
+# 2. Fazer um list comprehension com zip() para individualizar cada elemento de cada lista.
+# 3. Fazer o cálculo da coluna 'total'.
+# 4. Inserir com insert() no index 0 os cabeçalhos.
+
+id_quantidade_preco_total = [(iD, quantidade, preco, round(quantidade * preco, 2)) for iD, quantidade, preco in zip(ids, quantidade, preco)]
+# A lógica é aplicar um zip para tratar individualizar cada valor de cada lista individualmente, e aplicar o cálculo em quantidade e preco.
+# Além disso, aprendi que podemos adicionar valores de colunas desta maneira: (coluna1, coluna2), evitando que no final, o resultado seja somente o cálculo.
+id_quantidade_preco_total.insert(0, ('id', 'quantidade', 'preco', 'total')) # insert() nos permite adicionar tal valor especificando o index de nossa preferência.
+# print(id_quantidade_preco_total)
 
 
 # 4. Uma empresa possui uma lista com os estados das filiais:
@@ -105,3 +119,4 @@ print(glicemia_rotulo)
 # 2. Um dicionário em que:
 #    - as chaves sejam os estados
 #    - os valores sejam a soma total de funcionários por estado.
+
