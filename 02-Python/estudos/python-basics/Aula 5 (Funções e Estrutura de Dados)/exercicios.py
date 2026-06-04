@@ -82,20 +82,28 @@ id_quantidade_preco_total.insert(0, ('id', 'quantidade', 'preco', 'total')) # in
 
 
 # 4. Uma empresa possui uma lista com os estados das filiais:
-#
-# estados = [
-#     'SP', 'ES', 'MG', 'MG', 'SP', 'MG',
-#     'ES', 'ES', 'ES', 'SP', 'SP', 'MG',
-#     'ES', 'SP', 'RJ', 'MG', 'RJ', 'SP',
-#     'MG', 'SP', 'ES', 'SP', 'MG'
-# ]
-#
+
+estados = [
+    'SP', 'ES', 'MG', 'MG', 'SP', 'MG',
+    'ES', 'ES', 'ES', 'SP', 'SP', 'MG',
+    'ES', 'SP', 'RJ', 'MG', 'RJ', 'SP',
+    'MG', 'SP', 'ES', 'SP', 'MG'
+]
+
 # Crie um dicionário usando dict comprehension em que:
 # - a chave seja o nome do estado
 # - o valor seja a quantidade de vezes que o estado aparece na lista.
 #
 # Dica:
 # Você pode criar uma lista intermediária antes.
+
+# Meu raciocínio:
+# 1. Objetivo Final: {SP: 8, ...}
+# 2. Contar cada elemento de forma individual. (count())
+# 3. Juntar a resposta da contagem com a chave respectiva.
+
+estado_contagem = {estado: estados.count(estado) for estado in estados} 
+# print(estado_contagem)
 
 
 # 5. A empresa também possui a seguinte lista:
