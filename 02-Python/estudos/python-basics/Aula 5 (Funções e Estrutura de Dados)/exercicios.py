@@ -107,16 +107,16 @@ estado_contagem = {estado: estados.count(estado) for estado in estados}
 
 
 # 5. A empresa também possui a seguinte lista:
-#
-# funcionarios = [
-#     ('SP', 16), ('ES', 8), ('MG', 9), ('MG', 6),
-#     ('SP', 10), ('MG', 4), ('ES', 9), ('ES', 7),
-#     ('ES', 12), ('SP', 7), ('SP', 11), ('MG', 8),
-#     ('ES', 8), ('SP', 9), ('RJ', 13), ('MG', 5),
-#     ('RJ', 9), ('SP', 12), ('MG', 10), ('SP', 7),
-#     ('ES', 14), ('SP', 10), ('MG', 12)
-# ]
-#
+
+funcionarios = [
+    ('SP', 16), ('ES', 8), ('MG', 9), ('MG', 6),
+    ('SP', 10), ('MG', 4), ('ES', 9), ('ES', 7),
+    ('ES', 12), ('SP', 7), ('SP', 11), ('MG', 8),
+    ('ES', 8), ('SP', 9), ('RJ', 13), ('MG', 5),
+    ('RJ', 9), ('SP', 12), ('MG', 10), ('SP', 7),
+    ('ES', 14), ('SP', 10), ('MG', 12)
+]
+
 # Crie:
 #
 # 1. Um dicionário em que:
@@ -128,3 +128,24 @@ estado_contagem = {estado: estados.count(estado) for estado in estados}
 #    - as chaves sejam os estados
 #    - os valores sejam a soma total de funcionários por estado.
 
+# 1. Primeiro Objetivo: Dicionário com chave sendo estado, valor sendo todos os valores das tuplas presentes dentro de uma lista. 
+    # Vai ser preciso pegar cada estado de forma individual.
+    # Criar um dicionário que representa cada estado de forma única.
+    # Ter uma lista de listas contendo os valores de funcionarios, separado por estado.
+    # Chave vai ser index 0, da lista de tuplas.
+    # Valor vai ser index 1, porém, é preciso que seja em forma de loop a adição na lista que será criada. (Ou seja, não substitua o último valor)
+# 2. Segundo Objetivo: Utlizar a resposta do primeiro objetivo e somar os valores que estão presentes na lista.
+
+estados = set([estado[0] for estado in funcionarios])   # O comando set() resumiadamente tem a função de criar uma estrutura de dados.
+                                                        # Porém, nesta estrutura criada não contém elementos duplicados.
+                                                        # Cada elemento só aparece uma vez.
+                                                        # Aqui está com um loop, é basicamente dizer, se valor atual do loop já estiver na estrutura de dados, não faça nada. 
+
+estados_unicos = {estado: [] for estado in estados}     # Criação de um dict com valor sendo uma lista vázia, visando popular ela futuramente.
+
+for funcionario in funcionarios:
+        estados_unicos[funcionario[0]].append(funcionario[1])
+
+# Em um outro dict comprehension, pegar valor de cada estado individualmente e somar as listas com sum().
+
+estados_funcionario_total = {estado: sum(funcionarios) for estado, funcionarios in estados_unicos.items()}
