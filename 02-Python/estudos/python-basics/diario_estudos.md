@@ -34,7 +34,7 @@ Com o objetivo de aprender sobre a linguagem, consolidar conhecimento e posterio
 
 ### | 📚 Aula 02 
 
-#### **Dia 2 — 8 (27/04/26 há 06/05/26)**
+#### **Dia 2 — 8 (27/04/26 a 06/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Exercícios aplicando comportamentos dos objetos de tipos primitivos em Python:
@@ -64,7 +64,7 @@ Estruturas de Controle:
 
 ### | 📚 Aula 3 
 
-#### **Dia 9 — 14 (08/05/26 há 16/05/26)**
+#### **Dia 9 — 14 (08/05/26 a 16/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Controles de Fluxo.
@@ -92,7 +92,7 @@ Estruturas de Controle:
 
 ### | 📚 Aula 4
 
-#### **Dia 15 — 20 (18/05/26 há 29/05/26)
+#### **Dia 15 — 20 (18/05/26 a 29/05/26)**
 
 **🖋️ Tópicos da Aula:**
 - Tipos complexos e Type Hint.
@@ -135,7 +135,7 @@ Principais Métodos Lista:
 ---
 
 ### | 📚 Aula 5
-#### Dia 21 — 25 (30/05/26 há 04/06/26)
+#### **Dia 21 — 25 (30/05/26 a 04/06/26)**
 
 **🖋️ Tópicos da Aula:**
     - Built-in function.
@@ -149,10 +149,10 @@ Principais Métodos Lista:
         - Lista de Tuplas
 
 **🧠 Aprendizados da aula:**
-    - **Built-in functions:** São funções embutidas e disponibilizadas pelo próprio Python, e podem ser utilizadas a qualquer momento. Alguns exemplos de **Built-in functions** como: `type(), list(), sum(), len()`.
-    - Funções são uma sequência de instruções que criamos em um bloco de código para executar tarefas específicas. Além disso, podem ser reutilzidas em diferentes partes do nosso código.
-    - Funções lambdas não precisam ser definidas como fazemos com funções normais com o def, por isso muito chamda de funções anônimas, além disso ela pode ser definida apenas em uma linha de código.
-        - O `map()` pode potencializar o lambda, fazendo com que possamos executar funções anônimas com o lambda em iteráveis. O map() é muito semelhante a um FOR, ele não é um loop, mas individualiza cada elemento de iteráveis para o lambda executar o que foi instruído.
-    - Nos exercícios tive uma leve introdução ao `zip()`, para a solução de um dos exercícios presentes.
-    - **Tuplas** são uma estrutura de dados usadas para armazenar itens em uma única variável, além disso são imutáveis. Ou seja, significa que após uma tupla ser criada, ela não pode ter alterações, adições, ou remoções. Frequentemente utilizadas para garantir que os dados agrupados não sejam ser modificados acidentalmente ou intencionalmente.  
-    - **List Comprehension** e **Dict Comprehesion** são maneiras que proporcionam mais facilidade em criar listas e dicionários que seguem padrões, como de loops for, condições if-else. Além disso, elas são uma maneira mais eficaz de substituir linhas de código de um loop for com condições por somente uma linha.
+- **Built-in functions:** São funções embutidas e disponibilizadas pelo próprio Python, e podem ser utilizadas a qualquer momento. Alguns exemplos de **Built-in functions** como: `type(), list(), sum(), len()`.
+- Funções são uma sequência de instruções que criamos em um bloco de código para executar tarefas específicas. Além disso, podem ser reutilzidas em diferentes partes do nosso código.
+- Funções lambdas não precisam ser definidas como fazemos com funções normais com o def, por isso muito chamda de funções anônimas, além disso ela pode ser definida apenas em uma linha de código.
+    - O `map()` pode potencializar o lambda, fazendo com que possamos executar funções anônimas com o lambda em iteráveis. O map() é muito semelhante a um FOR, ele não é um loop, mas individualiza cada elemento de iteráveis para o lambda executar o que foi instruído.
+- Nos exercícios tive uma leve introdução ao `zip()`, para a solução de um dos exercícios presentes.
+- **Tuplas** são uma estrutura de dados usadas para armazenar itens em uma única variável, além disso são imutáveis. Ou seja, significa que após uma tupla ser criada, ela não pode ter alterações, adições, ou remoções. Frequentemente utilizadas para garantir que os dados agrupados não sejam ser modificados acidentalmente ou intencionalmente.  
+- **List Comprehension** e **Dict Comprehesion** são maneiras que proporcionam mais facilidade em criar listas e dicionários que seguem padrões, como de loops for, condições if-else. Além disso, elas são uma maneira mais eficaz de substituir linhas de código de um loop for com condições por somente uma linha.
