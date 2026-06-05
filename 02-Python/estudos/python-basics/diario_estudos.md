@@ -135,7 +135,7 @@ Principais Métodos Lista:
 ---
 
 ### | 📚 Aula 5
-#### Dia 21 (30/05/26)
+#### Dia 21 — 25 (30/05/26 há 04/06/26)
 
 **🖋️ Tópicos da Aula:**
     - Built-in function.
