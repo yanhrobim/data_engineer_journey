@@ -55,11 +55,9 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [x] Funções e modularização de código
     - [ ] Programação Orientada a Objetos *(POO)*
 
-- **Engenharia de Dados**
-    - [ ] Leitura e escrita de arquivos *(CSV, JSON)*
-    - [ ] Leitura e escrita de arquivos *(CSV, JSON)*
-    - [ ] Integração com bancos de dados *(SQLAlchemy)*
-    - [ ] Integração com APIs *(requests)*
+- **Python para Dados**
+    - [ ] Leitura e escrita de arquivos *(CSV, JSON, etc.)*
+    - [ ] Processamento e transformação de dados. (Pandas)*
 
 ## 🛠️ Stack da Jornada
 
