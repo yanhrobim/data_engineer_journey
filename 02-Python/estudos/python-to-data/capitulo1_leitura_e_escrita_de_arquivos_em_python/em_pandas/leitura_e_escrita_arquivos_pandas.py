@@ -16,15 +16,15 @@ clientes = [
 ]
 
 
-# ===========================================
+# ============================================
 #    ESCRITA DE ARQUIVOS UTILIZANDO PANDAS
-# ===========================================
+# ============================================
 
-clientes = pd.DataFrame().to_csv("./dados_para_pratica/dados.csv")
+escrver = pd.DataFrame(clientes).to_csv("./dados_para_pratica/dados.csv")
 
 
 # ============================================
-#    LEITURA DE ARQUIVOS UTILIZANDO PANDAS
+#    LEITURA ARQUIVOS UTILIZANDO PANDAS
 # ============================================
 
 

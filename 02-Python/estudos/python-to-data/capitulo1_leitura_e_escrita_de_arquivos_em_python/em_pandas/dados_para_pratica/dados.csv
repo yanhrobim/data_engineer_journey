@@ -1,1 +1,11 @@
-""
+,id,nome,cidade,compras
+0,1,Ana Lima,São Paulo,5
+1,2,Carlos Souza,Curitiba,2
+2,3,Fernanda Rocha,Belo Horizonte,8
+3,4,João Pedro,Recife,1
+4,5,Mariana Costa,Porto Alegre,4
+5,6,Rafael Mendes,Salvador,7
+6,7,Beatriz Alves,Fortaleza,3
+7,8,Lucas Teixeira,Manaus,6
+8,9,Camila Nunes,Brasília,9
+9,10,Diego Ferreira,Goiânia,2
