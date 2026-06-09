@@ -27,6 +27,9 @@ escrver = pd.DataFrame(clientes).to_csv("./dados_para_pratica/dados.csv")
 #    LEITURA ARQUIVOS UTILIZANDO PANDAS
 # ============================================
 
+leitura = pd.read_csv("./dados_para_pratica/dados.csv")
+print(leitura)
+
 
 # ======================================================
 #    TIPO DE ARQUIVO CSV (UTILIZANDO PANDAS)
