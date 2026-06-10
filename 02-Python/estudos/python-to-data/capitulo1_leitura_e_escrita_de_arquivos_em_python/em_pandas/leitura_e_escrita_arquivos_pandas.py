@@ -16,25 +16,17 @@ clientes = [
 ]
 
 
-# ============================================
-#    ESCRITA DE ARQUIVOS UTILIZANDO PANDAS
-# ============================================
+# =================================================
+#    ESCRITA DE ARQUIVOS UTILIZANDO PANDAS (CSV)
+# =================================================
 
-escrver = pd.DataFrame(clientes).to_csv("./dados_para_pratica/dados.csv")
+escrever = pd.DataFrame(clientes)
+escrever.to_csv("./dados_para_pratica/clientes.csv")
 
 
-# ============================================
-#    LEITURA ARQUIVOS UTILIZANDO PANDAS
-# ============================================
+# ===============================================
+#    LEITURA ARQUIVOS UTILIZANDO PANDAS (CSV)
+# ===============================================
 
-leitura = pd.read_csv("./dados_para_pratica/dados.csv")
+leitura = pd.read_csv("./dados_para_pratica/clientes.csv")
 print(leitura)
-
-
-# ======================================================
-#    TIPO DE ARQUIVO CSV (UTILIZANDO PANDAS)
-# ======================================================
-# Para a leitura ou escrita de arquivos '.csv', é necessário a importação do módulo 'csv' disponibilizado pelo próprio Python.
-
-# 1. Escrita de arquivos '.csv':
-
