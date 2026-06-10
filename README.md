@@ -57,7 +57,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 
 - **Python para Dados**
     - [x] Leitura e escrita de arquivos *(CSV, JSON, etc.)*
-    - [ ] Processamento e transformação de dados. *(Pandas)*
+    - [x] Processamento e transformação de dados. *(Pandas)*
 
 ## 🛠️ Stack da Jornada
 
