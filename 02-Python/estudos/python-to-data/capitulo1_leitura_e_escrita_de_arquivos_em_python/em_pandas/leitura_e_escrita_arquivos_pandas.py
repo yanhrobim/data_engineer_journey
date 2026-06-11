@@ -89,3 +89,6 @@ print(clientes_df.loc[1])
 # Em um cenário real, quando fazemos um filtro em um DataFrame, a depender do filtro as linhas não ficam mais em ordem de index 1,2,3,4,
 # o .loc[] entra exatemente aqui, se o antigo index de tal linha for '2', ou 'b', você passa este valor e ele nos retorna o registro.
 
+print(clientes_df.iloc[3])  # A diferença com o .loc[] é que aqui pegamos por posição do registro, independente do antigo index,
+                            # então quando passamos '3' para pegar um valor, ele retorna o registro
+                            # atual que está nesta posição, independente se antes ele era '5'.
