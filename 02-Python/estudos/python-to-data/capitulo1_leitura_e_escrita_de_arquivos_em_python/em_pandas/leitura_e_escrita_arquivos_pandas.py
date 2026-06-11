@@ -73,9 +73,19 @@ print(clientes_df.shape) # O método .shape() nos retorna a quantidade de regist
 # dtypes: int64(2), str(2)
 # memory usage: 452.0 bytes
 
-print(clientes_df['compras'].describe()) # O método describe() nos retorna estásticas sobre nossas colunas númericas como:
-                                         # Valor máximo, dtype da coluna, 25% (primeiro quartil), 75% (último quartil), entre outras.
+# print(clientes_df['compras'].describe()) # O método describe() nos retorna estásticas sobre nossas colunas númericas como:
+#                                          # Valor máximo, dtype da coluna, 25% (primeiro quartil), 75% (último quartil), entre outras.
 
-print(clientes_df.columns) # .colums() nos retorna o nome das colunas presentes no DataFrame.
-print(clientes_df.dtypes)  # .dtypes() nos retorna o tipo da coluna(s).
+# print(clientes_df.columns) # .colums() nos retorna o nome das colunas presentes no DataFrame.
+# print(clientes_df.dtypes)  # .dtypes() nos retorna o tipo da coluna(s).
+
+
+# ============================================
+#    PRINCIPAIS MÉTODOS (SELEÇÃO / FILTRO)
+# ============================================
+
+print(clientes_df.loc[1])   
+# O .loc[] nos permite pegar um valor pelo label do registro, podendo ser qualquer valor, string, int, portanto que seja label do registro.
+# Em um cenário real, quando fazemos um filtro em um DataFrame, a depender do filtro as linhas não ficam mais em ordem de index 1,2,3,4,
+# o .loc[] entra exatemente aqui, se o antigo index de tal linha for '2', ou 'b', você passa este valor e ele nos retorna o registro.
 
