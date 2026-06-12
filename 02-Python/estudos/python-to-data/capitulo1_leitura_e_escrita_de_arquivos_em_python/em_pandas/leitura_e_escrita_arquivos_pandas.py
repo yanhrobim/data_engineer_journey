@@ -20,10 +20,6 @@ clientes = [
 #    ESCRITA DE ARQUIVOS UTILIZANDO PANDAS (CSV)
 # =================================================
 
-escrever = pd.DataFrame(clientes) # Para escrever arquivos com 'pandas' é necessário transformar seus dados em um DataFrame.
-
-escrever.to_csv("./dados_para_pratica/clientes.csv", index=False)   # Após a transformação, o objeto DataFrame nos proporciona métodos 
-                                                       # como este o 'to_csv()'.
 
 
 # ===============================================
@@ -92,3 +88,33 @@ print(clientes_df.loc[1])
 print(clientes_df.iloc[3])  # A diferença com o .loc[] é que aqui pegamos por posição do registro, independente do antigo index,
                             # então quando passamos '3' para pegar um valor, ele retorna o registro
                             # atual que está nesta posição, independente se antes ele era '5'.
+
+
+# ============================================
+#    PRINCIPAIS MÉTODOS (LIMPEZA)
+# ============================================
+
+# Sobre valores nulos:
+print(clientes_df.isnull()) # O método .isnull() não transforma nada dentro do DataFrame, na verdade, ele verifica linha por linha
+                            # tentando encontrar valores nulos. Se valor for nulo igual a 'True', se não igual a 'False'.
+
+print(clientes_df.dropna()) # O método .dropna() é mais agressivo em comparação com o .isnull(). Em um contexto de um loop no DataFrame
+                            # se você passar cada elemento e o método encontrar valores nulos na linha, 
+                            # ele remove do DataFrame. Em outro contexto, se você passar colunas, ele pode até mesmo excluir uma coluna
+                            # se conter valores nulos. Ele remove tudo aquilo que tem algum valor nulo, sendo individual ou não. 
+
+print(clientes_df.fillna('VALOR_FALTANTE'))  # O método .fillna() é poderoso para lidar com valores nulos, além de encontrar os valores,
+                                        # você pode passar algum valor para ele substituir por NULL, ou NaN.
+                                        # Exemplo: Substituir valores nulos de uma coluna númerica por zero.
+
+# Limpeza
+
+# clientes_df.drop(coluna) O método .drop() resumidamente tem o objetivo de remover colunas ou linhas.
+
+clientes_df.rename(columns={'nome': 'nome_cliente'}) # O método .rename() renomeia colunas do DataFrame, de acordo com a forma que você passa o parâmetro.
+
+clientes_df['compras'].astype(int)      # O método astype() converte o tipo de dado.
+
+
+
+
