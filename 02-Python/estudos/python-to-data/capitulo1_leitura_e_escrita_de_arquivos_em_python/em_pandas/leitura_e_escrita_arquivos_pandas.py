@@ -115,6 +115,14 @@ clientes_df.rename(columns={'nome': 'nome_cliente'}) # O método .rename() renom
 
 clientes_df['compras'].astype(int)      # O método astype() converte o tipo de dado.
 
+clientes_df['quantidade_compras'] = clientes_df['compras'].apply(lambda compras: len(str(compras))) # Está coluna não faz sentido, porém o objetivo foi praticar e aplicar o método .apply() :)
+# O método .apply() nos permite aplicar uma função dentro de uma coluna.
+# É importante lembrar que é uma função que deve ser aplicada como parâmetro do comando como um lambda, ou uma feita por você mesmo.
 
+clientes_df.groupby('nome') # Semelhante ao GROUPBY do SQL, resumidamente agrupa dados. 
+# Em meu repositório data_engineer_journey, na pasta 01-SQL, existe uma explicação sobre o GROUPBY caso queira ver!
 
+# clientes_df.merge() # O .merge() mescla dois DataFrames resumidamente, muito semelhante ao JOIN do SQL.
+# Em meu repositório data_engineer_journey, na pasta 01-SQL, existe uma explicação sobre os JOINs caso queira ver!
 
+print(clientes_df.sort_values('cidade'))    # Ordena pelos valores da colunas.
