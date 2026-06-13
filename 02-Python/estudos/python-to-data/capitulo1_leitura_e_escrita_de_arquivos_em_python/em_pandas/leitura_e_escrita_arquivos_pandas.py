@@ -20,6 +20,10 @@ clientes = [
 #    ESCRITA DE ARQUIVOS UTILIZANDO PANDAS (CSV)
 # =================================================
 
+escrever = pd.DataFrame(clientes) # Para escrever arquivos com 'pandas' é necessário transformar seus dados em um DataFrame.
+
+escrever.to_csv("./dados_para_pratica/clientes.csv", index=False)   # Após a transformação, o objeto DataFrame nos proporciona métodos 
+                                                       # como este o 'to_csv()'.
 
 
 # ===============================================
