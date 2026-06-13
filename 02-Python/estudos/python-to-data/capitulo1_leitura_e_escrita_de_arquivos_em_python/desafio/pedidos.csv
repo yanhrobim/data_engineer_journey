@@ -1,0 +1,21 @@
+id_pedido,cliente,produto,quantidade,preco_unitario,data_pedido
+1,Mariana Souza,Notebook,1,3500.0,2026-01-05
+2,João Pereira,Mouse,3,45.9,2026-01-06
+3,Mariana Souza,Teclado,1,120.0,2026-01-08
+4,Carlos Lima,Monitor,2,890.0,2026-01-10
+5,Ana Ribeiro,Notebook,1,3200.0,2026-01-11
+6,João Pereira,Headset,2,199.9,2026-01-12
+7,Beatriz Costa,Cadeira Gamer,1,1450.0,2026-01-13
+8,Carlos Lima,Mousepad,4,35.0,2026-01-14
+9,Mariana Souza,Webcam,1,250.0,2026-01-15
+10,Ana Ribeiro,Mouse,2,45.9,2026-01-16
+11,Pedro Santos,Monitor,1,890.0,2026-01-17
+12,Beatriz Costa,Teclado,1,120.0,2026-01-18
+13,João Pereira,Notebook,1,3500.0,2026-01-19
+14,Pedro Santos,Cadeira Gamer,1,1450.0,2026-01-20
+15,Ana Ribeiro,Headset,1,199.9,2026-01-21
+16,Carlos Lima,Webcam,2,250.0,2026-01-22
+17,Mariana Souza,Monitor,1,890.0,2026-01-23
+18,Pedro Santos,Mouse,5,45.9,2026-01-24
+19,Beatriz Costa,Notebook,1,3500.0,2026-01-25
+20,João Pereira,Mousepad,3,35.0,2026-01-26
