@@ -44,7 +44,7 @@ pedidos = [
 
 ---
 
-- ### 3 | Dentro dessa função, implemente um loop que percorra cada linha do DataFrame e calcule o valor total do pedido (quantidade * preco_unitario), guardando esse valor em uma nova coluna chamada valor_total.
+- ### 3 | Dentro dessa função, adicione uma nova coluna chamada valor_total, representando o valor total de cada pedido (quantidade * preco_unitario).
 
 ---
 
