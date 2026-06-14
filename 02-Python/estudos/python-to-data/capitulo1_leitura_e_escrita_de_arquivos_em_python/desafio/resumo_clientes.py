@@ -8,5 +8,6 @@ transformacao = apply_valor_total(dados_csv=leitura_csv,
                                   nome_coluna_de_preco_unitario='preco_unitario')
 
 agrupando_p_cliente  = transformacao.groupby(by=['cliente'], group_keys=True, as_index=False).apply(lambda groupby: sum(groupby['valor_total']))
-print(pd.DataFrame(agrupando_p_cliente).rename(columns={None: "valor_total_gasto"}))
+pd.DataFrame(agrupando_p_cliente).rename(columns={None: "valor_total_gasto"}).to_json(path_or_buf="./dados_desafio/resumo_clientes.json",
+                                                                                      orient='records', indent=4)
 
