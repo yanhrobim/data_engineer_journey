@@ -55,4 +55,3 @@ pedidos = [
 - ### 5 | Salve esse resumo final em um arquivo JSON (resumo_clientes.json), de forma organizada.
 
 ---
-
