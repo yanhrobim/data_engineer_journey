@@ -6,15 +6,16 @@ Este diário será focado em documentar o meu processo de aprendizado sobre Pyth
 
 --- 
 
-### | 📚 Capítulo 1
+### | 📚 Fundamentos Pandas
 #### **Dia 1 — 7 (05/06/26 a 14/06/2026)**
 
-**🖋️ Tópicos da Aula:**
+**🖋️ Tópicos:**
 - Leitura e Escrita de Arquivos.
     - **Python**
     - **Pandas**
 
-**🧠 Aprendizados da aula:**
+**🧠 Aprendizados:**
+- Tenho a visão de que entender o processo utilizando somente uma linguagem de programação pura é o que nos faz dar valor a ferramentas como o Pandas, que facilitam aquilo que pode ser tão complexo sem o auxílio delas.
 - Leitura e escrita de arquivos utilizando somente **Python:**
     - `with open()` para o fechamento do método (leitura, escrita) escolhido automaticamente. Existe também a possibilidade de adicionar o método open() a uma variável e seus parâmetros, porém é preciso em algum momento do código sinalizar que quer fechar com close().
     - `write()` para escrever arquivos. No with open() ou na variável que armazena open() é necessário especificar que o método escolhido é *"w"(write)*.
