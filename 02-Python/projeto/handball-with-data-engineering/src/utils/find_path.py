@@ -11,10 +11,10 @@ def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str):
             raise FileNotFoundError
                     
     except FileNotFoundError:
-        print("O caminho que foi desenvolvido não existe! Verifique os parâmetros que você passou!")
+        print("\nO caminho que foi desenvolvido não existe! Verifique os parâmetros que você passou!")
         print(f"Parâmetros passados: '{pasta_com_dados}'; '{nome_dados}'. \nCaminho Final: '{caminho_para_dados}'")
 
     else:
-        print("O path para o arquivo.csv foi criado com sucesso! Todos os parâmetros passados encontram um arquivo.csv!")
-        print(f"Path criado: {caminho_para_dados}")
+        print("\nO path para o arquivo.csv foi criado com sucesso! Todos os parâmetros passados encontram um arquivo.csv!")
+        print(f"Path criado: {caminho_para_dados}\n")
         return caminho_para_dados
