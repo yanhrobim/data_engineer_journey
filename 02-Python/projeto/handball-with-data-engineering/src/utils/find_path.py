@@ -18,8 +18,3 @@ def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str):
         print("O path para o arquivo.csv foi criado com sucesso! Todos os parâmetros passados encontram um arquivo.csv!")
         print(f"Path criado: {caminho_para_dados}")
         return caminho_para_dados
-
-caminho_path = encontrar_caminho_dados_csv(pasta_com_dados='dat', nome_dados='bundeshandball_sujo.csv')
-
-# Resposta Função:
-# /home/usuario/Projetos/data_engineer_journey/02-Python/projeto/handball-with-data-engineering/data/bundeshandball_sujo.csv
