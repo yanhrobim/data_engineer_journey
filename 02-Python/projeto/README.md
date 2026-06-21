@@ -10,7 +10,7 @@ Bem-Vindos a uma leve introdução ao caminho do projeto **Handball With Data En
 
 Ao decorrer do meu projeto raiz para potfólio "data_engineer_journey", realizei estudos aprodundados na **Linguagem de Programação Python**, aprendendo de forma aprodundada fundamentos, conceitos, sintaxe e aprimoramento de lógica de programação. Todo o processo foi documentado ao decorrer de todos os dias de estudo, e cada aula e conceito tendo seu espaço dentro de um arquivo em formato README `(diario_estudos.md)` e comentários no código, visando ter uma explicação leve do que foi aprendido em cada etapa do processo de estudos.
 
-* **Pasta de Estudos:** [`python-basics`](/02-Python/estudos/python-basics/data_engineer_journet/)
+* **Pasta de Estudos:** [`python-basics`](/02-Python/estudos/python-basics/)
 
 ## 🐼 Python-To-Data
 
