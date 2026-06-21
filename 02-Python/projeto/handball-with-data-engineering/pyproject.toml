@@ -1,6 +1,7 @@
 [project]
 name = "handball-with-data-engineering"
 version = "0.1.0"
+package-mode = false
 description = ""
 authors = [
     {name = "Yan",email = "yanrobim@gmail.com"}
