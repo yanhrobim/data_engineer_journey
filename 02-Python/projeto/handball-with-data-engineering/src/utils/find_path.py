@@ -2,15 +2,12 @@ from pathlib import Path
 
 def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str):
 
-    try:
-        raiz = Path(__file__).parent.parent.parent
 
-        caminho_para_dados = raiz / pasta_com_dados / nome_dados
+    raiz = Path(__file__).parent.parent.parent  # 3x .parent, para se localizar na raiz do projeto.
 
-        if caminho_para_dados.exists() == False:
-            raise FileNotFoundError
-                    
-    except FileNotFoundError:
+    caminho_para_dados = raiz / pasta_com_dados / nome_dados
+
+    if caminho_para_dados.exists() == False:    # Verificação se caminho/caminho existe. .exists() retorna False, caso não existir.
         print("\nO caminho que foi desenvolvido não existe! Verifique os parâmetros que você passou!")
         print(f"Parâmetros passados: '{pasta_com_dados}'; '{nome_dados}'. \nCaminho Final: '{caminho_para_dados}'")
 
