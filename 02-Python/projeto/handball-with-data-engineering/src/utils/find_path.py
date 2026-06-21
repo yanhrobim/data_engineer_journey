@@ -1,6 +1,6 @@
 from pathlib import Path
 
-def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str):
+def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str) -> Path:
 
 
     raiz = Path(__file__).parent.parent.parent  # 3x .parent, para se localizar na raiz do projeto.
@@ -13,5 +13,5 @@ def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str):
 
     else:
         print("\nO path para o arquivo.csv foi criado com sucesso! Todos os parâmetros passados encontram um arquivo.csv!")
-        print(f"Path criado: {caminho_para_dados}\n")
+        print(f"Path criado: {caminho_para_dados}")
         return caminho_para_dados
