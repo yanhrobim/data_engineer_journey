@@ -24,5 +24,3 @@ def leitura_csv(nome_pasta_com_arquivo_csv: str, nome_arquivo: str) -> pd.DataFr
 
 leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
-print(leitura.info())
-
