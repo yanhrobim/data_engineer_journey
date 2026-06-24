@@ -3,13 +3,13 @@ from src.extract.extracao_leitura_dados import leitura_csv
 
 leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
-def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame):
-    nome_minusculo = [str.lower(coluna) for coluna in return_leitura_csv.columns]
+def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+    nome_minusculo = [str.lower(coluna).strip().replace(" ", "_") for coluna in return_leitura_csv.columns]
     return_leitura_csv.columns = nome_minusculo
     return return_leitura_csv
 
 
-def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
+def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
     colunas_com_null = return_leitura_csv.columns[return_leitura_csv.isnull().any()].tolist() 
     # O objetivo dessa linha é obter as colunas que possuem algum valor nulo. Faço isso utilizando alguns métodos do pandas: .columns, .isnull(),.any() e .tolist().
@@ -26,14 +26,38 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
     for coluna in colunas_com_null:
 
         if return_leitura_csv[coluna].dtype == float:
-            coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)
+            coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
+            # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
-
+                                                                    # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
         if return_leitura_csv[coluna].dtype == 'str': 
-            coluna_str_sem_null = return_leitura_csv[coluna].fillna("valor_faltante")
+            coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
         
     return return_leitura_csv
 
+leitura = padronizando_nome_colunas(leitura)
 
-              
+def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+    colunas_com_caracter_especial = return_leitura_csv.columns[return_leitura_csv.astype("str")
+                                                                                 .apply(lambda dados: 
+                                                                                  dados.str.contains(r"[\_]", regex=True).any())].tolist()
+    # Antes de tudo, o único caracter especial que o dataset possui em dados são o "_", na coluna 'position'.
+    # Porém, utilizo código regex pois se futuramente o caso mudasse, era somente alterar o código.
+    # Existe mais códigos Regex que abrangem mais opções de caracteres especiais, mas neste cenário iria pegar colunas desnecessárias para fazer uma limpeza nos dados.
+
+    # Lógica muito semelhante a como pegamos colunas na função 'lidar com nulos', mas ao invés de termos isnull(), utilizo o apply() para
+    # obter o filtro, o filtro se baseia em encontrar quais colunas que possuem dados com caracter especial.
+    # Lembrando que o apply() passa o primeiro parâmetro ao lambda, no caso sendo a resposta de return_leitura_csv.columns().
+    # str.contains() é um método do pandas frequentemente utlizado para obter valores seguindo a regra/padrão que é passado a função.
+    # Passo um código regex ao método como regra, e juntamente com o .columns() passado anteriormemte, ele busca no DataFrame
+    # seguindo pelas colunas, quais dados possuem o(s) caractere(s) que o código Regex atribiui (No caso sendo somente "_"),
+    # então ele retorna True para colunas que possuem seguindo a regra e False para as que não. Com o .any() e .tolist() obtenho as colunas
+    # que possuem dados que contém caracteres especiais.
+
+    sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].replace(to_replace=r"[\_]", value="", regex=True)
+
+    return_leitura_csv[colunas_com_caracter_especial] = sem_caracteres_especial
+
+    return return_leitura_csv
+
