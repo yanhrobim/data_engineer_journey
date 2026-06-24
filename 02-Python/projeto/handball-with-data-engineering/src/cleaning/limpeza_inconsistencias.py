@@ -66,5 +66,17 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
 
     return return_leitura_csv
 
+def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+    colunas_com_valores_impossiveis = return_leitura_csv.columns[return_leitura_csv.isin([999, -1]).any()].tolist()
+    # Como o str.contains, o método .isin() encontra valores seguindo um parâmetro, o que for passado a ele.
+
+    coluna_sem_valor_impossivel = return_leitura_csv[colunas_com_valores_impossiveis].replace(to_replace=999, value=0)
+
+    return_leitura_csv[colunas_com_valores_impossiveis] = coluna_sem_valor_impossivel
+    
+    return return_leitura_csv
+
+
+
 
 
