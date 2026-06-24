@@ -41,9 +41,10 @@ leitura = padronizando_nome_colunas(leitura)
 def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     colunas_com_caracter_especial = return_leitura_csv.columns[return_leitura_csv.astype("str")
                                                                                  .apply(lambda dados: 
-                                                                                  dados.str.contains(r"[\_]", regex=True).any())].tolist()
-    # Antes de tudo, o único caracter especial que o dataset possui em dados são o "_", na coluna 'position'.
-    # Porém, utilizo código regex pois se futuramente o caso mudasse, era somente alterar o código.
+                                                                                  dados.str.contains(r"[_\\-]", regex=True)
+                                                                                  .any())].tolist()
+    # Antes de tudo, o único caracter especial que o dataset possui em dados são "_" e "-" (Valores númericos que não são negativos).
+    # Ex: Position, Games Played.
     # Existe mais códigos Regex que abrangem mais opções de caracteres especiais, mas neste cenário iria pegar colunas desnecessárias para fazer uma limpeza nos dados.
 
     # Lógica muito semelhante a como pegamos colunas na função 'lidar com nulos', mas ao invés de termos isnull(), utilizo o apply() para
@@ -51,13 +52,17 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     # Lembrando que o apply() passa o primeiro parâmetro ao lambda, no caso sendo a resposta de return_leitura_csv.columns().
     # str.contains() é um método do pandas frequentemente utlizado para obter valores seguindo a regra/padrão que é passado a função.
     # Passo um código regex ao método como regra, e juntamente com o .columns() passado anteriormemte, ele busca no DataFrame
-    # seguindo pelas colunas, quais dados possuem o(s) caractere(s) que o código Regex atribiui (No caso sendo somente "_"),
+    # seguindo pelas colunas, quais dados possuem o(s) caractere(s) que o código Regex atribiui (No caso sendo "_" e "-"),
     # então ele retorna True para colunas que possuem seguindo a regra e False para as que não. Com o .any() e .tolist() obtenho as colunas
     # que possuem dados que contém caracteres especiais.
 
-    sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].replace(to_replace=r"[\_]", value="", regex=True)
+    print(colunas_com_caracter_especial)
+
+    sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].astype("str").replace(to_replace=r"[_\\-]", value="", regex=True)
 
     return_leitura_csv[colunas_com_caracter_especial] = sem_caracteres_especial
 
     return return_leitura_csv
+
+
 
