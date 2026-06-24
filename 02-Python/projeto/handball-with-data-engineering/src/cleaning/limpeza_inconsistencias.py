@@ -59,6 +59,8 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     print(colunas_com_caracter_especial)
 
     sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].astype("str").replace(to_replace=r"[_\\-]", value="", regex=True)
+    # Além de "_" tive a decisão de adicionar para limpar "-", pois por exemplo na coluna "games_played" existia números negativos,
+    # não faz muito sentido ter "jogos jogados" negativos.
 
     return_leitura_csv[colunas_com_caracter_especial] = sem_caracteres_especial
 
