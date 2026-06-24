@@ -6,7 +6,7 @@ leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bund
 def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame):
     nome_minusculo = [str.lower(coluna) for coluna in return_leitura_csv.columns]
     return_leitura_csv.columns = nome_minusculo
-    return leitura
+    return return_leitura_csv
 
 
 def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
@@ -34,4 +34,6 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
             return_leitura_csv[coluna] = coluna_str_sem_null
         
     return return_leitura_csv
+
+
               
