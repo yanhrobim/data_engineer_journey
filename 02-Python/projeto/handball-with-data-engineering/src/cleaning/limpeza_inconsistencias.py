@@ -77,6 +77,32 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) 
     return return_leitura_csv
 
 
+# Vamos ter a coluna Season.
+# Utilizar o método Counter() para contar quais e quantos padrões existem na coluna 'Season'
+# Dentre as estruturas de data de sessão, tomar uma decisão de qual sera imposto a todos os dados.
+# (21/22, 22/23, 20/21, 18/19, 23/24, 19/20, 17/18)   
+# Aplicar provavelmente a nível de linha, com condições de controle a nova estrutura a dados que agora são errados.
+# Ex: Se a estrutura escolhida for 17/18, aplicar um if para apenas filtrar as linhas que não são 17/18.
+# Aplicar a nova estrutura a dados que não seguem.
+# Devolver o df.
 
 
+def padronizar_coluna_season_com_anos_2000(return_leitura_csv):
 
+    estruturas_season = return_leitura_csv["season"].value_counts().index.tolist()
+
+    for estrutura in estruturas_season:
+
+        if len(estrutura) == 5:
+            return_leitura_csv.loc[return_leitura_csv['season'] == estrutura].apply(lambda dados_season_sem_20: ''.join(['20', str(dados_season_sem_20)[:0], str(dados_season_sem_20)[:2], '/', '20', str(dados_season_sem_20)[-2:]]))
+            
+        if len(estrutura) > 5:
+            return_leitura_csv['season'].replace("-", "/")
+
+    return return_leitura_csv
+
+leitura = padronizar_coluna_season_com_anos_2000(leitura)
+print(leitura['season'])
+
+
+    
