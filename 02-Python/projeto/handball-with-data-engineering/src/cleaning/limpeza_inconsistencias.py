@@ -87,17 +87,12 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) 
 # Devolver o df.
 
 
-def padronizar_coluna_season_com_anos_2000(return_leitura_csv):
+def padronizar_coluna_season_com_anos_2000(return_leitura_csv: pd.DataFrame):
 
-    estruturas_season = return_leitura_csv["season"].value_counts().index.tolist()
-
-    for estrutura in estruturas_season:
-
-        if len(estrutura) == 5:
-            return_leitura_csv.loc[return_leitura_csv['season'] == estrutura].apply(lambda dados_season_sem_20: ''.join(['20', str(dados_season_sem_20)[:0], str(dados_season_sem_20)[:2], '/', '20', str(dados_season_sem_20)[-2:]]))
+    return_leitura_csv['season'] = return_leitura_csv['season'].str.replace(r'(\d{2})\/(\d{2})', r'20\1/20\2', regex=True)
             
-        if len(estrutura) > 5:
-            return_leitura_csv['season'].replace("-", "/")
+
+    return_leitura_csv['season'] = return_leitura_csv['season'].replace("-", "/")
 
     return return_leitura_csv
 
