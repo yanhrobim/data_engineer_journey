@@ -80,24 +80,34 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) 
 # Vamos ter a coluna Season.
 # Utilizar o método Counter() para contar quais e quantos padrões existem na coluna 'Season'
 # Dentre as estruturas de data de sessão, tomar uma decisão de qual sera imposto a todos os dados.
-# (21/22, 22/23, 20/21, 18/19, 23/24, 19/20, 17/18)   
+# ('21/22', '22/23', '20/21', '18/19', '23/24', '19/20', '17/18', '2017-2018')   
 # Aplicar provavelmente a nível de linha, com condições de controle a nova estrutura a dados que agora são errados.
 # Ex: Se a estrutura escolhida for 17/18, aplicar um if para apenas filtrar as linhas que não são 17/18.
 # Aplicar a nova estrutura a dados que não seguem.
 # Devolver o df.
 
 
-def padronizar_coluna_season_com_anos_2000(return_leitura_csv: pd.DataFrame):
+def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame):
+    # A coluna "Season" veio com a inconsistência de se ter mais de um formato de data dentro da coluna.
+    # ('21/22', '22/23', '20/21', '18/19', '23/24', '19/20', '17/18', '2017-2018')  
+    # Isso poderia atrapalhar em contrução de futuros filtros, ou até mesmo para obter dados estratégicos.
+    # Tive a decisão de aplicar um padrão a cada data da coluna, sendo 2017/2018.
 
-    return_leitura_csv['season'] = return_leitura_csv['season'].str.replace(r'(\d{2})\/(\d{2})', r'20\1/20\2', regex=True)
+    return_leitura_csv['season'] = return_leitura_csv['season'].str.replace(pat=r'(\d{2})\/(\d{2})', repl=r'20\1/20\2', regex=True)
+    # Utilizei os metodos 'str.replace()' do Pandas, o 'str' nos possibilita obter as operações de texto para um Dataframe e o
+    # 'replace()' tem o objetivo de encontrar e substituir strings de acordo com o parâmetro passado a ele.
+    # Além dos métodos, utilizei um padrão regex para auxiliar a encontrar o formato desejado.
+    # O padrão se baseia em (\d{2}) significa que deveria ter dois números, '\/' significa que a string contém '/'. (\d{2})\/(\d{2}) == '17/18'...
+    # Simplificando digo ao .replace() para encontrar strings que estão neste padrão com o parâmetro 'pat'.
+    # As () são o que captura cada valor e guarda temporariamente. Por isso \d{2} estão em () pois a cada parentêses o regex salva como grupo de captura,.
+    # Basicamente '17' foi salvo em \1, e '18' foi salvo em \2, cada data se tornou um grupo de captura. 
+    # Com cada data do formato '17/18' em um grupo de captura, passo o novo formato que quero para o .replace() reescrever a cada string que ele encontrar seguindo o padrão regex.
             
 
-    return_leitura_csv['season'] = return_leitura_csv['season'].replace("-", "/")
+    return_leitura_csv['season'] = return_leitura_csv['season'].str.replace(pat="-", repl="/")
+    # No dataset, a coluna 'season' também possuí os dados '2017-2018', então se caso ele encontrar estes dados, apenas substituir o '-'
+    # para colocar no padrão decidido.
 
     return return_leitura_csv
 
-leitura = padronizar_coluna_season_com_anos_2000(leitura)
-print(leitura['season'])
 
-
-    
