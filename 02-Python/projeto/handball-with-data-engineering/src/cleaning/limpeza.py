@@ -3,6 +3,22 @@ from src.extract.extracao_leitura_dados import leitura_csv
 
 leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
+def removendo_linhas_duplicadas(return_leitura_csv: pd.DataFrame):
+    linhas_antes = len(return_leitura_csv)
+    
+    return_leitura_csv = return_leitura_csv.drop_duplicates()
+
+    linhas_depois = len(return_leitura_csv)
+
+    relatorio = {
+        "funcao": "removendo_linhas_duplicadas",
+        "total_linhas_sem_limpeza": linhas_antes,
+        "total_linhas_depois_limpeza": linhas_depois,
+        "total_linhas_duplicadas_removidas": linhas_antes - linhas_depois
+    }
+
+    return return_leitura_csv, relatorio
+
 def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     nome_minusculo = [str.lower(coluna).strip().replace(" ", "_") for coluna in return_leitura_csv.columns]
     return_leitura_csv.columns = nome_minusculo
@@ -23,22 +39,27 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     # Tive a decisão de que, colunas que possuem valores númericos os dados nulos serão substituidos por 0.
     # Essa decisão é tomada pois na validação de dados, colunas de valores númericos só poderam ter tipos de dados númericos.
 
+
     for coluna in colunas_com_null:
 
-        if return_leitura_csv[coluna].dtype == float:
+
+        if return_leitura_csv[coluna].dtype == float or return_leitura_csv[coluna].dtype == int:
             coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
             # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
                                                                     # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
-        if return_leitura_csv[coluna].dtype == 'str': 
+        if return_leitura_csv[coluna].dtype == 'str':
             coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
+
+    
         
-    return return_leitura_csv
+    return return_leitura_csv, relatorio
 
 leitura = padronizando_nome_colunas(leitura)
 
 def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+
     colunas_com_caracter_especial = return_leitura_csv.columns[return_leitura_csv.astype("str")
                                                                                  .apply(lambda dados: 
                                                                                   dados.str.contains(r"[_\\-]", regex=True)
@@ -55,8 +76,6 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     # seguindo pelas colunas, quais dados possuem o(s) caractere(s) que o código Regex atribiui (No caso sendo "_" e "-"),
     # então ele retorna True para colunas que possuem seguindo a regra e False para as que não. Com o .any() e .tolist() obtenho as colunas
     # que possuem dados que contém caracteres especiais.
-
-    print(colunas_com_caracter_especial)
 
     sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].astype("str").replace(to_replace=r"[_\\-]", value="", regex=True)
     # Além de "_" tive a decisão de adicionar para limpar "-", pois por exemplo na coluna "games_played" existia números negativos,
@@ -111,9 +130,12 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
     return return_leitura_csv
 
 
-def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str):
+def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
 
     return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
     
     return return_leitura_csv
+
+leitura, relatorio = lidar_com_colunas_null(leitura)
+print(relatorio)
 
