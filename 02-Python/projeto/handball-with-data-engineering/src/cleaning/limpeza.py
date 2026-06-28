@@ -39,20 +39,31 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     # Tive a decisão de que, colunas que possuem valores númericos os dados nulos serão substituidos por 0.
     # Essa decisão é tomada pois na validação de dados, colunas de valores númericos só poderam ter tipos de dados númericos.
 
+    total_linhas_null = int(return_leitura_csv.isna().sum().sum())
+
+    nulos_transformados = 0
 
     for coluna in colunas_com_null:
 
 
         if return_leitura_csv[coluna].dtype == float or return_leitura_csv[coluna].dtype == int:
+            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
             # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
                                                                     # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
         if return_leitura_csv[coluna].dtype == 'str':
+            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
 
     
+    relatorio = {
+        "funcao": "lidar_com_colunas_null",
+        "colunas_com_null": colunas_com_null,
+        "total_linhas_nulas": total_linhas_null,
+        "totalnulos_transformados": nulos_transformados
+    }    
         
     return return_leitura_csv, relatorio
 
@@ -136,6 +147,4 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     
     return return_leitura_csv
 
-leitura, relatorio = lidar_com_colunas_null(leitura)
-print(relatorio)
 
