@@ -156,6 +156,3 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     
     return return_leitura_csv
 
-
-leitura = lidando_com_valores_impossiveis_invalidos(leitura)
-print(leitura)
