@@ -62,8 +62,8 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
         "funcao": "lidar_com_colunas_null",
         "colunas_com_null": colunas_com_null,
         "total_linhas_nulas_encontradas": total_linhas_null,
-    }    
-        
+    }
+    
     return return_leitura_csv, relatorio
 
 leitura = padronizando_nome_colunas(leitura)
@@ -96,15 +96,24 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     return return_leitura_csv
 
 def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
-    
+
     colunas_com_valores_impossiveis = return_leitura_csv.columns[return_leitura_csv.isin([999, -1]).any()].tolist()
     # Como o str.contains, o método .isin() encontra valores seguindo um parâmetro, o que for passado a ele.
+
+    linhas_com_valores_impossiveis = len(return_leitura_csv.loc[return_leitura_csv[colunas_com_valores_impossiveis].isin([999, -1]).any(axis=1).tolist()])
 
     coluna_sem_valor_impossivel = return_leitura_csv[colunas_com_valores_impossiveis].replace(to_replace=999, value=0)
 
     return_leitura_csv[colunas_com_valores_impossiveis] = coluna_sem_valor_impossivel
+
+    relatorio = {
+        "funcao": "lidando_com_valores_impossiveis_invalidos",
+        "valores_considerados_impossiveis": [999, -1],
+        "colunas_com_valores_impossiveis_invalidos": colunas_com_valores_impossiveis,
+        "total_linhas_com_valores_impossiveis": linhas_com_valores_impossiveis
+    }
     
-    return return_leitura_csv
+    return return_leitura_csv, relatorio
 
 
 # Vamos ter a coluna Season.
