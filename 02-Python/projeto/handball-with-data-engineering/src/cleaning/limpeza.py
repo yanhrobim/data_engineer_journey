@@ -41,19 +41,15 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
     total_linhas_null = int(return_leitura_csv.isna().sum().sum())
 
-    nulos_transformados = 0
-
     for coluna in colunas_com_null:
 
 
         if return_leitura_csv[coluna].dtype == float or return_leitura_csv[coluna].dtype == int:
-            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
             # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
                                                                     # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
         if return_leitura_csv[coluna].dtype == 'str':
-            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
 
@@ -132,6 +128,8 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
     # Isso poderia atrapalhar em contrução de futuros filtros, ou até mesmo para obter dados estratégicos.
     # Tive a decisão de aplicar um padrão a cada data da coluna, sendo 2017/2018.
 
+    formatos_sem_transformacao = return_leitura_csv['season'].value_counts().index.values.tolist()
+
     return_leitura_csv[f'{nome_coluna_season}'] = return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat=r'(\d{2})\/(\d{2})', repl=r'20\1/20\2', regex=True)
     # Utilizei os metodos 'str.replace()' do Pandas, o 'str' nos possibilita obter as operações de texto para um Dataframe e o
     # 'replace()' tem o objetivo de encontrar e substituir strings de acordo com o parâmetro passado a ele.
@@ -147,7 +145,14 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
     # No dataset, a coluna 'season' também possuí os dados '2017-2018', então se caso ele encontrar estes dados, apenas substituir o '-'
     # para colocar no padrão decidido.
 
-    return return_leitura_csv
+    relatorio = {
+        "funcao": "padronizar_formato_season_para_ano_completo",
+        "formatos_encontrados": formatos_sem_transformacao,
+        "formatos_apos_transformacao": return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat="-", repl="/").value_counts().index.tolist()
+    }
+
+
+    return return_leitura_csv, relatorio
 
 
 def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
@@ -155,4 +160,7 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
     
     return return_leitura_csv
+
+leitura, rel = padronizar_formato_season_para_ano_completo(return_leitura_csv=leitura, nome_coluna_season='season')
+print(rel)
 
