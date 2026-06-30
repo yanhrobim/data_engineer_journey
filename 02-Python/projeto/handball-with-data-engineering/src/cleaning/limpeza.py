@@ -61,8 +61,7 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     relatorio = {
         "funcao": "lidar_com_colunas_null",
         "colunas_com_null": colunas_com_null,
-        "total_linhas_nulas": total_linhas_null,
-        "totalnulos_transformados": nulos_transformados
+        "total_linhas_nulas_encontradas": total_linhas_null,
     }    
         
     return return_leitura_csv, relatorio
@@ -97,6 +96,7 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     return return_leitura_csv
 
 def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+    
     colunas_com_valores_impossiveis = return_leitura_csv.columns[return_leitura_csv.isin([999, -1]).any()].tolist()
     # Como o str.contains, o método .isin() encontra valores seguindo um parâmetro, o que for passado a ele.
 
@@ -148,3 +148,5 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     return return_leitura_csv
 
 
+leitura = lidando_com_valores_impossiveis_invalidos(leitura)
+print(leitura)
