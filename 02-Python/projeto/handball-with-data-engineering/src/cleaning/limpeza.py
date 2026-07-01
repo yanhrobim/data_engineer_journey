@@ -9,7 +9,12 @@ def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
     return_leitura_csv.columns = nome_minusculo
 
-    return return_leitura_csv
+    relatorio = {
+        "funcao": "padronizando_nome_colunas",
+        "decisao": "padronizar nome de colunas para todas as letras em minúsculo."
+    }
+
+    return return_leitura_csv, relatorio
 
 def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
 
@@ -35,7 +40,7 @@ def removendo_linhas_duplicadas(return_leitura_csv: pd.DataFrame):
 
     return return_leitura_csv, relatorio
 
-def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
 
     colunas_com_null = return_leitura_csv.columns[return_leitura_csv.isnull().any()].tolist() 
     # O objetivo dessa linha é obter as colunas que possuem algum valor nulo. Faço isso utilizando alguns métodos do pandas: .columns, .isnull(),.any() e .tolist().
@@ -113,9 +118,7 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
     return return_leitura_csv, relatorio
 
 
-def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
-
-
+def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame):
 
     colunas_com_caracter_especial = return_leitura_csv.columns[return_leitura_csv.astype("str")
                                                                                  .apply(lambda dados: 
@@ -152,7 +155,7 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
 
     return return_leitura_csv, relatorio
 
-def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame):
 
     colunas_com_valores_impossiveis = return_leitura_csv.columns[return_leitura_csv.isin([999, -1]).any()].tolist()
     # Como o str.contains, o método .isin() encontra valores seguindo um parâmetro, o que for passado a ele.
