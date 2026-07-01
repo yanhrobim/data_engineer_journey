@@ -39,25 +39,28 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     # Tive a decisão de que, colunas que possuem valores númericos os dados nulos serão substituidos por 0.
     # Essa decisão é tomada pois na validação de dados, colunas de valores númericos só poderam ter tipos de dados númericos.
 
-    total_linhas_null = int(return_leitura_csv.isna().sum().sum())
+    nulos_transformados = 0
 
     for coluna in colunas_com_null:
 
 
         if return_leitura_csv[coluna].dtype == float or return_leitura_csv[coluna].dtype == int:
+            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
             # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
                                                                     # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
         if return_leitura_csv[coluna].dtype == 'str':
+            nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
             coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
 
     
     relatorio = {
         "funcao": "lidar_com_colunas_null",
-        "colunas_com_null": colunas_com_null,
-        "total_linhas_nulas_encontradas": total_linhas_null,
+        "colunas_afetadas": colunas_com_null,
+        "total_linhas_nulas_tratadas": nulos_transformados,
+        "decisao": "substituir nulos seguindo o tipo de dados, se nulo for string/texto para 'missing_value', se tipo do nulo for numérico para 0."
     }
     
     return return_leitura_csv, relatorio
@@ -65,6 +68,8 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 leitura = padronizando_nome_colunas(leitura)
 
 def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+
+
 
     colunas_com_caracter_especial = return_leitura_csv.columns[return_leitura_csv.astype("str")
                                                                                  .apply(lambda dados: 
@@ -83,13 +88,23 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFra
     # então ele retorna True para colunas que possuem seguindo a regra e False para as que não. Com o .any() e .tolist() obtenho as colunas
     # que possuem dados que contém caracteres especiais.
 
+    linhas_com_caracteres_especiais = len(return_leitura_csv[return_leitura_csv[colunas_com_caracter_especial].astype(str).apply(lambda dados: dados.str.contains(r"[_\\-]", regex=True)).any(axis=1)])
+
     sem_caracteres_especial = return_leitura_csv[colunas_com_caracter_especial].astype("str").replace(to_replace=r"[_\\-]", value="", regex=True)
     # Além de "_" tive a decisão de adicionar para limpar "-", pois por exemplo na coluna "games_played" existia números negativos,
     # não faz muito sentido ter "jogos jogados" negativos.
 
     return_leitura_csv[colunas_com_caracter_especial] = sem_caracteres_especial
 
-    return return_leitura_csv
+    relatorio = {
+        "funcao": "remover_caracteres_especiais",
+        "caracteres_considerados_especiais_dataset": ["_", "-"],
+        "colunas_afetadas": colunas_com_caracter_especial,
+        "total_linhas_caracteres_especiais_tratadas": linhas_com_caracteres_especiais,
+        "decisao": "Remover caracteres especiais, pois no contexto atual são desnecessários e sujam os dados."
+    }
+
+    return return_leitura_csv, relatorio
 
 def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -105,8 +120,9 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) 
     relatorio = {
         "funcao": "lidando_com_valores_impossiveis_invalidos",
         "valores_considerados_impossiveis": [999, -1],
-        "colunas_com_valores_impossiveis_invalidos": colunas_com_valores_impossiveis,
-        "total_linhas_com_valores_impossiveis": linhas_com_valores_impossiveis
+        "colunas_afetadas": colunas_com_valores_impossiveis,
+        "total_linhas_com_valores_impossiveis_tratadas": linhas_com_valores_impossiveis,
+        "decisao": "visando que os valores impossiveis são númericos, substituir eles por 0."
     }
     
     return return_leitura_csv, relatorio
@@ -147,10 +163,11 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
 
     relatorio = {
         "funcao": "padronizar_formato_season_para_ano_completo",
+        "coluna_afetada": [f"{nome_coluna_season}"],
         "formatos_encontrados": formatos_sem_transformacao,
-        "formatos_apos_transformacao": return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat="-", repl="/").value_counts().index.tolist()
+        "formatos_apos_transformacao": return_leitura_csv['season'].value_counts().index.values.tolist(),
+        "decisao": "Padronizar datas de forma completa ao invés de abreviação. Estrutura decidida como correta: 'xxxx/xxxx'"
     }
-
 
     return return_leitura_csv, relatorio
 
@@ -161,6 +178,4 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     
     return return_leitura_csv
 
-leitura, rel = padronizar_formato_season_para_ano_completo(return_leitura_csv=leitura, nome_coluna_season='season')
-print(rel)
 
