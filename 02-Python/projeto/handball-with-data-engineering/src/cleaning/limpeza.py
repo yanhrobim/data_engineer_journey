@@ -19,8 +19,13 @@ def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
 
     return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
+
+    relatorio = {
+        "funcao": "padronizando_nome_colunas",
+        "decisao": "formatação de colunas com números com mais de duas casas decimais, visando ter números mais legiveis e próximos a realidade."
+    }
     
-    return return_leitura_csv
+    return return_leitura_csv, relatorio
 
 def removendo_linhas_duplicadas(return_leitura_csv: pd.DataFrame):
 
