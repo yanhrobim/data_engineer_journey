@@ -3,7 +3,22 @@ from src.extract.extracao_leitura_dados import leitura_csv
 
 leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
+def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+
+    nome_minusculo = [str.lower(coluna).strip().replace(" ", "_") for coluna in return_leitura_csv.columns]
+
+    return_leitura_csv.columns = nome_minusculo
+
+    return return_leitura_csv
+
+def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
+
+    return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
+    
+    return return_leitura_csv
+
 def removendo_linhas_duplicadas(return_leitura_csv: pd.DataFrame):
+
     linhas_antes = len(return_leitura_csv)
     
     return_leitura_csv = return_leitura_csv.drop_duplicates()
@@ -14,16 +29,11 @@ def removendo_linhas_duplicadas(return_leitura_csv: pd.DataFrame):
         "funcao": "removendo_linhas_duplicadas",
         "total_linhas_sem_limpeza": linhas_antes,
         "total_linhas_depois_limpeza": linhas_depois,
-        "total_linhas_duplicadas_removidas": linhas_antes - linhas_depois
+        "total_linhas_duplicadas_removidas": linhas_antes - linhas_depois,
+        "decisao": "remover linhas duplicadas."
     }
 
     return return_leitura_csv, relatorio
-
-def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
-    nome_minusculo = [str.lower(coluna).strip().replace(" ", "_") for coluna in return_leitura_csv.columns]
-    return_leitura_csv.columns = nome_minusculo
-    return return_leitura_csv
-
 
 def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -43,15 +53,18 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
     for coluna in colunas_com_null:
 
-
         if return_leitura_csv[coluna].dtype == float or return_leitura_csv[coluna].dtype == int:
+
             nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
+            
             coluna_numerica_sem_null =  return_leitura_csv[coluna].fillna(0)    
             # finllna() é um método utilizado para sobrescrever valores nulos. Além de encontrar os valores sozinhos, sobrescreve pelo parâmetro que é passado.
             return_leitura_csv[coluna] = coluna_numerica_sem_null
                                                                     # Se caso tivesse colunas com outros tipos de dados seria necessario adicionar mais if.
         if return_leitura_csv[coluna].dtype == 'str':
+
             nulos_transformados += int(return_leitura_csv[coluna].isnull().sum())
+            
             coluna_str_sem_null = return_leitura_csv[coluna].fillna("missing_value") # Dados em inglês, transformações em inglês.
             return_leitura_csv[coluna] = coluna_str_sem_null
 
@@ -65,7 +78,40 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     
     return return_leitura_csv, relatorio
 
-leitura = padronizando_nome_colunas(leitura)
+
+def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame, nome_coluna_season: str):
+    # A coluna "Season" veio com a inconsistência de se ter mais de um formato de data dentro da coluna.
+    # ('21/22', '22/23', '20/21', '18/19', '23/24', '19/20', '17/18', '2017-2018')  
+    # Isso poderia atrapalhar em contrução de futuros filtros, ou até mesmo para obter dados estratégicos.
+    # Tive a decisão de aplicar um padrão a cada data da coluna, sendo 2017/2018.
+
+    formatos_sem_transformacao = return_leitura_csv['season'].value_counts().index.values.tolist()
+
+    return_leitura_csv[f'{nome_coluna_season}'] = return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat=r'(\d{2})\/(\d{2})', repl=r'20\1/20\2', regex=True)
+    # Utilizei os metodos 'str.replace()' do Pandas, o 'str' nos possibilita obter as operações de texto para um Dataframe e o
+    # 'replace()' tem o objetivo de encontrar e substituir strings de acordo com o parâmetro passado a ele.
+    # Além dos métodos, utilizei um padrão regex para auxiliar a encontrar o formato desejado.
+    # O padrão se baseia em (\d{2}) significa que deveria ter dois números, '\/' significa que a string contém '/'. (\d{2})\/(\d{2}) == '17/18'...
+    # Simplificando digo ao .replace() para encontrar strings que estão neste padrão com o parâmetro 'pat'.
+    # As () são o que captura cada valor e guarda temporariamente. Por isso \d{2} estão em () pois a cada parentêses o regex salva como grupo de captura,.
+    # Basicamente '17' foi salvo em \1, e '18' foi salvo em \2, cada data se tornou um grupo de captura. 
+    # Com cada data do formato '17/18' em um grupo de captura, passo o novo formato que quero para o .replace() reescrever a cada string que ele encontrar seguindo o padrão regex.
+            
+
+    return_leitura_csv[f'{nome_coluna_season}'] = return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat="-", repl="/")
+    # No dataset, a coluna 'season' também possuí os dados '2017-2018', então se caso ele encontrar estes dados, apenas substituir o '-'
+    # para colocar no padrão decidido.
+
+    relatorio = {
+        "funcao": "padronizar_formato_season_para_ano_completo",
+        "coluna_afetada": [f"{nome_coluna_season}"],
+        "formatos_encontrados": formatos_sem_transformacao,
+        "formatos_apos_transformacao": return_leitura_csv['season'].value_counts().index.values.tolist(),
+        "decisao": "Padronizar datas de forma completa ao invés de abreviação. Estrutura decidida como correta: 'xxxx/xxxx'."
+    }
+
+    return return_leitura_csv, relatorio
+
 
 def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -126,56 +172,4 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame) 
     }
     
     return return_leitura_csv, relatorio
-
-
-# Vamos ter a coluna Season.
-# Utilizar o método Counter() para contar quais e quantos padrões existem na coluna 'Season'
-# Dentre as estruturas de data de sessão, tomar uma decisão de qual sera imposto a todos os dados.
-# ('21/22', '22/23', '20/21', '18/19', '23/24', '19/20', '17/18', '2017-2018')   
-# Aplicar provavelmente a nível de linha, com condições de controle a nova estrutura a dados que agora são errados.
-# Ex: Se a estrutura escolhida for 17/18, aplicar um if para apenas filtrar as linhas que não são 17/18.
-# Aplicar a nova estrutura a dados que não seguem.
-# Devolver o df.
-
-
-def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame, nome_coluna_season: str):
-    # A coluna "Season" veio com a inconsistência de se ter mais de um formato de data dentro da coluna.
-    # ('21/22', '22/23', '20/21', '18/19', '23/24', '19/20', '17/18', '2017-2018')  
-    # Isso poderia atrapalhar em contrução de futuros filtros, ou até mesmo para obter dados estratégicos.
-    # Tive a decisão de aplicar um padrão a cada data da coluna, sendo 2017/2018.
-
-    formatos_sem_transformacao = return_leitura_csv['season'].value_counts().index.values.tolist()
-
-    return_leitura_csv[f'{nome_coluna_season}'] = return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat=r'(\d{2})\/(\d{2})', repl=r'20\1/20\2', regex=True)
-    # Utilizei os metodos 'str.replace()' do Pandas, o 'str' nos possibilita obter as operações de texto para um Dataframe e o
-    # 'replace()' tem o objetivo de encontrar e substituir strings de acordo com o parâmetro passado a ele.
-    # Além dos métodos, utilizei um padrão regex para auxiliar a encontrar o formato desejado.
-    # O padrão se baseia em (\d{2}) significa que deveria ter dois números, '\/' significa que a string contém '/'. (\d{2})\/(\d{2}) == '17/18'...
-    # Simplificando digo ao .replace() para encontrar strings que estão neste padrão com o parâmetro 'pat'.
-    # As () são o que captura cada valor e guarda temporariamente. Por isso \d{2} estão em () pois a cada parentêses o regex salva como grupo de captura,.
-    # Basicamente '17' foi salvo em \1, e '18' foi salvo em \2, cada data se tornou um grupo de captura. 
-    # Com cada data do formato '17/18' em um grupo de captura, passo o novo formato que quero para o .replace() reescrever a cada string que ele encontrar seguindo o padrão regex.
-            
-
-    return_leitura_csv[f'{nome_coluna_season}'] = return_leitura_csv[f'{nome_coluna_season}'].str.replace(pat="-", repl="/")
-    # No dataset, a coluna 'season' também possuí os dados '2017-2018', então se caso ele encontrar estes dados, apenas substituir o '-'
-    # para colocar no padrão decidido.
-
-    relatorio = {
-        "funcao": "padronizar_formato_season_para_ano_completo",
-        "coluna_afetada": [f"{nome_coluna_season}"],
-        "formatos_encontrados": formatos_sem_transformacao,
-        "formatos_apos_transformacao": return_leitura_csv['season'].value_counts().index.values.tolist(),
-        "decisao": "Padronizar datas de forma completa ao invés de abreviação. Estrutura decidida como correta: 'xxxx/xxxx'"
-    }
-
-    return return_leitura_csv, relatorio
-
-
-def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
-
-    return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
-    
-    return return_leitura_csv
-
 
