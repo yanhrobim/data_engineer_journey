@@ -31,4 +31,4 @@ for funcao, parametros_extras_funcoes in lista_funcoes_de_limpeza:
     # leitura, relatorio = formatacao_duas_casas_decimais(df, coluna_decimal="shooting_accuracy")
 
 
-pd.DataFrame(relatorio).to_json(criar_caminho())
+pd.DataFrame(relatorio).to_json(criar_caminho(pastas='data/reports/data_report/', nome_arquivo='relatorio.json'))
