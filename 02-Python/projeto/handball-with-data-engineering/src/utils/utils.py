@@ -16,7 +16,7 @@ def encontrar_caminho_dados_csv(pasta_com_dados:str, nome_dados: str) -> Path:
         print(f"Path criado: {caminho_para_dados}")
         return caminho_para_dados
     
-def criar_caminho(pastas: str, nome_arquivo: str | None =  None):
+def criar_caminho(pastas: str, nome_arquivo: str | None =  None) -> Path:
 
     raiz = Path(__file__).parent.parent.parent
 
@@ -45,3 +45,14 @@ def criar_caminho(pastas: str, nome_arquivo: str | None =  None):
 
     return caminho
 
+def criar_relatorio_qualidade_de_dados_json(relatorios: list[dict], pastas_onde_relatorio_deve_ser_salvo: str, nome_para_relatorio: str):
+
+    import json
+
+    caminho_do_json = criar_caminho(pastas=f'{pastas_onde_relatorio_deve_ser_salvo}', nome_arquivo=f'{nome_para_relatorio}')
+    estrutura_json = json.dumps(relatorios, indent=4, ensure_ascii=False)
+
+    with open(f'{caminho_do_json}', 'w', encoding='utf-8') as create_json:
+        create_json.write(estrutura_json)
+
+    return print(f"\nO relatório de qualidade de dados foi criado! Localizado em: '{caminho_do_json}'")
