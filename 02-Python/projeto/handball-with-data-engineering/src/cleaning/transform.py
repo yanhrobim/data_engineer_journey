@@ -49,3 +49,4 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
                                             nome_para_relatorio="data_quality_report.json")
 
     return budeshandball_dataframe
+
