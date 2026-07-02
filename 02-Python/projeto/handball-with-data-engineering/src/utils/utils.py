@@ -45,5 +45,3 @@ def criar_caminho(pastas: str, nome_arquivo: str | None =  None):
 
     return caminho
 
-caminho_json = criar_caminho(pastas='data/reports/data_report/', nome_arquivo='relatorio.json')
-
