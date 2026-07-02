@@ -1,9 +1,8 @@
 import pandas as pd
 import pandas.errors
-from src.utils.find_path import encontrar_caminho_dados_csv
+from src.utils.utils import encontrar_caminho_dados_csv
 
-
-def leitura_csv(nome_pasta_com_arquivo_csv: str, nome_arquivo: str) -> pd.DataFrame:
+def leitura_budeshandball_csv(nome_pasta_com_arquivo_csv: str, nome_arquivo: str) -> pd.DataFrame:
     caminho = encontrar_caminho_dados_csv(pasta_com_dados=nome_pasta_com_arquivo_csv, nome_dados=nome_arquivo)
     try:
         dados = pd.read_csv(filepath_or_buffer=caminho)
@@ -21,6 +20,3 @@ def leitura_csv(nome_pasta_com_arquivo_csv: str, nome_arquivo: str) -> pd.DataFr
         print("\nA Leitura do CSV foi executada sem exeções!")
         return dados
     
-
-leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
-
