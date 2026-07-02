@@ -1,7 +1,4 @@
 import pandas as pd
-from src.extract.extracao_leitura_dados import leitura_csv
-
-leitura =  leitura_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
 def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -21,7 +18,7 @@ def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_deci
     return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
 
     relatorio = {
-        "funcao": "padronizando_nome_colunas",
+        "funcao": "formatacao_duas_casas_decimais",
         "decisao": "formatação de colunas com números com mais de duas casas decimais, visando ter números mais legiveis e próximos a realidade."
     }
     
