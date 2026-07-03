@@ -1,6 +1,6 @@
 import pandera.pandas as pa
 import pandas as pd
-from src.cleaning.limpeza import padronizando_nome_colunas, formatacao_duas_casas_decimais, removendo_linhas_duplicadas, lidar_com_colunas_null, padronizar_formato_season_para_ano_completo, remover_caracteres_especiais, lidando_com_valores_impossiveis_invalidos
+from src.cleaning.limpeza import padronizando_nome_colunas, formatacao_duas_casas_decimais, removendo_linhas_duplicadas, lidar_com_colunas_null, padronizar_formato_season_para_ano_completo, remover_caracteres_especiais, lidando_com_valores_impossiveis_invalidos, padronizando_posicoes_para_abreviacao
 from src.utils.utils import criar_relatorio_qualidade_de_dados_json
 from src.validation.validacao_schema import RawSchemaBudesHandball
 
@@ -35,6 +35,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
         (remover_caracteres_especiais, {}),
 
         (lidando_com_valores_impossiveis_invalidos, {})
+        (padronizando_posicoes_para_abreviacao, {"nome_coluna_season": "position"})
     ]
 
     for funcao, parametros_extras_funcoes in lista_funcoes_de_limpeza:
