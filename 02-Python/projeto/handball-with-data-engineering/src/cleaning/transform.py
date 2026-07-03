@@ -13,6 +13,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
         # primeiro erro encontrado.
 
     except pa.errors.SchemaErrors as exc:
+        print("Erro ao validar o schema dos dados brutos:")
         print(exc)
 
     relatorios = []

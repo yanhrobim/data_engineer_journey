@@ -178,3 +178,31 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame):
     
     return return_leitura_csv, relatorio
 
+
+def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame):
+
+    return_leitura_csv['position'] = return_leitura_csv['position'].str.upper()
+    return_leitura_csv['position'] = return_leitura_csv['position'].str.strip()
+
+    posicoes = return_leitura_csv['position'].value_counts().index.values.tolist()
+    posicoes.remove("NAN")
+    # Por algum motivo em meio desenvolvimento da função, estava retornando NAN na contagem dos valores, mesmo o método
+    # .value_counts() ter o parâmetro 'dropna=True' como padrão, então caso na contagem devolvesse NAN, iria ser removido aqui.
+
+    for posicao in posicoes:
+    
+        if " " in posicao.strip().strip():
+            index_espaco = posicao.index(" ")   # Pegando o index da posição de espaço. Se fosse por exemplo: "Center Back" iria ser index 6.
+            return_leitura_csv['position'] = return_leitura_csv['position'].str.replace(pat=posicao, repl=posicao[0] + posicao[index_espaco + 1])
+            # Juntando a primeira letra do valor[0], com a letra depois do " "[index_espaco + 1].
+            # Resultado "RIGHT WING": "RW".
+
+    relatorio = {
+        "funcao": "padronizando_posicoes_para_abreviacao",
+        "posicoes_encontradas": posicoes,
+        "posicoes_formato_errado": [posicao for posicao in posicoes if " " in posicao.strip()],
+        "posicoes_após_transformacao": return_leitura_csv['position'].value_counts().index.values.tolist(),
+        "decisao": "Abreviar nomes de posição para seguir o padrão do Dataset. Exemplos de Nome sem Abreviação: 'Right Back', 'Center Back', etc."
+    }
+
+    return return_leitura_csv, relatorio
