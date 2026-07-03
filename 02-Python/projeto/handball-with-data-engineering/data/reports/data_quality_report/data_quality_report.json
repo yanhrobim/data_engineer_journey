@@ -1,0 +1,80 @@
+[
+    {
+        "funcao": "padronizando_nome_colunas",
+        "decisao": "padronizar nome de colunas para todas as letras em minúsculo."
+    },
+    {
+        "funcao": "formatacao_duas_casas_decimais",
+        "decisao": "formatação de colunas com números com mais de duas casas decimais, visando ter números mais legiveis e próximos a realidade."
+    },
+    {
+        "funcao": "removendo_linhas_duplicadas",
+        "total_linhas_sem_limpeza": 6058,
+        "total_linhas_depois_limpeza": 5845,
+        "total_linhas_duplicadas_removidas": 213,
+        "decisao": "remover linhas duplicadas."
+    },
+    {
+        "funcao": "lidar_com_colunas_null",
+        "colunas_afetadas": [
+            "name",
+            "position",
+            "assists"
+        ],
+        "total_linhas_nulas_tratadas": 759,
+        "decisao": "substituir nulos seguindo o tipo de dados, se nulo for string/texto para 'missing_value', se tipo do nulo for numérico para 0."
+    },
+    {
+        "funcao": "padronizar_formato_season_para_ano_completo",
+        "coluna_afetada": [
+            "season"
+        ],
+        "formatos_encontrados": [
+            "22/23",
+            "21/22",
+            "20/21",
+            "18/19",
+            "23/24",
+            "19/20",
+            "17/18",
+            "2017-2018"
+        ],
+        "formatos_apos_transformacao": [
+            "2022/2023",
+            "2021/2022",
+            "2020/2021",
+            "2018/2019",
+            "2023/2024",
+            "2017/2018",
+            "2019/2020"
+        ],
+        "decisao": "Padronizar datas de forma completa ao invés de abreviação. Estrutura decidida como correta: 'xxxx/xxxx'."
+    },
+    {
+        "funcao": "remover_caracteres_especiais",
+        "caracteres_considerados_especiais_dataset": [
+            "_",
+            "-"
+        ],
+        "colunas_afetadas": [
+            "lastname",
+            "name",
+            "position",
+            "games_played"
+        ],
+        "total_linhas_caracteres_especiais_tratadas": 812,
+        "decisao": "Remover caracteres especiais, pois no contexto atual são desnecessários e sujam os dados."
+    },
+    {
+        "funcao": "lidando_com_valores_impossiveis_invalidos",
+        "valores_considerados_impossiveis": [
+            999,
+            -1
+        ],
+        "colunas_afetadas": [
+            "technical_faults"
+        ],
+        "total_linhas_com_valores_impossiveis_tratadas": 404,
+        "decisao": "visando que os valores impossiveis são númericos, substituir eles por 0."
+    }
+]
