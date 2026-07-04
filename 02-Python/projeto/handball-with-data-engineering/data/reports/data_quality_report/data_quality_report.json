@@ -76,5 +76,44 @@
         ],
         "total_linhas_com_valores_impossiveis_tratadas": 404,
         "decisao": "visando que os valores impossiveis são númericos, substituir eles por 0."
+    },
+    {
+        "funcao": "padronizando_posicoes_para_abreviacao",
+        "posicoes_encontradas": [
+            "LB",
+            "P",
+            "GK",
+            "CB",
+            "RB",
+            "LW",
+            "RW",
+            "MISSINGVALUE",
+            "RIGHT WING",
+            "LEFT BACK"
+        ],
+        "posicoes_formato_errado": [
+            "RIGHT WING",
+            "LEFT BACK"
+        ],
+        "posicoes_após_transformacao": [
+            "LB",
+            "P",
+            "GK",
+            "CB",
+            "RB",
+            "LW",
+            "RW",
+            "MISSINGVALUE"
+        ],
+        "decisao": "Abreviar nomes de posição para seguir o padrão do Dataset. Exemplos de Nome sem Abreviação: 'Right Back', 'Center Back', etc."
+    },
+    {
+        "funcao": "remover_espacos_desnecessarios",
+        "coluna_afetada(": [
+            "lastname",
+            "name",
+            "team"
+        ],
+        "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
     }
 ]
