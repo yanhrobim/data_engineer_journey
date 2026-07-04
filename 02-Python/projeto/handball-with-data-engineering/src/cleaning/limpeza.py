@@ -1,5 +1,4 @@
 import pandas as pd
-from src.extract.extracao_leitura_dados import leitura_budeshandball_csv
 
 def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -209,30 +208,21 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
 
     return return_leitura_csv, relatorio
 
-leitura =  leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
 
+def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame):
 
-def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame, coluna_com_espaco_desnecessario: str | None = None, lista_de_colunas_com_espaco_desnecessario: list[str] | None = None):
+    colunas_com_espaco = return_leitura_csv.columns[return_leitura_csv.astype("str").apply(lambda dados: dados.str.contains(" ").any())].tolist()
 
+    if len(colunas_com_espaco) > 0:
 
-    if not coluna_com_espaco_desnecessario == None:
+        return_leitura_csv[colunas_com_espaco] = return_leitura_csv[colunas_com_espaco].astype(str).str.strip()
 
-        return_leitura_csv[coluna_com_espaco_desnecessario] = return_leitura_csv[coluna_com_espaco_desnecessario].astype(str).astype(str).str.strip()
-
-
-    elif not lista_de_colunas_com_espaco_desnecessario == None:
-
-        return_leitura_csv[lista_de_colunas_com_espaco_desnecessario] = return_leitura_csv[lista_de_colunas_com_espaco_desnecessario].astype(str).str.strip()
 
     relatorio = {
         "funcao": "remover_espacos_desnecessarios",
-        "coluna_afetada(": coluna_com_espaco_desnecessario or lista_de_colunas_com_espaco_desnecessario,
+        "coluna_afetada(": colunas_com_espaco,
         "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
     }
     
     return return_leitura_csv, relatorio
-
-
-
-
 
