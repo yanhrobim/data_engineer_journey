@@ -1,4 +1,5 @@
 import pandas as pd
+from src.extract.extracao_leitura_dados import leitura_budeshandball_csv
 
 def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
 
@@ -12,6 +13,7 @@ def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     }
 
     return return_leitura_csv, relatorio
+
 
 def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
 
@@ -179,12 +181,12 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame):
     return return_leitura_csv, relatorio
 
 
-def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame):
+def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome_coluna_de_posicoes_jogadores: str):
 
-    return_leitura_csv['position'] = return_leitura_csv['position'].str.upper()
-    return_leitura_csv['position'] = return_leitura_csv['position'].str.strip()
+    return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'] = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].str.upper()
+    return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'] = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].str.strip()
 
-    posicoes = return_leitura_csv['position'].value_counts().index.values.tolist()
+    posicoes = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist()
     posicoes.remove("NAN")
     # Por algum motivo em meio desenvolvimento da função, estava retornando NAN na contagem dos valores, mesmo o método
     # .value_counts() ter o parâmetro 'dropna=True' como padrão, então caso na contagem devolvesse NAN, iria ser removido aqui.
@@ -193,7 +195,7 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame):
     
         if " " in posicao.strip().strip():
             index_espaco = posicao.index(" ")   # Pegando o index da posição de espaço. Se fosse por exemplo: "Center Back" iria ser index 6.
-            return_leitura_csv['position'] = return_leitura_csv['position'].str.replace(pat=posicao, repl=posicao[0] + posicao[index_espaco + 1])
+            return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'] = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].str.replace(pat=posicao, repl=posicao[0] + posicao[index_espaco + 1])
             # Juntando a primeira letra do valor[0], com a letra depois do " "[index_espaco + 1].
             # Resultado "RIGHT WING": "RW".
 
@@ -201,8 +203,36 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame):
         "funcao": "padronizando_posicoes_para_abreviacao",
         "posicoes_encontradas": posicoes,
         "posicoes_formato_errado": [posicao for posicao in posicoes if " " in posicao.strip()],
-        "posicoes_após_transformacao": return_leitura_csv['position'].value_counts().index.values.tolist(),
+        "posicoes_após_transformacao": return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist(),
         "decisao": "Abreviar nomes de posição para seguir o padrão do Dataset. Exemplos de Nome sem Abreviação: 'Right Back', 'Center Back', etc."
     }
 
     return return_leitura_csv, relatorio
+
+leitura =  leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
+
+
+def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame, coluna_com_espaco_desnecessario: str | None = None, lista_de_colunas_com_espaco_desnecessario: list[str] | None = None):
+
+
+    if not coluna_com_espaco_desnecessario == None:
+
+        return_leitura_csv[coluna_com_espaco_desnecessario] = return_leitura_csv[coluna_com_espaco_desnecessario].astype(str).astype(str).str.strip()
+
+
+    elif not lista_de_colunas_com_espaco_desnecessario == None:
+
+        return_leitura_csv[lista_de_colunas_com_espaco_desnecessario] = return_leitura_csv[lista_de_colunas_com_espaco_desnecessario].astype(str).str.strip()
+
+    relatorio = {
+        "funcao": "remover_espacos_desnecessarios",
+        "coluna_afetada(": coluna_com_espaco_desnecessario or lista_de_colunas_com_espaco_desnecessario,
+        "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
+    }
+    
+    return return_leitura_csv, relatorio
+
+
+
+
+
