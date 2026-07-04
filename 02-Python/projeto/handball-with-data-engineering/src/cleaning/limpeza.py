@@ -186,7 +186,6 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
     return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'] = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].str.strip()
 
     posicoes = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist()
-    posicoes.remove("NAN")
     # Por algum motivo em meio desenvolvimento da função, estava retornando NAN na contagem dos valores, mesmo o método
     # .value_counts() ter o parâmetro 'dropna=True' como padrão, então caso na contagem devolvesse NAN, iria ser removido aqui.
 
@@ -215,7 +214,7 @@ def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame):
 
     if len(colunas_com_espaco) > 0:
 
-        return_leitura_csv[colunas_com_espaco] = return_leitura_csv[colunas_com_espaco].astype(str).str.strip()
+        return_leitura_csv[colunas_com_espaco] = return_leitura_csv[colunas_com_espaco].astype(str).apply(lambda dados: dados.str.strip())
 
 
     relatorio = {
