@@ -186,8 +186,11 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
     return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'] = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].str.strip()
 
     posicoes = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist()
-    # Por algum motivo em meio desenvolvimento da função, estava retornando NAN na contagem dos valores, mesmo o método
-    # .value_counts() ter o parâmetro 'dropna=True' como padrão, então caso na contagem devolvesse NAN, iria ser removido aqui.
+    posicoes.remove("MISSINGVALUE")
+    # a função lidar_com_valores_nulos() faz com que todos valores nulos do tipo texto se transformem em 'missing_values'.
+    # Porém, neste caso não é uma posição, então para obter melhores resultados, principalmente no relatório de qualidade dos dados,
+    # é necessário que ele seja excluido da lista de posições, antes mesmo de qualquer padronização desta função, fora que ele não é uma posição válida como um NaN.
+    
 
     for posicao in posicoes:
     
@@ -197,11 +200,14 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
             # Juntando a primeira letra do valor[0], com a letra depois do " "[index_espaco + 1].
             # Resultado "RIGHT WING": "RW".
 
+    posicoes_padronizadas = return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist()
+    posicoes_padronizadas.remove("MISSINGVALUE")
+
     relatorio = {
         "funcao": "padronizando_posicoes_para_abreviacao",
         "posicoes_encontradas": posicoes,
         "posicoes_formato_errado": [posicao for posicao in posicoes if " " in posicao.strip()],
-        "posicoes_após_transformacao": return_leitura_csv[f'{nome_coluna_de_posicoes_jogadores}'].value_counts().index.values.tolist(),
+        "posicoes_após_transformacao": posicoes_padronizadas,
         "decisao": "Abreviar nomes de posição para seguir o padrão do Dataset. Exemplos de Nome sem Abreviação: 'Right Back', 'Center Back', etc."
     }
 
