@@ -55,7 +55,3 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
                                             nome_para_relatorio="data_quality_report.json")
 
     return budeshandball_dataframe
-
-leitura =  leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
-
-t = transform_budeshandball_csv(leitura)
