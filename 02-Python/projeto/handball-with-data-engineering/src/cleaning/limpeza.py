@@ -225,7 +225,7 @@ def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame):
 
     relatorio = {
         "funcao": "remover_espacos_desnecessarios",
-        "coluna_afetada(": colunas_com_espaco,
+        "coluna_afetada": colunas_com_espaco,
         "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
     }
     
