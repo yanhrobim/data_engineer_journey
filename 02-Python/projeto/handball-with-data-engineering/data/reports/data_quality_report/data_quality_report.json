@@ -87,7 +87,6 @@
             "RB",
             "LW",
             "RW",
-            "MISSINGVALUE",
             "RIGHT WING",
             "LEFT BACK"
         ],
@@ -102,8 +101,7 @@
             "CB",
             "RB",
             "LW",
-            "RW",
-            "MISSINGVALUE"
+            "RW"
         ],
         "decisao": "Abreviar nomes de posição para seguir o padrão do Dataset. Exemplos de Nome sem Abreviação: 'Right Back', 'Center Back', etc."
     },
