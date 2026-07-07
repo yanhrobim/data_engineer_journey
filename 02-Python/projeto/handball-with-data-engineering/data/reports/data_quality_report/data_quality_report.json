@@ -16,7 +16,7 @@
     },
     {
         "funcao": "lidar_com_colunas_null",
-        "colunas_afetadas": [
+        "coluna(s)_afetada(s)": [
             "name",
             "position",
             "assists"
@@ -26,7 +26,7 @@
     },
     {
         "funcao": "padronizar_formato_season_para_ano_completo",
-        "coluna_afetada": [
+        "coluna(s)_afetada(s)": [
             "season"
         ],
         "formatos_encontrados": [
@@ -56,7 +56,7 @@
             "_",
             "-"
         ],
-        "colunas_afetadas": [
+        "coluna(s)_afetada(s)": [
             "lastname",
             "name",
             "position",
@@ -71,7 +71,7 @@
             999,
             -1
         ],
-        "colunas_afetadas": [
+        "coluna(s)_afetada(s)": [
             "technical_faults"
         ],
         "total_linhas_com_valores_impossiveis_tratadas": 404,
@@ -79,6 +79,7 @@
     },
     {
         "funcao": "padronizando_posicoes_para_abreviacao",
+        "coluna(s)_afetada(s)": "position",
         "posicoes_encontradas": [
             "LB",
             "P",
@@ -107,11 +108,59 @@
     },
     {
         "funcao": "remover_espacos_desnecessarios",
-        "coluna_afetada(": [
-            "lastname",
-            "name",
+        "coluna(s)_afetada(s)": [
             "team"
         ],
-        "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
+        "lista_de_times": [
+            "BER",
+            "GWD",
+            "TVB",
+            "LEI",
+            "HBW",
+            "HAN",
+            "ELB",
+            "TVH",
+            "DOR",
+            "RNL",
+            "TBV",
+            "HCE",
+            "BHC",
+            "LUD",
+            "VFL",
+            "GUM",
+            "COB",
+            "SGF",
+            "SGB",
+            "ASV",
+            "MTM",
+            "THW",
+            "SCM",
+            "WET",
+            "FAG",
+            "TUE",
+            "NOL",
+            "HSV",
+            "AUE",
+            "NLB",
+            "EIS",
+            "HAG",
+            "WÖW",
+            "DES",
+            "TVG",
+            "TVE",
+            "KON",
+            "FER",
+            "WHV",
+            "HRO",
+            "VIK",
+            "POT",
+            "HIL",
+            "FFB",
+            "KRF",
+            "HCM",
+            "HGS",
+            "VIN"
+        ],
+        "decisao": "Remover espaços desnecessários (como no final e começo). Exemplo: ' Nome '"
     }
 ]
