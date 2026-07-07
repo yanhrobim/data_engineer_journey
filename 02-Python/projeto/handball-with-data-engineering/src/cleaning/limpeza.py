@@ -1,6 +1,7 @@
 import pandas as pd
+from src.extract.extracao_leitura_dados import leitura_budeshandball_csv
 
-def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
+def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame):
 
     nome_minusculo = [str.lower(coluna).strip().replace(" ", "_") for coluna in return_leitura_csv.columns]
 
@@ -14,7 +15,7 @@ def padronizando_nome_colunas(return_leitura_csv: pd.DataFrame) -> pd.DataFrame:
     return return_leitura_csv, relatorio
 
 
-def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str) -> pd.DataFrame:
+def formatacao_duas_casas_decimais(return_leitura_csv: pd.DataFrame, coluna_decimal: str):
 
     return_leitura_csv[f'{coluna_decimal}'] = (round(return_leitura_csv[f'{coluna_decimal}'], 2))
 
@@ -79,7 +80,7 @@ def lidar_com_colunas_null(return_leitura_csv: pd.DataFrame):
     
     relatorio = {
         "funcao": "lidar_com_colunas_null",
-        "colunas_afetadas": colunas_com_null,
+        "coluna(s)_afetada(s)": colunas_com_null,
         "total_linhas_nulas_tratadas": nulos_transformados,
         "decisao": "substituir nulos seguindo o tipo de dados, se nulo for string/texto para 'missing_value', se tipo do nulo for numérico para 0."
     }
@@ -112,7 +113,7 @@ def padronizar_formato_season_para_ano_completo(return_leitura_csv: pd.DataFrame
 
     relatorio = {
         "funcao": "padronizar_formato_season_para_ano_completo",
-        "coluna_afetada": [f"{nome_coluna_season}"],
+        "coluna(s)_afetada(s)": [f"{nome_coluna_season}"],
         "formatos_encontrados": formatos_sem_transformacao,
         "formatos_apos_transformacao": return_leitura_csv['season'].value_counts().index.values.tolist(),
         "decisao": "Padronizar datas de forma completa ao invés de abreviação. Estrutura decidida como correta: 'xxxx/xxxx'."
@@ -151,7 +152,7 @@ def remover_caracteres_especiais(return_leitura_csv: pd.DataFrame):
     relatorio = {
         "funcao": "remover_caracteres_especiais",
         "caracteres_considerados_especiais_dataset": ["_", "-"],
-        "colunas_afetadas": colunas_com_caracter_especial,
+        "coluna(s)_afetada(s)": colunas_com_caracter_especial,
         "total_linhas_caracteres_especiais_tratadas": linhas_com_caracteres_especiais,
         "decisao": "Remover caracteres especiais, pois no contexto atual são desnecessários e sujam os dados."
     }
@@ -172,7 +173,7 @@ def lidando_com_valores_impossiveis_invalidos(return_leitura_csv: pd.DataFrame):
     relatorio = {
         "funcao": "lidando_com_valores_impossiveis_invalidos",
         "valores_considerados_impossiveis": [999, -1],
-        "colunas_afetadas": colunas_com_valores_impossiveis,
+        "coluna(s)_afetada(s)": colunas_com_valores_impossiveis,
         "total_linhas_com_valores_impossiveis_tratadas": linhas_com_valores_impossiveis,
         "decisao": "visando que os valores impossiveis são númericos, substituir eles por 0."
     }
@@ -205,6 +206,7 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
 
     relatorio = {
         "funcao": "padronizando_posicoes_para_abreviacao",
+        "coluna(s)_afetada(s)": nome_coluna_de_posicoes_jogadores,
         "posicoes_encontradas": posicoes,
         "posicoes_formato_errado": [posicao for posicao in posicoes if " " in posicao.strip()],
         "posicoes_após_transformacao": posicoes_padronizadas,
@@ -216,18 +218,24 @@ def padronizando_posicoes_para_abreviacao(return_leitura_csv: pd.DataFrame, nome
 
 def remover_espacos_desnecessarios(return_leitura_csv: pd.DataFrame):
 
-    colunas_com_espaco = return_leitura_csv.columns[return_leitura_csv.astype("str").apply(lambda dados: dados.str.contains(" ").any())].tolist()
+    colunas_com_espacos_desnecessarios = return_leitura_csv.columns[return_leitura_csv.astype(str).apply(lambda dados: dados.str.contains(r"^\s+|\s+$", regex=True)).any()].tolist()
 
-    if len(colunas_com_espaco) > 0:
-
-        return_leitura_csv[colunas_com_espaco] = return_leitura_csv[colunas_com_espaco].astype(str).apply(lambda dados: dados.str.strip())
+    
+    if len(colunas_com_espacos_desnecessarios) > 0:
+        for coluna in colunas_com_espacos_desnecessarios:
+            return_leitura_csv[coluna] = return_leitura_csv[coluna].astype(str).str.strip()
 
 
     relatorio = {
         "funcao": "remover_espacos_desnecessarios",
-        "coluna_afetada": colunas_com_espaco,
-        "decisao": "Remover espaços que sujam os dados da coluna passada pelo usuário. Exemplo: ' Nome '"
+        "coluna(s)_afetada(s)": colunas_com_espacos_desnecessarios,
+        "lista_de_times": return_leitura_csv['team'].value_counts().index.values.tolist(), 
+        "decisao": "Remover espaços desnecessários (como no final e começo). Exemplo: ' Nome '"
     }
     
     return return_leitura_csv, relatorio
 
+leitura = leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
+leitura = padronizando_nome_colunas(leitura)[0]
+leitura, rel = remover_espacos_desnecessarios(leitura)
+print(rel)
