@@ -28,7 +28,7 @@ def criar_caminho(pastas: str, nome_arquivo: str | None =  None) -> Path:
             print(f"Parâmetros passados: '{pastas}'; '{nome_arquivo}'. \nCaminho Final: '{caminho}'")
 
         else:
-            print("\nO path foi criado com sucesso!")
+            print("\nO path para o relatório de qualidade de dados foi criado com sucesso!")
             print(f"Path criado: {caminho}")
             return caminho
         
@@ -39,7 +39,7 @@ def criar_caminho(pastas: str, nome_arquivo: str | None =  None) -> Path:
             print(f"Parâmetros passados: '{pastas}';  \nCaminho Final: '{caminho}'")
 
         else:
-            print("\nO path foi criado com sucesso!")
+            print("\nO path para o relatório de qualidade de dados foi criado com sucesso!")
             print(f"Path criado: {caminho}")
             return caminho
 
