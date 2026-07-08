@@ -29,9 +29,10 @@
                 "coluna(s)_afetada(s)": [
                     "name",
                     "position",
+                    "missed",
                     "assists"
                 ],
-                "total_linhas_nulas_tratadas": 759,
+                "total_linhas_nulas_tratadas": 761,
                 "decisao": "substituir nulos seguindo o tipo de dados, se nulo for string/texto para 'missing_value', se tipo do nulo for numérico para 0."
             }
         }
