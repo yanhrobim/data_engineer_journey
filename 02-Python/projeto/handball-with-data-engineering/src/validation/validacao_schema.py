@@ -51,6 +51,7 @@ class TrustedSchemaBudesHandball(pa.DataFrameModel):
     penalty_goals: Series[int]
     shooting_accuracy: Series[float]
     assists: Series[int]
+    steals: Series[int]
     technical_faults: Series[int]
     blocks: Series[int]
     yellow_cards: Series[int]
@@ -102,7 +103,7 @@ class TrustedSchemaBudesHandball(pa.DataFrameModel):
     
     pa.dataframe_check(name = "Cálculo da Métrica 'Shooting Accuracy'.",
                        error = "O valor do cálculo na coluna 'shooting_accuracy' está errado!")
-    def shooting_accuracy(cls, df_handball: pd.DataFrame) -> Series[bool]:
+    def metrica_shooting_accuracy(cls, df_handball: pd.DataFrame) -> Series[bool]:
         calculo_shooting_accuracy = round(df_handball['goals'] / (df_handball['missed'], df_handball['field_goals'], df_handball['penalty_goals']), 2)
         return df_handball['shooting_accuracy'] != calculo_shooting_accuracy
     
