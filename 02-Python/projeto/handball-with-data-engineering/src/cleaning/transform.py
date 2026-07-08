@@ -3,6 +3,7 @@ import pandas as pd
 from src.cleaning.limpeza import padronizando_nome_colunas, formatacao_duas_casas_decimais, removendo_linhas_duplicadas, lidar_com_colunas_null, padronizar_formato_season_para_ano_completo, remover_caracteres_especiais, lidando_com_valores_impossiveis_invalidos, padronizando_posicoes_para_abreviacao, remover_espacos_desnecessarios
 from src.utils.utils import criar_relatorio_qualidade_de_dados_json
 from src.validation.validacao_schema import RawSchemaBudesHandball
+from src.extract.extracao_leitura_dados import leitura_budeshandball_csv
 
 def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
     try:
@@ -32,7 +33,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
 
         (padronizar_formato_season_para_ano_completo, {"nome_coluna_season": "season"}),
 
-        (remover_caracteres_especiais, {}),
+        (remover_caracteres_especiais, {"colunas_com_caracteres_especiais_que_sujam_os_dados": ["position", "games_played"]}),
 
         (lidando_com_valores_impossiveis_invalidos, {}),
 
@@ -54,3 +55,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
                                             nome_para_relatorio="data_quality_report.json")
 
     return budeshandball_dataframe
+
+leitura =  leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
+
+t = transform_budeshandball_csv(leitura)
