@@ -2,8 +2,8 @@ import pandera.pandas as pa
 import pandas as pd
 from src.cleaning.limpeza import padronizando_nome_colunas, formatacao_duas_casas_decimais, removendo_linhas_duplicadas, lidar_com_colunas_null, padronizar_formato_season_para_ano_completo, remover_caracteres_especiais, lidando_com_valores_impossiveis_invalidos, padronizando_posicoes_para_abreviacao, remover_espacos_desnecessarios
 from src.utils.utils import criar_relatorio_qualidade_de_dados_json
-from src.validation.validacao_schema import RawSchemaBudesHandball
-from src.extract.extracao_leitura_dados import leitura_budeshandball_csv
+from src.validation.validacao_schema import RawSchemaBudesHandball, TrustedSchemaBudesHandball
+
 
 def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
     try:
@@ -53,9 +53,15 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
     criar_relatorio_qualidade_de_dados_json(relatorios=relatorios, 
                                             pastas_onde_relatorio_deve_ser_salvo="data/reports/data_quality_report",
                                             nome_para_relatorio="data_quality_report.json")
+    
+    try:
+
+        budeshandball_dataframe = TrustedSchemaBudesHandball.validate(budeshandball_dataframe)
+
+    except pa.errors.SchemaErrors as exc:
+        print(f"Erro no schema após a limpeza dos dados! Detalhes: \n{exc}")
+        raise
+
 
     return budeshandball_dataframe
 
-leitura =  leitura_budeshandball_csv(nome_pasta_com_arquivo_csv="data/raw", nome_arquivo="bundeshandball.csv")
-
-t = transform_budeshandball_csv(leitura)
