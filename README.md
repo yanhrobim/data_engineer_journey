@@ -40,7 +40,7 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 - [x] Window Functions
 - [x] CTEs (Common Table Expressions) x Subqueries x Views x Temporary Tables x Materialized Views
 
-- **Projeto Prático:** Extração de KPIs de E-commerce - Dataset Olist
+- **Projeto Prático:** [Extração de KPIs de E-commerce - Dataset Olist](./01-SQL/)
 
 ### | 🐍 Python (Fundamentos e Engenharia de Dados)
 
