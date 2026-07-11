@@ -2,7 +2,7 @@ import pandera.pandas as pa
 from pandera.typing import Series
 import pandas as pd
 
-class RawSchemaBudesHandball(pa.DataFrameModel):
+class RawSchemaBundesHandball(pa.DataFrameModel):
 # Está classe é criada com o objetivo de ser utilziada como uma pré-transformação.
 # Utilizando este contrato de dados, mesmo que seja nos dados brutos, evito de alguma forma que dados que não se encaixem 
 # sejam barrados antes mesmo de tentar o processo de limpeza.
@@ -39,7 +39,7 @@ class RawSchemaBudesHandball(pa.DataFrameModel):
                             # ele passa no contrato, se não gera erro.
 
 
-class TrustedSchemaBudesHandball(pa.DataFrameModel):
+class TrustedSchemaBundesHandball(pa.DataFrameModel):
     lastname: Series[str]
     name: Series[str]
     team: Series[str]
