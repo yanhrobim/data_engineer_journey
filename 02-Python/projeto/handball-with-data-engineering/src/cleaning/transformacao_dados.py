@@ -12,7 +12,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
     print("====================================================")
 
     try:
-        RawSchemaBudesHandball.validate(budeshandball_dataframe, lazy=True)
+        RawSchemaBundesHandball.validate(budeshandball_dataframe, lazy=True)
         # O parâmetro 'lazy=' do método validade() nos permite encontrar mais de um erro em apenas uma execução. 
         # Resumidamente, mesmo que ele encontre o primeiro erro, 
         # com 'lazy' ele continuara até encontrar todos os erros e no final te entregar tudo de uma única vez, invés de parar no
@@ -81,7 +81,7 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
 
     try:
 
-        budeshandball_dataframe = TrustedSchemaBudesHandball.validate(budeshandball_dataframe, lazy=True)
+        budeshandball_dataframe = TrustedSchemaBundesHandball.validate(budeshandball_dataframe, lazy=True)
 
     except pa.errors.SchemaErrors as exc:
         print(f"Erro: Erro no schema dos dados após a limpeza! Detalhes: \n{exc}")
