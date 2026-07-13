@@ -49,6 +49,7 @@ O tratamento de erros se diferencia em dois tipos de situação:
 Para o primeiro cenário, foi decidido o pipeline utilizar `try-except`, capturando o erro sem interromper a execução de forma brusca. Para o segundo, a utilização de `if-else`, já que é uma verificação previsível.
 O tratamento de erros também segue o princípio de responsabilidade única. Por exemplo, a função (`encontrar_caminho_dados_csv`) somente lida com situações que envolvem **Path**. 
 
+
 **Contruindo..**
 
 
