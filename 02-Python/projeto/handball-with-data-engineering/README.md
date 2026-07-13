@@ -44,7 +44,7 @@ A etapa de extração/leitura do pipeline é dividida em duas responsabilidades:
 
 O tratamento de erros se diferencia em dois tipos de situação: 
 - Problemas que são imprevisíveis (fora do controle do código), como remoção do arquivo, localização alterada durante o pipeline, ou até mesmo, arquivo sem permissão para ser lido. 
-- Problemas que podem ser encontrados antes mesmo do código ser executado, como confirmar se o caminho é inexistente, se arquivo possui dados, assim por diante.
+- Problemas que podem ser encontrados com os dados que o código já possui, como confirmar se o caminho é inexistente, se arquivo possui dados, assim por diante.
 
 Para o primeiro cenário, foi decidido o pipeline utilizar `try-except`, capturando o erro sem interromper a execução de forma brusca. Para o segundo, a utilização de `if-else`, já que é uma verificação previsível.
 O tratamento de erros também segue o princípio de responsabilidade única. Por exemplo, a função (`encontrar_caminho_dados_csv`) somente lida com situações que envolvem **Path**. 
