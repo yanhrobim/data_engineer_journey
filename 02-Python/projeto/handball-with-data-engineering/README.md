@@ -23,15 +23,15 @@ Um pipeline que lê dados brutos a partir de um arquivo CSV, limpa as suas incon
 
 O projeto **Handball With Data Engineering** simula na prática o fluxo de trabalho de um pipeline de dados real. A estrutura segue um modelo de **"ETL" (Extract, Transform, Load)** , extraindo os dados brutos de um arquivo CSV, limpando suas inconsistências através de transformações, e os dados limpos sendo carregados em um formato otimizado para análise.
 
-Antes de qualquer transformação, o pipeline compara os dados que chegam contra um **"contrato de dados"**, chamado por mim de etapa **Pré-Transform**. Após toda a limpeza de inconsistências, os dados são comparados com um segundo **"contrato de dados"** com verificações mais exigentes e regras de negócio, chamado dentro do pipeline de **Pós-Transform**. Estas etapas são adicionadas ao projeto com o objetivo de evitar que os dados inconsistentes avancem silenciosamente.
+Antes de qualquer transformação, o pipeline compara os dados que chegam contra um **"contrato de dados"**, chamado dentro do pipeline de etapa **Pré-Transform**. Após toda a limpeza de inconsistências, os dados são comparados com um segundo **"contrato de dados"** com verificações mais exigentes e regras de negócio, chamado dentro do pipeline de etapa **Pós-Transform**. Estas etapas são adicionadas ao projeto com o objetivo de evitar que os dados inconsistentes avancem silenciosamente.
 - **Pré-Transform:** Definição de quais colunas são esperadas, tipo de dados que cada uma deve ter.
-- **Pós-Transform:** Base do contrato anterior, mas adicionado regras mais exigentes como os valores que são permitidos em tal coluna, se uma coluna feita por cálcuclo possui os valores corretos. Caso os dados não estiverem de acordo, esta etapa para o pipeline.
+- **Pós-Transform:** Base do contrato anterior, mas adicionado regras mais exigentes como os valores que são permitidos em tal coluna, se uma coluna feita por cálcuclo possui os valores corretos. Caso os dados não estiverem de acordo, esta etapa para a execução do pipeline.
 
 No fim da etapa de limpeza, é gerado um **"Data Quality Report (Relatório de Qualidade de Dados)"**, que documenta as inconsistências encontradas, a decisão para lidar com elas e por quê.
 
 
 ### 🔁 Fluxo do Pipeline
-![Diagrama do pipeline ETL](./assets/pipeline_diagram.png)
+![Diagrama do pipeline ETL](./assets/img/pipeline_diagram.png)
 
 ---
 
