@@ -49,6 +49,17 @@ O tratamento de erros se diferencia em dois tipos de situação:
 Para o primeiro cenário, foi decidido o pipeline utilizar `try-except`, capturando o erro sem interromper a execução de forma brusca. Para o segundo, a utilização de `if-else`, já que é uma verificação previsível.
 O tratamento de erros também segue o princípio de responsabilidade única. Por exemplo, a função (`encontrar_caminho_dados_csv`) somente lida com situações que envolvem **Path**. 
 
+### 🧹 Transform
+
+A limpeza dos dados possui uma arquitetura modular: cada tipo de inconsistência (como valores nulos, caracteres especiais desnecessários, duplicatas, entre outros) é tratada por uma função dedicada, responsável apenas por aquele erro específico. Cada função recebe o DataFrame, aplica a limpeza, e devolve tanto o DataFrame quanto um relatório em formato dict que documenta informações da inconsistência tratada, o que foi encontrado e a decisão tomada. Este dicionário é o que alimenta o Data Quality Report gerado após toda a etapa de limpeza ser executada.
+
+Todas as funções de limpeza são conectadas em uma função orquestradora que executa as correções de forma sequencial nos dados recebidos, antes de os dados seguirem para etapa de **Pós-Transform**.
+
+### 📦 Load
+
+Após os dados serem validados pela etapa anterior **(Pós-Transform)**, A etapa de Load recebe os dados, e o resultado é carregado para `.parquet`, visando melhor desempenho dos dados em futuras análises, tendo como engine o **PyArrow** e utilizando o método de compreensão **Snappy** (Principal método por priorizar eficiência e perfomance). Uma boa observação é que a etapa de Load não valida se os dados estão corretos ou não, e sim a etapa anterior, mantendo em consideração a estrutura do projeto onde cada etapa tem sua responsabilidade única e contribui individualmente para o pipeline.
+
+---
 
 **Contruindo..**
 
