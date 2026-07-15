@@ -1,0 +1,18 @@
+{
+    "SCHEMA": {
+        "SERIES_CONTAINS_NULLS": [
+            {
+                "schema": "RawSchemaBundesHandball",
+                "column": "Name",
+                "check": "not_nullable",
+                "error": "non-nullable series 'Name' contains null values:919     NaN1102    NaN1378    NaN1604    NaN4383    NaNName: Name, dtype: str"
+            },
+            {
+                "schema": "RawSchemaBundesHandball",
+                "column": "Position",
+                "check": "not_nullable",
+                "error": "non-nullable series 'Position' contains null values:6       NaN18      NaN21      NaN37      NaN52      NaN       ... 6019    NaN6030    NaN6032    NaN6036    NaN6046    NaNName: Position, Length: 498, dtype: str"
+            }
+        ]
+    }
+}
