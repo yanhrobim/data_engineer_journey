@@ -19,9 +19,11 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
         # primeiro erro encontrado.
 
     except pa.errors.SchemaErrors as exc:
-        print("\nErro ao validar o schema dos dados brutos:")
-        print(exc)
-    
+        criar_relatorio_qualidade_de_dados_json(relatorios=dict(exc.message), 
+                                            pastas_onde_relatorio_deve_ser_salvo="data/reports/data_quality_reports",
+                                            nome_para_relatorio="pre_transform_data_quality_report.json")
+        print("\nErro ao validar o schema dos dados brutos! Detalhes na pasta de relatórios: './data/report/data_quality_reports/'")
+
     else:
         print("\nO schema dos dados brutos foi validado com sucesso, nenhum erro encontrado!")
 
@@ -72,8 +74,8 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
     print("============================================================")
 
     criar_relatorio_qualidade_de_dados_json(relatorios=relatorios, 
-                                            pastas_onde_relatorio_deve_ser_salvo="data/reports/data_quality_report",
-                                            nome_para_relatorio="data_quality_report.json")
+                                            pastas_onde_relatorio_deve_ser_salvo="data/reports/data_quality_reports",
+                                            nome_para_relatorio="transform_data_quality_report.json")
     
     print("\n==========================================================")
     print("  PÓS-TRANSFORM: CONTRATO DE DADOS (DADOS APÓS LIMPEZA)")
@@ -84,7 +86,10 @@ def transform_budeshandball_csv(budeshandball_dataframe: pd.DataFrame):
         budeshandball_dataframe = TrustedSchemaBundesHandball.validate(budeshandball_dataframe, lazy=True)
 
     except pa.errors.SchemaErrors as exc:
-        print(f"Erro: Erro no schema dos dados após a limpeza! Detalhes: \n{exc}")
+        criar_relatorio_qualidade_de_dados_json(relatorios=dict(exc.message), 
+                                            pastas_onde_relatorio_deve_ser_salvo="data/reports/data_quality_reports",
+                                            nome_para_relatorio="pos_transform_data_quality_report.json")
+        print("Erro: Erro na validação dos dados após a limpeza! Detalhes na pasta de relatórios: './data/report/data_quality_reports/'")
         raise
     else:
         print("\nO schema dos dados após a limpeza foi validado com sucesso, nenhum erro encontrado!")
