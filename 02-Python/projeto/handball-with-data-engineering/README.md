@@ -154,4 +154,4 @@ Para sujar os dados, defini os tipos de inconsistência que queria simular, e co
 
 Através deste processo, se tornaram os [dados sujos](./data/raw/bundeshandball.csv) que são limpos através do pipeline do projeto.
 
---- 
+---
