@@ -42,6 +42,8 @@ Priorizando aprendizado em extração e transformação de dados em bancos relac
 
 - **Projeto Prático:** [Extração de KPIs de E-commerce - Dataset Olist](./01-SQL/)
 
+---
+
 ### | 🐍 Python (Fundamentos e Engenharia de Dados)
 
 Direcionado a fundamentos de programação e Engenharia de Dados em Python.
@@ -60,7 +62,9 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 
 - **Projeto Prático:** [Handball With Data Engineering](./02-Python/projeto/handball-with-data-engineering/)
 
-## | 📊 Power BI (Fundamentos e Modelagem)
+---
+
+### | 📊 Power BI (Fundamentos e Modelagem)
 
 Direcionado aos fundamentos essenciais da ferramenta para atuação como Analista/Engenheiro de Dados, priorizando modelagem, DAX e conexão com dados.
 
@@ -73,6 +77,8 @@ Direcionado aos fundamentos essenciais da ferramenta para atuação como Analist
 - [ ] Estudo aplicado de domínio (escolha entre Comercial/Vendas ou Financeiro)
 
 - **Projeto Prático:** *(planejado após fundamentos)*
+
+---
 
 ## 🛠️ Stack da Jornada
 
