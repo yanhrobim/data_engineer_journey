@@ -4,7 +4,7 @@
   <a href="https://github.com/yanhrobim">
   <img src="https://img.shields.io/badge/GitHub-Yan Robim-181717?logo=github"/>
   </a>
-  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 65 (Python)]-yellow" />
+  <img src="https://img.shields.io/badge/Status-Em%20Andamento [Dia 66 (Python)]-yellow" />
   <img src="https://img.shields.io/badge/Objetivo Principal-Data%20Engineer-black" />
 
 Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. O espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
@@ -27,7 +27,7 @@ Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focad
 ### 📅 Jornada de Aprendizado
 - **[SQL & Banco de Dados](#-️-sql--banco-de-dados)**
 - **[Python (Fundamentos e Engenharia de Dados)](#--python-fundamentos-e-engenharia-de-dados)**
-- **DBT & Modelagem de Dados (Planejado)**
+- **[Power BI (Próximo Passo)](#--power-bi-fundamentos-e-modelagem)**
 
 ### | 🛢️ SQL & Banco de Dados
 
@@ -59,12 +59,29 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [x] Leitura e escrita de arquivos *(CSV, JSON, etc.)*
     - [x] Processamento e transformação de dados. *(Pandas)*
 
+- **Projeto Prático:** [Handball With Data Engineering](./02-Python/projeto/handball-with-data-engineering/)
+
+## | 📊 Power BI (Fundamentos e Modelagem)
+
+Direcionado aos fundamentos essenciais da ferramenta para atuação como Analista/Engenheiro de Dados, priorizando modelagem, DAX e conexão com dados.
+
+- [ ] Introdução e Primeiros Passos com o Power BI
+- [ ] Modelagem, Relacionamentos e DAX
+- [ ] Limpeza e Manipulação de Dados com Power BI
+- [ ] Power Query M Language
+- [ ] Power BI e Bancos de Dados
+- [ ] SQL Analytics (aplicado ao Power BI)
+- [ ] Estudo aplicado de domínio (escolha entre Comercial/Vendas ou Financeiro)
+
+- **Projeto Prático:** *(planejado após fundamentos)*
+
 ## 🛠️ Stack da Jornada
 
 | Categoria | Ferramentas / Linguagens |
 | :--- | :--- |
 | **Linguagens de Programação** | Python & SQL |
 | **Bancos de Dados** | PostgreSQL |
+| **Visualização de Dados** | Power BI |
 | **Bibliotecas** | Pandas |
 | **Versionamento** | Git & GitHub |
 | **IDEs** | VS Code & DBeaver |
