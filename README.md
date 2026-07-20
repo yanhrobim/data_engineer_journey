@@ -53,7 +53,6 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
     - [x] Estruturas de repetição *(For)*
     - [x] Tipos complexos e Type Hint. (Dicionários, Listas, DataFrames, etc.)
     - [x] Funções e modularização de código
-    - [ ] Programação Orientada a Objetos *(POO)*
 
 - **Python para Dados**
     - [x] Leitura e escrita de arquivos *(CSV, JSON, etc.)*
