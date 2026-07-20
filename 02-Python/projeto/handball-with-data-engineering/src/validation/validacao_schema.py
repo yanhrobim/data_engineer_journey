@@ -7,18 +7,18 @@ class RawSchemaBundesHandball(pa.DataFrameModel):
 # Utilizando este contrato de dados, mesmo que seja nos dados brutos, evito de alguma forma que dados que não se encaixem 
 # sejam barrados antes mesmo de tentar o processo de limpeza.
     Lastname: Series[str] 
-    Name: Series[str] = pa.Field(nullable=True) # O método pa.Field() nos permite adicionar validações por Coluna do DataFrame.
+    Name: Series[str] # O método pa.Field() nos permite adicionar validações por Coluna do DataFrame.
                                                 # Dentre vários parâmetros, o nullable=True diz ao pandera que nesta coluna é permitido conter dados nulos.
-    Team: Series[str] = pa.Field(nullable=True)
-    Position: Series[str] = pa.Field(nullable=True)
-    Games_Played: Series[str] = pa.Field(alias="Games Played", nullable=True)   # Todas possuem 'nullable=True' pois como são dados brutos, qualquer coluna pode conter valores nulos e aqui, se não for especificado o código quebra.
-    Goals: Series[int] = pa.Field(nullable=True)
-    Missed: Series[int] = pa.Field(nullable=True)
-    Field_Goals: Series[int] = pa.Field(alias="Field Goals", nullable=True)
-    Penalty_Goals: Series[int] = pa.Field(alias="Penalty Goals", nullable=True)
-    Shooting_Accuracy: Series[float] = pa.Field(alias="Shooting Accuracy", nullable=True)
-    Assists: Series[int] = pa.Field(nullable=True)
-    Technical_Faults: Series[int] = pa.Field(alias="Technical Faults", nullable=True)  # o parâmetro alias= nos permite apontar a qual coluna o 
+    Team: Series[str]
+    Position: Series[str]
+    Games_Played: Series[str] = pa.Field(alias="Games Played")   # Todas possuem 'nullable=True' pois como são dados brutos, qualquer coluna pode conter valores nulos e aqui, se não for especificado o código quebra.
+    Goals: Series[int]
+    Missed: Series[int]
+    Field_Goals: Series[int] = pa.Field(alias="Field Goals")
+    Penalty_Goals: Series[int] = pa.Field(alias="Penalty Goals")
+    Shooting_Accuracy: Series[float] = pa.Field(alias="Shooting Accuracy")
+    Assists: Series[int]
+    Technical_Faults: Series[int] = pa.Field(alias="Technical Faults") # o parâmetro alias= nos permite apontar a qual coluna o 
                                                                         # objeto da classe aponta no DataFrame.
                                                                         # Utilizo ele em colunas que possuem espaços no nome,
                                                                         # pois em criação de classes não é permitido objeto com nomes que contém espaço.
@@ -110,12 +110,4 @@ class TrustedSchemaBundesHandball(pa.DataFrameModel):
     class Config():
         strict = True
         coerce = True 
-    
-    
-
-    
-    
-
-
-
 
