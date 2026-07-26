@@ -131,6 +131,9 @@ A qualidade de dados é aplicada em três etapas do pipeline, cada uma capturand
   ├── pyproject.toml                    # Configuração do projeto e dependências (gerenciadas via Poetry).
   └── README.md                         # Documentação geral do projeto.
 ```
+
+---
+
 ## 🗄️ Sobre os Dados
 
 ### 📦 Dataset Kaggle
