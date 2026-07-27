@@ -17,4 +17,12 @@ Com o objetivo de aprender sobre a ferramenta, consolidar conhecimento e posteri
 
 **Business Intelligence (BI)** é um conjunto de técnicas e ferramentas utilizadas para transformar os dados em informações úteis visando obter melhores decisões de negócio para a empresa. 
 
+### **O que é Microsoft Power BI?**
+
+**Microsoft Power BI** é uma plataforma da **Microsoft** que permite aos usuários visualizar e analisar dados, criar relatórios e dashboards e compartilhar insights com outros usuários.
+
+No **Power BI** os usuários podem se conectar a diversas fontes de dados, como planilhas, banco de dados, serviços de nuvem e aplicativos, transformando os dados em informações valiosas e úteis.
+
+Com o Power BI, podemos importar, limpar, transformar e modelar dados, criar relatórios e visualizações, e em uma versão paga até publicar e compartilhar. Além disso, possui recursos avançados, dashboards interativos, Inteligência Artificial (IA) e automatização de relatórios.
+
 ---
