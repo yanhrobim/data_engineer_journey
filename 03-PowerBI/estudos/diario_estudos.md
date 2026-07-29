@@ -68,3 +68,5 @@ Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar
   - Pergunta 3 (vendas por país + prioridade de entrega): gráfico de barra empilhada é bom pra mostrar mais de 2 informações no mesmo gráfico.
 - Existe interação entre dashboards: ao clicar em um país no gráfico da pergunta 3, o gráfico da pergunta 1 se atualiza mostrando o total de vendas daquele país, funciona como um filtro.
 Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, média, contagem. Além disso, podemos também aplicar filtros como: **Mostre a região que vendeu mais de 100 mil (Somente exemplo)** .
+
+**Dashboards com a Respostas das Perguntas:** [Dashboards](/03-PowerBI/estudos/1.%20Introdução%20e%20Primeiros%20Passos%20com%20o%20Power%20BI/)
