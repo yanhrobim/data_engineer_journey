@@ -22,7 +22,49 @@ Com o objetivo de aprender sobre a ferramenta, consolidar conhecimento e posteri
 **Microsoft Power BI** é uma plataforma da **Microsoft** que permite aos usuários visualizar e analisar dados, criar relatórios e dashboards e compartilhar insights com outros usuários.
 
 No **Power BI** os usuários podem se conectar a diversas fontes de dados, como planilhas, banco de dados, serviços de nuvem e aplicativos, transformando os dados em informações valiosas e úteis.
-
-Com o Power BI, podemos importar, limpar, transformar e modelar dados, criar relatórios e visualizações, e em uma versão paga até publicar e compartilhar. Além disso, possui recursos avançados, dashboards interativos, Inteligência Artificial (IA) e automatização de relatórios.
+Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar relatórios e visualizações, e em uma versão paga até publicar e compartilhar. Além disso, possui recursos avançados, dashboards interativos, Inteligência Artificial (IA) e automatização de relatórios.
 
 ---
+
+## 📝 Registro Por Aula
+
+### | 📚 Aula 01 
+
+#### **Dia 1 (29/07/26)**
+
+**🖋️ Tópicos da Aula:**
+- Introdução a ferramenta **Power BI**. (Interface)
+- Intrdoução a Relatórios e Dashboards com Laboratório Prático. (Responder Perguntas de Métrica com o **Power BI**)
+    - Dados
+    - *1. Qual o valor total vendido?*
+    - *2. Quantas vendas foram realizadas por categoria de produto?*
+    - *3. Quantas vendas foram realizadas por país considerando prioridade de entrega?*
+    - *4. Qual foi a média de desconto nas vendas por subcategoria de produto?*
+    - *5. Quais países tiveram maior média que 250 (25%) de valor de venda? Demonstre em um mapa.*
+
+**🧠 Aprendizados da aula:**
+
+**🧠 Aprendizados da aula:**
+
+*Interface Power BI*
+- Na interface do Power BI, temos: uma aba de Modelos (modelagem), uma aba de Tabela (visualizar os dados que consumimos) e a aba de Relatórios (onde criamos os dashboards).
+
+*Leve Introdução ao Power Query*
+> Obs: anotações do que vi e entendi até agora, pode conter imprecisões, é uma primeira impressão.
+- Clicar em "Transformar Dados" redireciona para o Power Query.
+- O Power Query possui 6 abas:
+  - **Base**: parecido com um banco relacional (ex: PostgreSQL) — consulta a tabela, pega os dados, filtra por coluna, conceitos básicos de SQL.
+  - **Transformar**: transformação nos dados — agrupamento, verificação/modificação de tipos, formatação, cálculos estatísticos, scripts de R ou Python.
+  - **Adicionar Coluna**: foco em criar novas colunas (ex: Total em vendas), inclui criar coluna, invocar função personalizada, entre outras opções.
+  - **Exibição**: filtros de visualização dos dados, opções de nulls, teste de qualidade da coluna, entre outros.
+  - **Ferramentas**: "Iniciar Diagnóstico" funciona como um DEBUG — ajuda a entender o dashboard, melhorar performance, encontrar erros.
+
+*Observações/Anotações Próprias*
+- Power BI não é uma ferramenta de Ciência de Dados, e sim de Análise de Dados, porém em tarefas específicas dá pra usar Ciência de Dados, com a possibilidade de importar scripts Python ou R na aba Transformar.
+- "Relatório" no Power BI equivale a um projeto.
+- Os gráficos/dashboards podem ser escolhidos em um menu no lado direito, populá-los é só clicar em quais colunas quero que apareçam.
+- Dicas de escolha de gráfico:
+  - Pergunta 2 (vendas por categoria, 3 categorias): gráfico de pizza é uma boa opção, mas seria ruim com muitas categorias.
+  - Pergunta 3 (vendas por país + prioridade de entrega): gráfico de barra empilhada é bom pra mostrar mais de 2 informações no mesmo gráfico.
+- Existe interação entre dashboards: ao clicar em um país no gráfico da pergunta 3, o gráfico da pergunta 1 se atualiza mostrando o total de vendas daquele país, funciona como um filtro.
+Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, média, contagem. Além disso, podemos também aplicar filtros como: **Mostre a região que vendeu mais de 100 mil (Somente exemplo)** .
