@@ -30,7 +30,7 @@ Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar
 
 ### | 📚 Aula 01 
 
-#### **Dia 1 (29/07/26)**
+#### **Dia 1 — 2 (29/07/26 há 30/07/26)**
 
 **🖋️ Tópicos da Aula:**
 - Introdução a ferramenta **Power BI**. (Interface)
@@ -41,8 +41,6 @@ Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar
     - *3. Quantas vendas foram realizadas por país considerando prioridade de entrega?*
     - *4. Qual foi a média de desconto nas vendas por subcategoria de produto?*
     - *5. Quais países tiveram maior média que 250 (25%) de valor de venda? Demonstre em um mapa.*
-
-**🧠 Aprendizados da aula:**
 
 **🧠 Aprendizados da aula:**
 
@@ -70,3 +68,14 @@ Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar
 Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, média, contagem. Além disso, podemos também aplicar filtros como: **Mostre a região que vendeu mais de 100 mil (Somente exemplo)** .
 
 **Dashboards com a Respostas das Perguntas:** [Dashboards](/03-PowerBI/estudos/1.%20Introdução%20e%20Primeiros%20Passos%20com%20o%20Power%20BI/)
+
+---
+
+### | 📚 Aula 02 
+
+#### **Dia 3 (31/07/26)**
+
+**🖋️ Tópicos da Aula:**
+- Introdução a tema Modelagem de Dados
+- Relacionamentos
+- DAX
