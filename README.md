@@ -68,7 +68,7 @@ Direcionado a fundamentos de programação e Engenharia de Dados em Python.
 
 Direcionado aos fundamentos essenciais da ferramenta para atuação como Analista/Engenheiro de Dados, priorizando modelagem, DAX e conexão com dados.
 
-- [ ] Introdução e Primeiros Passos com o Power BI
+- [x] Introdução e Primeiros Passos com o Power BI
 - [ ] Modelagem, Relacionamentos e DAX
 - [ ] Limpeza e Manipulação de Dados com Power BI
 - [ ] Power Query M Language
