@@ -28,7 +28,7 @@ Com o **Power BI**, podemos importar, limpar, transformar e modelar dados, criar
 
 ## 📝 Registro Por Aula
 
-### | 📚 Aula 01 
+### | 📚 Capítulo 01
 
 #### **Dia 1 — 2 (29/07/26 há 30/07/26)**
 
@@ -71,7 +71,7 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
 
 ---
 
-### | 📚 Aula 02 
+### | 📚 Capítulo 02 
 
 #### **Dia 3 (31/07/26)**
 
