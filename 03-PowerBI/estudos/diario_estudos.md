@@ -76,6 +76,13 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
 #### **Dia 3 (31/07/26)**
 
 **🖋️ Tópicos da Aula:**
-- Introdução a tema Modelagem de Dados
+- Introdução a Modelagem de Dados
+  - O que é a modelagem de dados?
+  - O que é um modelo de dados?
+  - Como configurar um modelo de dados no **Power BI**?
+  - Quais são as implicações de não criar um modelo de dados corretamente no **Power BI**?
 - Relacionamentos
 - DAX
+
+**🧠 Aprendizados da aula:**
+- A **Modelagem de Dados** é o que você aplica na construção de um **Modelo de Dados**. Simplificando, você aplica técnicas de modelagem de dados para se construir um modelo de dados com o objetivo de visualizar estrutura, visualizar relacionamentos, visualizar organização dos dados.
