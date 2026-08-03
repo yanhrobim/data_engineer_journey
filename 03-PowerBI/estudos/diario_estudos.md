@@ -92,8 +92,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - **Modelo Conceitual**
     - **Modelo Lógico**
     * **Modelo  Físico**
-  - Em uma empresa
-    - Pode se ter: Um GRANDE Modelo de Dados, que mostra como os dados são utilizados dentro da empresa.
-    - Gerar pequenos modelos de dados seguido por departamento, demonstrando como cada departamentos dentro da empresa utiliza os dados.
-    - Criar um modelo de dados específico para a resolução de um problema, exemplo: Empresa quer entender em quais regiões o Marketing gera vendas/auxilia nas vendas.
+  - Em uma empresa pode se ter:
+    - Um grande modelo de Dados, que mostra como os dados são utilizados dentro da empresa.
+    - Pequenos modelos de dados seguido por departamento, demonstrando como cada departamentos dentro da empresa utiliza os dados.
+    - Um modelo de dados específico para a resolução de um problema, exemplo: Empresa quer entender em quais regiões o Marketing gera vendas/auxilia nas vendas.
 - O Power BI simplifica o processo de criação de um modelo de dados, criando um básico, porém que mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, mesmo assim, o papel principal de fazer o processo é **MEU**.
