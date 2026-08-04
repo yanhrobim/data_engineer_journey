@@ -96,5 +96,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - Um grande modelo de Dados, que mostra como os dados são utilizados dentro da empresa.
     - Pequenos modelos de dados seguido por departamento, demonstrando como cada departamentos dentro da empresa utiliza os dados.
     - Um modelo de dados específico para a resolução de um problema, exemplo: Empresa quer entender em quais regiões o Marketing gera vendas/auxilia nas vendas.
-- O Power BI simplifica o processo de criação de um modelo de dados, criando um básico, porém que mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, mesmo assim, o papel principal de fazer o processo é **MEU**.
+- O **Power BI** simplifica o processo de criação de um modelo de dados, criando um básico, mas mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, é importante entender que o papel principal de validar e decidir as regras de negócio antes é **TOTALMENTE MEU**. Caso eu não faça nada e somente deixe o **Power BI** fazer tudo o resultado será gráficos bonitos e informações erradas.
 - Query Editor x Report View x Relationship View x Data View.
