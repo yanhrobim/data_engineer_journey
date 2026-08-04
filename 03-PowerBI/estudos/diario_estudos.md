@@ -87,11 +87,11 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
 **🧠 Aprendizados da aula:**
 - A **Modelagem de Dados** é o que você aplica na construção de um **Modelo de Dados**. Simplificando, você aplica técnicas de modelagem de dados para se construir um modelo de dados com o objetivo de visualizar estrutura, visualizar relacionamentos, visualizar organização dos dados.
 - Um modelo de dados descreve a estrutura, organização, dos dados da empresa, quais fontes de dados ela coleta, conjuntos de dados, o caminho dos dados entre os sistemas, o que cada departamento faz com os dados, onde são armazenados, onde são analisados etc. De forma resumida, ele demonstra uma visão geral do caminho, os métodos, o que a empresa faz com os dados.
-Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados, onde ficarão os quartos, o banheiro, o tamanho, o que se deve ter etc. 
-  - Existe 3 modelos de dados:
-    - **Modelo Conceitual**
-    - **Modelo Lógico**
-    * **Modelo  Físico**
+Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados, onde ficarão os quartos, o banheiro, o tamanho, o que se deve ter etc.
+ - Existe 3 modelos de dados:
+    - **Modelo Conceitual:** O que existe e como se relaciona, sem detalhe técnico. É a ideia geral no caderno/reunião.
+    - **Modelo Lógico:** Como isso se estrutura em tabelas, colunas e tipos, ainda genérico, sem depender do banco específico. É o desenho do modelo de dados. Ex: Schema no [dbdiagram.io]([dbdiagram.io - Database Relationship Diagrams Design Tool](https://dbdiagram.io/home))
+    * **Modelo  Físico:** Como isso roda de verdade, no banco escolhido, com sintaxe e regras daquele sistema. É o `CREATE TABLE` executado.
   - Em uma empresa pode se ter:
     - Um grande modelo de Dados, que mostra como os dados são utilizados dentro da empresa.
     - Pequenos modelos de dados seguido por departamento, demonstrando como cada departamentos dentro da empresa utiliza os dados.
