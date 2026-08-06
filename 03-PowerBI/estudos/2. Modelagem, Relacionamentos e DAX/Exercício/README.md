@@ -2,6 +2,8 @@
 
 ### 1. Qual foi o total de valor venda considerando cada modo de envio dos pedidos? Use um gráfico de cascata.
 
+![Resposta 1](./Gráficos/1.png)
+
 ---
 
 ### 2. Quais mercados tiveram o maior custo médio de envio dos produtos vendidos? Use um gráfico treemap.
