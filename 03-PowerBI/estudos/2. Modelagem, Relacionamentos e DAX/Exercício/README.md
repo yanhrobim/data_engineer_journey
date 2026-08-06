@@ -22,6 +22,12 @@
 
 ![Grafico Pergunta 4](./Gráficos/4.png)
 
+**OBS: Foi preciso o uso de "DAX" para criar uma coluna na Tabela de Vendas, com os valores de lucro de cada venda.**
+
+```
+Lucro =  Vendas[Venda Valor] - Vendas[Custo Envio]
+```
+
 ---
 
 ### 5. Qual foi o comportamento da margem de lucro ao longo do tempo? Considere a margem de lucro como o lucro dividido pelo valor venda.
