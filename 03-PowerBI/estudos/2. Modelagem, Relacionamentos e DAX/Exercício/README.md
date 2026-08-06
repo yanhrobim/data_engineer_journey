@@ -14,6 +14,8 @@
 
 ### 3. A empresa tem como objetivo (meta) manter uma média de 350 para o valor de venda  todos os meses. Mostre um indicador (KPI– Key Performance Indicator) com o valor médio de venda. A empresa ficou abaixo ou acima da meta no mês de Abril/2014?
 
+![Grafico Pergunta 3](./Gráficos/3.png)
+
 ---
 
 ### 4. Considere que o lucro é equivalente a: (valor venda - custo envio). Qual categoria de produto apresentou maior lucro médio.
