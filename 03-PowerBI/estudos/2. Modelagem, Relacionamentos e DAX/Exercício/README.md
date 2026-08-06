@@ -20,6 +20,8 @@
 
 ### 4. Considere que o lucro é equivalente a: (valor venda - custo envio). Qual categoria de produto apresentou maior lucro médio.
 
+![Grafico Pergunta 4](./Gráficos/4.png)
+
 ---
 
 ### 5. Qual foi o comportamento da margem de lucro ao longo do tempo? Considere a margem de lucro como o lucro dividido pelo valor venda.
