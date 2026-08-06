@@ -82,7 +82,7 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
   - Como configurar um modelo de dados no **Power BI**?
   - Quais são as implicações de não criar um modelo de dados corretamente no **Power BI**?
 - Relacionamentos
-- DAX
+- Introdução a DAX
 
 **🧠 Aprendizados da aula:**
 - A **Modelagem de Dados** é o que você aplica na construção de um **Modelo de Dados**. Simplificando, você aplica técnicas de modelagem de dados para se construir um modelo de dados com o objetivo de visualizar estrutura, visualizar relacionamentos, visualizar organização dos dados.
@@ -98,3 +98,4 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - Um modelo de dados específico para a resolução de um problema, exemplo: Empresa quer entender em quais regiões o Marketing gera vendas/auxilia nas vendas.
 - O **Power BI** simplifica o processo de criação de um modelo de dados, criando um básico, mas mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, é importante entender que o papel principal de validar e decidir as regras de negócio antes é **TOTALMENTE MEU**. Caso eu não faça nada antes e crie o modelo no **Power BI**, o resultado será gráficos bonitos e informações erradas.
 - Query Editor x Report View x Relationship View x Data View.
+- Leve introdução a DAX, com criações de novas colunas na Tabela Vendas utlizando fórmulas DAX. (**Colunas Criadas:** Lucro e Margem de Lucro)
