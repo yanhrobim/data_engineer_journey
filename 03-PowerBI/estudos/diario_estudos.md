@@ -73,7 +73,7 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
 
 ### | 📚 Capítulo 02 
 
-#### **Dia 3 (31/07/26)**
+#### **Dia 3 — 8 (31/07/26 há 06/08/26)**
 
 **🖋️ Tópicos da Aula:**
 - Introdução a Modelagem de Dados
@@ -99,3 +99,13 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - O **Power BI** simplifica o processo de criação de um modelo de dados, criando um básico, mas mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, é importante entender que o papel principal de validar e decidir as regras de negócio antes é **TOTALMENTE MEU**. Caso eu não faça nada antes e crie o modelo no **Power BI**, o resultado será gráficos bonitos e informações erradas.
 - Query Editor x Report View x Relationship View x Data View.
 - Leve introdução a DAX, com criações de novas colunas na Tabela Vendas utlizando fórmulas DAX. (**Colunas Criadas:** Lucro e Margem de Lucro)
+
+### | 📚 Capítulo 03
+
+#### **Dia 9 (12/08/26)**
+
+**🖋️ Tópicos da Aula:**
+- Aprofundamento em DAX
+  - Medida vs Coluna Calculada
+  - Contexto de Filtro
+  - Função CALCULATE
