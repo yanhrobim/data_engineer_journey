@@ -2,7 +2,7 @@
 
 ## 📌 Objetivos dos Estudos
 
-Aprender fundamentos e conceitos da ferramenta **Power BI**, incluindo Power Query, DAX e modelagem de dados, através do curso da **Data Science Academy**.
+Aprender fundamentos e conceitos da ferramenta **Power BI**, incluindo Power Query, **DAX** e modelagem de dados, através do curso da **Data Science Academy**.
 Com o objetivo de aprender sobre a ferramenta, consolidar conhecimento e posteriormente aplicá-la em um projeto real de portfólio, unindo Engenharia de Dados e Análise de Dados.
 
 ---
@@ -82,7 +82,7 @@ Dentro dos dashboards conseguimos escolher a métrica que queremos, como soma, m
   - Como configurar um modelo de dados no **Power BI**?
   - Quais são as implicações de não criar um modelo de dados corretamente no **Power BI**?
 - Relacionamentos
-- Introdução a DAX
+- Introdução a **DAX**
 
 **🧠 Aprendizados da aula:**
 - A **Modelagem de Dados** é o que você aplica na construção de um **Modelo de Dados**. Simplificando, você aplica técnicas de modelagem de dados para se construir um modelo de dados com o objetivo de visualizar estrutura, visualizar relacionamentos, visualizar organização dos dados.
@@ -98,14 +98,21 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - Um modelo de dados específico para a resolução de um problema, exemplo: Empresa quer entender em quais regiões o Marketing gera vendas/auxilia nas vendas.
 - O **Power BI** simplifica o processo de criação de um modelo de dados, criando um básico, mas mesmo sendo básico te auxilia no momento de analisar os dados de forma correta. Porém, é importante entender que o papel principal de validar e decidir as regras de negócio antes é **TOTALMENTE MEU**. Caso eu não faça nada antes e crie o modelo no **Power BI**, o resultado será gráficos bonitos e informações erradas.
 - Query Editor x Report View x Relationship View x Data View.
-- Leve introdução a DAX, com criações de novas colunas na Tabela Vendas utlizando fórmulas DAX. (**Colunas Criadas:** Lucro e Margem de Lucro)
+- Leve introdução a **DAX**, com criações de novas colunas na Tabela Vendas utlizando fórmulas **DAX**. (**Colunas Criadas:** Lucro e Margem de Lucro)
 
 ### | 📚 Capítulo 03
 
 #### **Dia 9 (12/08/26)**
 
 **🖋️ Tópicos da Aula:**
-- Aprofundamento em DAX
-  - Medida vs Coluna Calculada
+- Aprofundamento em **DAX**
+  - Coluna Calulada vs Medida
   - Contexto de Filtro
   - Função CALCULATE
+
+**🧠 Aprendizados da aula:**
+- Coluna Calulada vs Medida
+  - **Coluna Calculada:** Uma das disponibilidades dentro de **DAX** é poder criar colunas calculadas. Por exemplo: adicionar uma coluna na tabela que possui o valor de lucro, ou de total faturamento, etc. Nada mais é do que criar uma coluna na sua tabela fazendo algum cálculo.
+  - **Medidas:** Com o **DAX** podemos criar medidas. Porém a medida tem um objetivo diferente, o objetivo é que em cenários que  querermos somente um valor utilizamos medidas. Exemplo: Querer o valor TOTAL de Lucro. Resumidamente, utilizar fórmulas **DAX** para retornar um único valor.
+- Além de medidas e colunas calculadas, com **DAX** também temos mais uma disponibilidade e ela envolve criar tabelas com métricas/cálculos. Basicamente, em um cenário de exemplo iríamos querer saber quais regiões são VIP (regiões com alta porcentagem de compra). Poderíamos criar uma tabela com **DAX** que somente teria as regiões que possuem mais de 10 mil de faturamento. Vale lembrar que esse é só um exemplo de uso. Na prática, uma tabela calculada pode ser criada a partir de cálculos e combinações mais amplas, não só filtrando uma tabela já existente.
+- O **DAX** para mim é muito parecido (dentro do Power BI) com algo relacionado a criação de KPIs. Por exemplo, quando utilizamos DBT e queremos criar uma KPI "Quais os clientes de cada região que mais gastaram dinheiro em compras?" utilizamos fórmulas e no final uma "tabela", view, para visualizar esta análise estratégica. No meu ponto de vista o **DAX** nos ajuda justamente nisto dentro do Power BI, criar análises estratégicas caso preciso, e não somente se limitar a fazer gráficos. Importante notar que medida e KPI não são a mesma coisa: a medida é a ferramenta técnica do **DAX** que faz o cálculo, enquanto o KPI é a métrica de negócio com significado definido (metas, etc)
