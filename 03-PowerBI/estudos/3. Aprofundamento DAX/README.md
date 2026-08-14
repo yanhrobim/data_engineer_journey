@@ -8,13 +8,9 @@
 
 ---
 
-## Bloco 2 — Contexto de Filtro
+## Bloco 2 — CALCULATE (regras de negócio)
 
-### 3. A diretoria quer um painel onde consiga ver o total de vendas, mas que esse número se ajuste sozinho conforme ela for explorando por categoria, região ou cliente — sem você precisar criar uma medida nova pra cada recorte. Construa isso e explique por que funciona.
-
----
-
-## Bloco 3 — CALCULATE (regras de negócio)
+## 3. A diretoria quer comparar, no mesmo painel, o total de vendas do cliente que está sendo visualizado no momento com o total de vendas de todos os clientes juntos (mesmo estando dentro de uma tabela/matriz filtrada por cliente). Ou seja: uma coluna mostra o valor só daquele cliente, outra coluna ao lado mostra sempre o total geral, sem se importar com o filtro de cliente.
 
 ### 4. A diretoria quer comparar, lado a lado, "quanto vendemos no total" vs "quanto vendemos especificamente em pedidos de alta prioridade" — e esse segundo número não pode mudar mesmo se ela filtrar o painel por categoria (ela sempre quer ver o total de alta prioridade da empresa inteira como referência fixa).
 
