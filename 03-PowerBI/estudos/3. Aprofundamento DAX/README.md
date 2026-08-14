@@ -10,10 +10,10 @@
 
 ## Bloco 2 — CALCULATE (regras de negócio)
 
-## 3. A diretoria quer comparar, no mesmo painel, o total de vendas do cliente que está sendo visualizado no momento com o total de vendas de todos os clientes juntos (mesmo estando dentro de uma tabela/matriz filtrada por cliente). Ou seja: uma coluna mostra o valor só daquele cliente, outra coluna ao lado mostra sempre o total geral, sem se importar com o filtro de cliente.
+## 3. A diretoria quer identificar, para cada categoria de produto, qual percentual do faturamento total da empresa aquela categoria representa, para decidir onde focar investimento e quais categorias têm baixa relevância no negócio. Ou seja: uma coluna mostra o valor de vendas daquela categoria específica, outra coluna mostra o total geral de vendas da empresa (sem se importar com o filtro de categoria), e uma terceira calcula o percentual que uma representa da outra.
 
-### 4. A diretoria quer comparar, lado a lado, "quanto vendemos no total" vs "quanto vendemos especificamente em pedidos de alta prioridade" — e esse segundo número não pode mudar mesmo se ela filtrar o painel por categoria (ela sempre quer ver o total de alta prioridade da empresa inteira como referência fixa).
+### 4. A diretoria quer identificar, para cada cliente, qual percentual do faturamento total da empresa aquele cliente representa, para enxergar rapidamente quem são os clientes mais importantes da carteira. Ou seja: uma coluna mostra o valor de vendas daquele cliente específico, outra coluna mostra o total geral de vendas da empresa (sem se importar com o filtro de cliente), e uma terceira calcula o percentual que um representa do outro.
 
-### 5.: A diretoria quer saber qual percentual das vendas totais vêm de pedidos de alta prioridade. Um único número que sintetize essa proporção.
+### 5. A diretoria quer saber qual percentual das vendas totais vêm de pedidos de alta prioridade. Um único número que sintetize essa proporção.
 
 ---
