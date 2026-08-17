@@ -14,6 +14,6 @@
 
 ### 4. A diretoria quer identificar, para cada cliente, qual percentual do faturamento total da empresa aquele cliente representa, para enxergar rapidamente quem são os clientes mais importantes da carteira. Ou seja: uma coluna mostra o valor de vendas daquele cliente específico, outra coluna mostra o total geral de vendas da empresa (sem se importar com o filtro de cliente), e uma terceira calcula o percentual que um representa do outro.
 
-### 5. A diretoria quer saber qual percentual das vendas totais vêm de pedidos de alta prioridade. Um único número que sintetize essa proporção.
+### 5. A diretoria quer identificar quais produtos estão vendendo abaixo da média da sua própria categoria. Ou seja, dentro de "Eletrônicos", por exemplo, quais produtos específicos estão performando pior que a média dos outros produtos daquela mesma categoria. Isso ajuda a decidir quais produtos merecem promoção, reposicionamento, ou até descontinuação.
 
 ---
