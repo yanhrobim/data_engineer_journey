@@ -16,4 +16,7 @@
 
 ### 5. A diretoria quer identificar quais produtos estão vendendo abaixo da média da sua própria categoria. Ou seja, dentro de "Eletrônicos", por exemplo, quais produtos específicos estão performando pior que a média dos outros produtos daquela mesma categoria. Isso ajuda a decidir quais produtos merecem promoção, reposicionamento, ou até descontinuação.
 
+
+**Desenvolvimento dos gráficos. Em breve adicionados aqui.**
+
 ---
