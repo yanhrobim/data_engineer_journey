@@ -4,6 +4,10 @@
 
 ### 1. A diretoria quer saber o lucro gerado por cada venda individual, e depois qual o lucro total da empresa.
 
+#### Lucro Por Cada Venda Individual
+![Grafico Pergunta 1](./Gráficos/1(2).png)
+
+#### Lucro Total da Empresa:
 ![Grafico Pergunta 1](./Gráficos/1.png)
 
 ### 2. A diretoria também quer entender a eficiência de cada venda, não só o valor absoluto do lucro (uma venda de R$10.000 com pouco lucro pode ser pior que uma de R$500 bem mais lucrativa). Mostre isso de alguma forma.
