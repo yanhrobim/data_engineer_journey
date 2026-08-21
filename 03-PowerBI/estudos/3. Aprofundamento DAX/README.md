@@ -1,4 +1,4 @@
-# 📊 Exercícios DAX (Sessão de Aprofundamento — Medida, Contexto de Filtro, CALCULATE)
+# 🔍 Exercícios DAX (Sessão de Aprofundamento — Medida, Contexto de Filtro, CALCULATE)
 
 ## Bloco 1 — Lucro e Margem de Lucro
 
@@ -60,6 +60,12 @@
 
 #### 📈 Gráfico
 ![Grafico Pergunta 5](./Gráficos/Ex_5.png)
+
+---
+
+## 📊 Dashboard
+
+![Dashboard](./Gráficos/Dashboard_Completo.png)
 
 ---
 
