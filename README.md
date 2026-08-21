@@ -98,7 +98,7 @@ Direcionado aos fundamentos essenciais da ferramenta para atuação como Analist
 
 Cada etapa de estudo gera:
 
-- Código desenvolvido **(Python/SQL)**.
+- Código desenvolvido do módulo que está sendo estudado.
 - Desafios e exercícios realizados.
 - README documentando aprendizados e observações com as minhas próprias palavras.
 - Aplicação da teoria aprendida em projetos práticos.
