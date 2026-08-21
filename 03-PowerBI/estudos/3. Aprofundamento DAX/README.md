@@ -15,7 +15,7 @@
 #### 🧩 Cálculo Para Descobrir Eficiência de Vendas (Em %)
 ![Grafico Pergunta 2](./DAX/Ex_2.png) 
 
-#### 📊 Gráfico
+#### 📈 Gráfico
 ![Grafico Pergunta 2](./Gráficos/Ex_2.png) 
 
 ---
@@ -33,20 +33,33 @@
 #### 🧩 Cáculo % Participação Categoria Sobre o Valor Total de Vendas
 ![Grafico Pergunta 3](./DAX/Ex_3(2).png)
 
-#### 📊 Gráfico
+#### 📈 Gráfico
 ![Grafico Pergunta 3](./Gráficos/Ex_3.png)
 
+---
 
 ### 4. A diretoria quer identificar, para cada cliente, qual percentual do faturamento total da empresa aquele cliente representa, para enxergar rapidamente quem são os clientes mais importantes da carteira. Ou seja: uma coluna mostra o valor de vendas daquele cliente específico, outra coluna mostra o total geral de vendas da empresa (sem se importar com o filtro de cliente), e uma terceira calcula o percentual que um representa do outro.
 
 #### 🧩 Cáculo % Participação Cliente Sobre o Valor Total de Vendas
 ![Grafico Pergunta 4](./Gráficos/Ex_4(2).png)
 
-#### 📊 Gráfico
+#### 📈 Gráfico
 ![Grafico Pergunta 4](./Gráficos/Ex_4.png)
 
+***OBS: Utilização da Medida Fixa do Valor Total de Vendas da Empresa do Exercício 3.***
+
+---
 
 ### 5. A diretoria quer identificar quais produtos estão vendendo abaixo da média da sua própria categoria. Ou seja, dentro de "Eletrônicos", por exemplo, quais produtos específicos estão performando pior que a média dos outros produtos daquela mesma categoria. Isso ajuda a decidir quais produtos merecem promoção, reposicionamento, ou até descontinuação.
+
+#### 🧩 Cáculo Para Descobrir a Média de Venda Por Categoria
+![Grafico Pergunta 5](./DAX/Ex_5.png)
+
+#### 🧩 Coluna Bônus (Média de Vendas)
+![Grafico Pergunta 5](./DAX/Ex_5(Bonus).png)
+
+#### 📈 Gráfico
+![Grafico Pergunta 5](./Gráficos/Ex_5.png)
 
 ---
 
