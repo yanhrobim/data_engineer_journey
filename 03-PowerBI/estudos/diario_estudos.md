@@ -102,7 +102,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 03
 
-#### **Dia 9 (12/08/26)**
+#### **Dia 9 - 14 (12/08/26 há 21/08/26)**
 
 **🖋️ Tópicos da Aula:**
 - Aprofundamento em **DAX**
@@ -121,3 +121,14 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - **ALLEXCEPT** e **SWITCH**: Aprendi essas duas funções na prática, enquanto resolvia a questão 5 (a mais complexa, sobre identificar produtos abaixo da média da própria categoria).
   - **ALLEXCEPT** remove todos os filtros de uma tabela, exceto o de uma coluna específica que eu quero manter — usei isso pra calcular a média de vendas por produto dentro da mesma categoria, ignorando o filtro do produto individual mas mantendo o filtro de categoria.
   - **SWITCH** é parecido com um IF, mas permite testar várias condições em sequência sem precisar aninhar vários IFs — usei numa versão mais simples (Sim/Não) pra criar a coluna "Abaixo da Média".
+
+### | 📚 Capítulo 04 (Mini-Projeto)
+
+**🖋️ Tópicos da Aula:**
+- O Que é Marketing? 
+- Principais KPIs (Key Performance Indicators) de Marketing
+- Mini-Projeto 1 - Análise de Campanhas de Marketing com Power BI
+  - Segmentação dos Clientes Por Grau de Escolaridade e Estado Civil no Power BI\
+  - Usando a Segmentação como Visual e como Filtro no Power BI
+  - Analisando a Performance das Campanhas de Marketing com o Power BI
+  - Analisando Padrões de Compra Por Ponto de Venda no Power BI
