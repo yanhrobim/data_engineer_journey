@@ -132,3 +132,10 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - Usando a Segmentação como Visual e como Filtro no Power BI
   - Analisando a Performance das Campanhas de Marketing com o Power BI
   - Analisando Padrões de Compra Por Ponto de Venda no Power BI
+
+**🧠 Aprendizados da aula:**
+- Utilizando o recurso de paginação para cada visão de negócio.
+  - Clientes
+  - Comportamento Cliente
+  - Perfomance Marketing
+  - Pontos de Venda
