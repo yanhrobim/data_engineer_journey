@@ -135,7 +135,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🧠 Aprendizados da aula:**
 - Utilizando o recurso de paginação para cada visão de negócio.
-  - Clientes
+  - Visão Clientes
   - Comportamento Cliente
   - Perfomance Marketing
   - Pontos de Venda
