@@ -124,6 +124,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 04 (Mini-Projeto)
 
+#### **Dia 15 (27/08/26)**
+
 **🖋️ Tópicos da Aula:**
 - O Que é Marketing? 
 - Principais KPIs (Key Performance Indicators) de Marketing
