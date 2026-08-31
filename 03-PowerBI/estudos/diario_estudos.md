@@ -141,3 +141,4 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - Comportamento Cliente
   - Perfomance Marketing
   - Pontos de Venda
+- Outlier é um dado muito diferente do padrão, que pode ser um erro ou um caso real, e que pode atrapalhar as métricas e análises.
