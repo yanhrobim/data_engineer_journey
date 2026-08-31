@@ -142,3 +142,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - Perfomance Marketing
   - Pontos de Venda
 - Outlier é um dado muito diferente do padrão, que pode ser um erro ou um caso real, e que pode atrapalhar as métricas e análises.
+	- Ex: Queremos descobrir a média da empresa, todas as vendas estão entre 300 a 500 reais, e um dado foge deste padrão sendo 12000.
+- O Comando **SUMX** é uma solucao quando queremos fazer uma soma total por linha, exemplo se queremos descobrir quanto cliente gastou.
