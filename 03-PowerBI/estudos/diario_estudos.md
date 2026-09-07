@@ -146,3 +146,4 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - **SUMX**  soma um valor que precisa ser **calculado linha por linha antes de somar** (ex: Quantidade × Preço), porque esse valor não existe pronto numa coluna.
 - Conhecendo melhor sobre o conceito Outlier e aprendendo a lidar com eles, principalmente aqueles que atrapalham métricas, análises e visualização do gráfico.
 - Em comportamento cliente o gráfico demonstra que quem tem 0 filhos em casa, possui maior gasto. Em primeira vista fiquei bem desacreditado e desconfiando algo sobre os dados ou o gráfico estiverem errados, mas na verdade é que a maior parte dos clientes (No dashboard Visão Cliente) nos dados são solteiros e por isso este resultado no gráfico.
+- Leve introdução a Limpeza/Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
