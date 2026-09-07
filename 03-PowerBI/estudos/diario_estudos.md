@@ -144,5 +144,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - Outlier é um dado muito diferente do padrão, que pode ser um erro ou um caso real, e que pode atrapalhar as métricas e análises.
 	- Ex: Queremos descobrir a média da empresa, todas as vendas estão entre 300 a 500 reais, e um dado foge deste padrão sendo 12000.
 - **SUMX**  soma um valor que precisa ser **calculado linha por linha antes de somar** (ex: Quantidade × Preço), porque esse valor não existe pronto numa coluna.
-- Remoção de Outlier que atrapalha análises e métricas.
+- Conhecendo melhor sobre o conceito Outlier e aprendendo a lidar com eles, principalmente aqueles que atrapalham métricas, análises e visualização do gráfico.
 - Em comportamento cliente o gráfico demonstra que quem tem 0 filhos em casa, possui maior gasto. Em primeira vista fiquei bem desacreditado e desconfiando algo sobre os dados ou o gráfico estiverem errados, mas na verdade é que a maior parte dos clientes (No dashboard Visão Cliente) nos dados são solteiros e por isso este resultado no gráfico.
