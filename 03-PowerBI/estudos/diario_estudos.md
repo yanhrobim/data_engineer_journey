@@ -137,9 +137,9 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🧠 Aprendizados da aula:**
 - Utilizando o recurso de paginação para cada visão de negócio.
-  - Visão Clientes
-  - Comportamento Cliente
-  - Perfomance Marketing
+  - [Visão Clientes](4.%20Power%20BI%20e%20Marketing/Dashboards/Visão%20Cliente/dashboard.gif)
+  - [Comportamento Cliente](4.%20Power%20BI%20e%20Marketing/Dashboards/Comportamento%20de%20Gasto%20do%20Cliente/dashboard.png)
+  - [Perfomance Marketing](4.%20Power%20BI%20e%20Marketing/Dashboards/Perfomance%20das%20Campanhas%20de%20Marketing/dashboard.gif)
   - Pontos de Venda
 - Outlier é um dado muito diferente do padrão, que pode ser um erro ou um caso real, e que pode atrapalhar as métricas e análises.
 	- Ex: Queremos descobrir a média da empresa, todas as vendas estão entre 300 a 500 reais, e um dado foge deste padrão sendo 12000.
