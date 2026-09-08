@@ -140,7 +140,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - [Visão Clientes](4.%20Power%20BI%20e%20Marketing/Dashboards/Visão%20Cliente/dashboard.gif)
   - [Comportamento Cliente](4.%20Power%20BI%20e%20Marketing/Dashboards/Comportamento%20de%20Gasto%20do%20Cliente/dashboard.png)
   - [Perfomance Marketing](4.%20Power%20BI%20e%20Marketing/Dashboards/Perfomance%20das%20Campanhas%20de%20Marketing/dashboard.gif)
-  - Pontos de Venda
+  - [Padrões de Compra por Ponto de Venda](4.%20Power%20BI%20e%20Marketing/Dashboards/Visão%20Padrões%20de%20Compra%20Por%20Ponto%20de%20Venda/dashboard.png)
 - Outlier é um dado muito diferente do padrão, que pode ser um erro ou um caso real, e que pode atrapalhar as métricas e análises.
 	- Ex: Queremos descobrir a média da empresa, todas as vendas estão entre 300 a 500 reais, e um dado foge deste padrão sendo 12000.
 - **SUMX**  soma um valor que precisa ser **calculado linha por linha antes de somar** (ex: Quantidade × Preço), porque esse valor não existe pronto numa coluna.
