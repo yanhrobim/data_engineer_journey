@@ -102,7 +102,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 03
 
-#### **Dia 9 - 14 (12/08/26 há 21/08/26)**
+#### **Dia 9 — 14 (12/08/26 há 21/08/26)**
 
 **🖋️ Tópicos da Aula:**
 - Aprofundamento em **DAX**
@@ -124,7 +124,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 04 (Mini-Projeto)
 
-#### **Dia 15 (27/08/26)**
+#### **Dia 15 — 26 (27/08/26 há 08/09/26)**
 
 **🖋️ Tópicos da Aula:**
 - O Que é Marketing? 
@@ -146,5 +146,13 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - **SUMX**  soma um valor que precisa ser **calculado linha por linha antes de somar** (ex: Quantidade × Preço), porque esse valor não existe pronto numa coluna.
 - Conhecendo melhor sobre o conceito Outlier e aprendendo a lidar com eles, principalmente aqueles que atrapalham métricas, análises e visualização do gráfico.
 - Em comportamento cliente o gráfico demonstra que quem tem 0 filhos em casa, possui maior gasto. Em primeira vista fiquei bem desacreditado e desconfiando algo sobre os dados ou o gráfico estiverem errados, mas na verdade é que a maior parte dos clientes (No dashboard Visão Cliente) nos dados são solteiros e por isso este resultado no gráfico.
-- Leve introdução a Limpeza/Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
+- Leve introdução a Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
 - Em relatórios é importante entender que as vezes em um pode se ter 5,6 gráficos, em outro somente 2. Para saber quando aplicar mais gráficos, deve-se ter em mente que quanto mais informações em um gráfico menos gráficos se deve ter, pois a consequência é um relatório complexo que adicionar mais gráficos irá gerar confusão e deslocamento da ideia principal. O equilíbrio é tudo, em alguns dashboards precisamos de gráficos com informações complexas para entender, em outro, simples gráficos já respondem perguntas de negócio. (Exemplo no Dashboard de Padrões de Compra Por Ponto de Venda)
+
+### | 📚 Capítulo 05
+
+#### **Dia 27 (10/09/26)**
+
+**🖋️ Tópicos da Aula:**
+- Estastística Fundamental Para Power BI
+- Limpeza e Manipulação de dados com Power BI
