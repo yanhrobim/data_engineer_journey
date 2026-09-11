@@ -164,7 +164,23 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - Pense, Power BI é uma vitrine, a estatística é uma da ferramentas que utilizamos para construir essa vitrine.
 - **Estatística Descritiva**
   - A estatística descritiva foca em organização, em resumo de forma simples e apresentar dados de maneira eficiente, utilizando formas visuais, tabelas e medidas numéricas como média, mediana, variância e desvio padrão para responder perguntas de negócio.
+  - **Técnicas da Estatística Descritiva:**
+	- **Tabelas e Gráficos:** Forma simplificada para mostrar os dados.
+	- **Medidas de Tendência Central:** Resumidamente, responder: "Qual o valor mais comum?". Para isso, calculamos média, mediana, moda.
+	- **Medidas de Dispersão:** Entender o quanto os dados estão separados ou juntos. **Utilizamos está técnica normalmente para encontrar/lidar com *outliers*, saber se valor é normal ou estranho.** 
+		- Exemplo: Se meu time de Handball a idade das pessoas são de 16 a 18 anos uma idade bem junta (Caso de Pouca Dispersão). Porém se tem gente de 15 a 30 anos, muitos anos de diferença (Alta Dispersão).
+	- **Medidas de Posição:** Diz onde um valor específico se encaixa em um grupo. Exemplo: Cliente está nos 10% que mais compraram na semana. Isso significa uma medida de posição.
 - **Estatística Inferencial**
   - A estatística Inferencial utiliza métodos e técnicas para generalizar e criar previsões com dados de amostra, para estimar sobre uma população maior (dados maiores).
 	 - Ex: Para saber se uma sopa está boa, você come uma colher (amostra) para estimar se o resto está bom, sem precisar comer a panela toda.
-   
+  - **Técnicas da Estatística Inferencial:**
+	- **Estimação:** Estimar um número através de dados de amostra para a população toda. 
+		- Exemplo: Acho que a média de pessoas que terminam a faculdade de ADS são de 10 a 18.
+	- **Testes de Hipóteses:** Verificar se uma afirmação é verdadeira através dos dados. 
+		- Exemplo: Este remédio é melhor que o outro ou foi só uma coincidência?
+	- **Análise de Regressão:** Descobrir se uma coisa influencia a outra. 
+		- Exemplo: Se eu investir mais em anúncio digital, eu ganho mais do que gasto? Se sim, quanto?
+	- **ANOVA:** Compara 3 ou mais grupos e diz se a diferença entre eles é de verdade ou só coincidência. 
+		- Exemplo: Entender se a loja que vendeu mais é realmente melhor ou se foi uma coincidência/sorte.
+	- **Modelos Probabilísticos e Séries Temporais:** Prever o futuro como mudanças ou coisas que tem chance de acontecer.
+		- Exemplo: Descobrir se a loja terá mais lucro ou mais gastos no mês que vem, com base no histórico do mês atual.
