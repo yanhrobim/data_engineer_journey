@@ -184,3 +184,4 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 		- Exemplo: Entender se a loja que vendeu mais é realmente melhor ou se foi uma coincidência/sorte.
 	- **Modelos Probabilísticos e Séries Temporais:** Prever o futuro como mudanças ou coisas que tem chance de acontecer.
 		- Exemplo: Descobrir se a loja terá mais lucro ou mais gastos no mês que vem, com base no histórico do mês atual.
+  - **OBS: O Power BI NÃO é uma ferramenta que se utiliza Estatística Inferencial, é uma ferramenta de BI (Business Intelligence) onde utilizamos Estatística Diferencial. Para Estatística Inferencial devemos utilizar ferramentas adequadas como pacotes de linguagens de programação como *Python* ou *R*.**
