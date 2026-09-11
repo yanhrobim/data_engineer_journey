@@ -162,4 +162,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 	- Exemplo do meu dia dia: Quando no meu treino de handball eu quero saber se contribui para o meu time, então eu conto o número de vezes que fui para gol, o quanto eu acertei, assim tirei uma "porcentagem de acerto", utilizei meus gols e meus erros (dados soltos) para descobrir uma porcentagem de acerto (algo verdadeiro sobre os dados, fatos).
 - Estatística conecta com Power BI porque quando criamos um dashboard aplicamos estatística que nem vemos, por exemplo quando queremos saber o ticket médio de cada categoria, temos uma tabela com 20 mil linhas soltas que transformamos em respostas visuais para perguntas de negócio, e por baixo dos panos utilizamos a estatística.
   - Pense, Power BI é uma vitrine, a estatística é uma da ferramentas que utilizamos para construir essa vitrine.
-  
+- Estatística Descritiva
+  - A estatística descritiva foca em organização, em resumo de forma simples e apresentar dados de maneira eficiente, utilizando formas visuais, tabelas e medidas numéricas como média, mediana, variância e desvio padrão para responder perguntas de negócio.
