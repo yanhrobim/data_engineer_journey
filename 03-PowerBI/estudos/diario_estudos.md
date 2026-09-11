@@ -156,3 +156,10 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 **🖋️ Tópicos da Aula:**
 - Estastística Fundamental Para Power BI
 - Limpeza e Manipulação de dados com Power BI
+
+**🧠 Aprendizados da aula:**
+-  Estatística é a arte de olhar para um monte de números e dizer algo verdadeiro sobre eles.- De forma simples, a estatística pega informações soltas e transforma elas em informações que respondem perguntas.
+	- Exemplo do meu dia dia: Quando no meu treino de handball eu quero saber se contribui para o meu time, então eu conto o número de vezes que fui para gol, o quanto eu acertei, assim tirei uma "porcentagem de acerto", utilizei meus gols e meus erros (dados soltos) para descobrir uma porcentagem de acerto (algo verdadeiro sobre os dados, fatos).
+- Estatística conecta com Power BI porque quando criamos um dashboard aplicamos estatística que nem vemos, por exemplo quando queremos saber o ticket médio de cada categoria, temos uma tabela com 20 mil linhas soltas que transformamos em respostas visuais para perguntas de negócio, e por baixo dos panos utilizamos a estatística.
+  - Pense, Power BI é uma vitrine, a estatística é uma da ferramentas que utilizamos para construir essa vitrine.
+  
