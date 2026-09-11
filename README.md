@@ -9,7 +9,6 @@
 
 Bem-vindo(a)! Este repositório mostra minha jornada de estudos e projetos focados em **Engenharia de Dados**. O espaço documenta minha evolução na área, com o objetivo de registrar o processo de tentativas, erros, aprendizados e soluções ao longo do caminho.
 
-
 ---
 
 ### 📌 Objetivos
