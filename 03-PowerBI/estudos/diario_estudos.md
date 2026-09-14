@@ -151,7 +151,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 05 Part 1
 
-#### **Dia 27 (11/09/26)**
+#### **Dia 27 — 28 (11/09/26 há 14/09/26)**
 
 **🖋️ Tópicos da Aula:**
 - Estastística Fundamental Para Power BI
