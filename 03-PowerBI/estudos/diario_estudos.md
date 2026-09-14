@@ -193,5 +193,4 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - **Variável Quantitativa (ou Numérica)** É quando o dado é um número, que você pode somar, tirar média ou mediana, contar, etc.
         - **Discreta:** Números inteiros, contáveis (Ex: Quantidade de Jogos Jogados)
         - **Contínua:** Número com casas decimais, dentro de uma faixa. (Ex: Valor de uma venda (149,50), altura de um jogador (1,78cm), etc)
-  
 
