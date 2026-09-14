@@ -155,7 +155,6 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🖋️ Tópicos da Aula:**
 - Estastística Fundamental Para Power BI
-- Limpeza e Manipulação de dados com Power BI
 
 **🧠 Aprendizados da aula:**
 -  Estatística é a arte de olhar para um monte de números e dizer algo verdadeiro sobre eles.- De forma simples, a estatística pega informações soltas e transforma elas em informações que respondem perguntas.
@@ -194,3 +193,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
         - **Discreta:** Números inteiros, contáveis (Ex: Quantidade de Jogos Jogados)
         - **Contínua:** Número com casas decimais, dentro de uma faixa. (Ex: Valor de uma venda (149,50), altura de um jogador (1,78cm), etc)
 
+### | 📚 Capítulo 05 Part 2
+
+**🖋️ Tópicos da Aula:**
+- Limpeza e Manipulação de dados com Power BI
