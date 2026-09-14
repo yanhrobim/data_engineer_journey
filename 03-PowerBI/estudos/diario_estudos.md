@@ -149,7 +149,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - Leve introdução a Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
 - Em relatórios é importante entender que as vezes em um pode se ter 5,6 gráficos, em outro somente 2. Para saber quando aplicar mais gráficos, deve-se ter em mente que quanto mais informações em um gráfico menos gráficos se deve ter, pois a consequência é um relatório complexo que adicionar mais gráficos irá gerar confusão e deslocamento da ideia principal. O equilíbrio é tudo, em alguns dashboards precisamos de gráficos com informações complexas para entender, em outro, simples gráficos já respondem perguntas de negócio. (Exemplo no Dashboard de Padrões de Compra Por Ponto de Venda)
 
-### | 📚 Capítulo 05
+### | 📚 Capítulo 05 Part 1
 
 #### **Dia 27 (11/09/26)**
 
@@ -185,3 +185,9 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 	- **Modelos Probabilísticos e Séries Temporais:** Prever o futuro como mudanças ou coisas que tem chance de acontecer.
 		- Exemplo: Descobrir se a loja terá mais lucro ou mais gastos no mês que vem, com base no histórico do mês atual.
   - **OBS: O Power BI NÃO é uma ferramenta que se utiliza Estatística Inferencial, é uma ferramenta de BI (Business Intelligence) onde utilizamos Estatística Diferencial. Para Estatística Inferencial devemos utilizar ferramentas adequadas como pacotes de linguagens de programação como *Python* ou *R*.**
+- **Tipo de Váriaveis**
+  - **Tipos de Variáveis** = "tipos de coluna" que existem em uma tabela de dados. Toda coluna de uma tabela de dados possui um tipo de informação diferente, a depender deste tipo você pode fazer certas ações (Tirar média, ou Ordenar, ou Somar.)
+    - **Variável Qualitativa (ou Categórica)** É quando o dado é uma categoria/rótulo, não um número que você usa pra contar ou somar.
+        - **Nominal:** Categorias/Rótulos sem ordem. (Ex: Nome de Times de Handball)
+        - **Ordinal:** Categorias/Rótulos com ordem. (Ex: Nível de Cada Liga, Mirim, Infantil, Cadete, Juvenil, etc)
+
