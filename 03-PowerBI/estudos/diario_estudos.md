@@ -198,7 +198,12 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 ### **Dia 29 (20/09/26)**
 
 **🖋️ Tópicos da Aula:**
-- Limpeza e Manipulação de dados com Power BI
+- Limpeza e Manipulação de Dados com Power BI
+- Principais Objetivos do Capítulo:
+  - Identificação e tratamento de registros duplicados
+  - Identificação e tratamento de valores ausentes
+  - Identificação e tratamento de valores outliers
+
 
 **🧠 Aprendizados da aula:**
 
