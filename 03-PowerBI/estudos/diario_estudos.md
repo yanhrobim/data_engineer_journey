@@ -195,6 +195,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 05 Part 2
 
+### **Dia 29 (20/09/26)**
+
 **🖋️ Tópicos da Aula:**
 - Limpeza e Manipulação de dados com Power BI
 
