@@ -197,3 +197,14 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🖋️ Tópicos da Aula:**
 - Limpeza e Manipulação de dados com Power BI
+
+**🧠 Aprendizados da aula:**
+
+- A limpeza e manipulação de dados são etapas essenciais para a análise e modelagem de dados. Estas etapas incluem organização, transformação, tratamento de erros e inconsistências nos dados, para garantir a confiabilidade e assim então utiliza-los em análises e visualizações ou Machine Learning. As principais tarefas de limpeza/manipulação são: 
+  - **Remoção de Dados Duplicados**
+  - **Tratamento de Valores Ausentes**
+  - **Conversão de Tios de Dados**
+  - **Renomeação e Reorganização de Colunas**
+  - **Filtragem e Seleção de Dados**
+  - **Normalização e Padronização**
+  - **Detecção e Tratamento de Outliers**
