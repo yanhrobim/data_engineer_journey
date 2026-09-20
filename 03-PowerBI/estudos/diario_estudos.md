@@ -215,3 +215,10 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - **Filtragem e Seleção de Dados**
   - **Normalização e Padronização**
   - **Detecção e Tratamento de Outliers**
+- Inconsistências Encontradas por Mim:
+  - Presença de Linhas Duplicadas. (10 Linhas)
+  - Presença de Valores Nulos nas Colunas: Idade e Peso.
+  - Cidades que Pertecem a Estados Errados. (Ex: São Paula, RS (Linha 12)) 
+  - Outliers Presentes na Coluna: Altura. (270, 278...)
+  - Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
+  - Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
