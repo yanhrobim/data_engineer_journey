@@ -224,4 +224,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 	
   - **Inconsistência:** Outliers Presentes na Coluna: Altura. (270, 278...)
 	  - **Como Foi Resolvido:** Substituído o 2 por 1; Exemplo Resultado: 170, 178. (Assumi que o cliente no momento do cadastro por algum motivo colocou o número 2 ao invés de 1. Está decisão se torna mais fácil pois o volume de dados outliers presente é pouco, mas caso fosse um volume maior a *Mediana* iria ser a melhor solução.)
-	
+
+#### OBS: Nesta primeira parte do capítulo 6 sobre limpeza e manipulaçao de dados somente utilizamos **Power BI** puro. Por este motivo inconsisências como "Cidades que Pertencem a Estados Errados" não são resolvidas nesta parte.
