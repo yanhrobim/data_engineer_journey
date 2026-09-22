@@ -149,7 +149,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - Leve introdução a Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
 - Em relatórios é importante entender que as vezes em um pode se ter 5,6 gráficos, em outro somente 2. Para saber quando aplicar mais gráficos, deve-se ter em mente que quanto mais informações em um gráfico menos gráficos se deve ter, pois a consequência é um relatório complexo que adicionar mais gráficos irá gerar confusão e deslocamento da ideia principal. O equilíbrio é tudo, em alguns dashboards precisamos de gráficos com informações complexas para entender, em outro, simples gráficos já respondem perguntas de negócio. (Exemplo no Dashboard de Padrões de Compra Por Ponto de Venda)
 
-### | 📚 Capítulo 05 Part 1
+### | 📚 Capítulo 05
 
 #### **Dia 27 — 28 (11/09/26 há 14/09/26)**
 
@@ -193,7 +193,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
         - **Discreta:** Números inteiros, contáveis (Ex: Quantidade de Jogos Jogados)
         - **Contínua:** Número com casas decimais, dentro de uma faixa. (Ex: Valor de uma venda (149,50), altura de um jogador (1,78cm), etc)
 
-### | 📚 Capítulo 05 Part 2
+### | 📚 Capítulo 06 Part 1
 
 #### **Dia 29 (20/09/26)**
 
@@ -216,9 +216,20 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - **Normalização e Padronização**
   - **Detecção e Tratamento de Outliers**
 - Inconsistências Encontradas por Mim:
-  - Presença de Linhas Duplicadas. (10 Linhas)
-  - Presença de Valores Nulos nas Colunas: Idade e Peso.
-  - Cidades que Pertecem a Estados Errados. (Ex: São Paula, RS (Linha 12)) 
-  - Outliers Presentes na Coluna: Altura. (270, 278...)
-  - Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
-  - Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
+  - **Inconsistência:** Presença de Linhas Duplicadas. (10 Linhas)
+	  - **Como Foi Resolvido:** "Remover Linhas Duplicadas" (Power BI)
+	
+  - **Inconsistência:** Presença de Valores Nulos nas Colunas: Idade e Peso.
+	  - **Como Foi Resolvido:** Substituindo valores *"null"* pelo valor da mediana de idades (40). (A média não pode ser utilizada aqui, pois se caso houver outliers na coluna, a média conta estes valores, algo que a mediana não faz, a mediana retorna um valor mais "concreto". )
+	
+  - **Inconsistência:** Cidades que Pertencem a Estados Errados. (Ex: São Paula, RS (Linha 12))
+	  - **Como Foi Resolvido:**
+	
+  - **Inconsistência:** Outliers Presentes na Coluna: Altura. (270, 278...)
+	  - **Como Foi Resolvido:** Substituído pelo valor da Mediana da coluna Altura. (Tendo em vista que as linhas possuem mais dados, e a exclusão seria um extremo.)
+	
+  - **Inconsistência:** Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
+	  - **Como Foi Resolvido:**
+	
+  - **Inconsistência:** Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
+    - **Como Foi Resolvido:**
