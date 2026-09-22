@@ -226,10 +226,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 	  - **Como Foi Resolvido:**
 	
   - **Inconsistência:** Outliers Presentes na Coluna: Altura. (270, 278...)
-	  - **Como Foi Resolvido:** Substituído pelo valor da Mediana da coluna Altura. (Tendo em vista que as linhas possuem mais dados, e a exclusão seria um extremo.)
+	  - **Como Foi Resolvido:** Substituído o 2 por 1; Exemplo Resultado: 170, 178. (Assumi que o cliente no momento do cadastro por algum motivo colocou o número 2 ao invés de 1. Está decisão se torna mais fácil pois o volume de dados outliers presente é pouco, mas caso fosse um volume maior a *Mediana* iria ser a melhor solução.)
 	
-  - **Inconsistência:** Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
-	  - **Como Foi Resolvido:**
-	
-  - **Inconsistência:** Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
-    - **Como Foi Resolvido:**
