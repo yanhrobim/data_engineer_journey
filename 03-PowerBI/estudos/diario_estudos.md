@@ -222,9 +222,6 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - **Inconsistência:** Presença de Valores Nulos nas Colunas: Idade e Peso.
 	  - **Como Foi Resolvido:** Substituindo valores *"null"* pelo valor da mediana de idades (40). (A média não pode ser utilizada aqui, pois se caso houver outliers na coluna, a média conta estes valores, algo que a mediana não faz, a mediana retorna um valor mais "concreto". )
 	
-  - **Inconsistência:** Cidades que Pertencem a Estados Errados. (Ex: São Paula, RS (Linha 12))
-	  - **Como Foi Resolvido:**
-	
   - **Inconsistência:** Outliers Presentes na Coluna: Altura. (270, 278...)
 	  - **Como Foi Resolvido:** Substituído o 2 por 1; Exemplo Resultado: 170, 178. (Assumi que o cliente no momento do cadastro por algum motivo colocou o número 2 ao invés de 1. Está decisão se torna mais fácil pois o volume de dados outliers presente é pouco, mas caso fosse um volume maior a *Mediana* iria ser a melhor solução.)
 	
