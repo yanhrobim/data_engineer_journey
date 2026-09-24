@@ -100,6 +100,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - Query Editor x Report View x Relationship View x Data View.
 - Leve introdução a **DAX**, com criações de novas colunas na Tabela Vendas utlizando fórmulas **DAX**. (**Colunas Criadas:** Lucro e Margem de Lucro)
 
+---
+
 ### | 📚 Capítulo 03
 
 #### **Dia 9 — 14 (12/08/26 há 21/08/26)**
@@ -121,6 +123,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - **ALLEXCEPT** e **SWITCH**: Aprendi essas duas funções na prática, enquanto resolvia a questão 5 (a mais complexa, sobre identificar produtos abaixo da média da própria categoria).
   - **ALLEXCEPT** remove todos os filtros de uma tabela, exceto o de uma coluna específica que eu quero manter — usei isso pra calcular a média de vendas por produto dentro da mesma categoria, ignorando o filtro do produto individual mas mantendo o filtro de categoria.
   - **SWITCH** é parecido com um IF, mas permite testar várias condições em sequência sem precisar aninhar vários IFs — usei numa versão mais simples (Sim/Não) pra criar a coluna "Abaixo da Média".
+
+---
 
 ### | 📚 Capítulo 04 (Mini-Projeto)
 
@@ -148,6 +152,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 - Em comportamento cliente o gráfico demonstra que quem tem 0 filhos em casa, possui maior gasto. Em primeira vista fiquei bem desacreditado e desconfiando algo sobre os dados ou o gráfico estiverem errados, mas na verdade é que a maior parte dos clientes (No dashboard Visão Cliente) nos dados são solteiros e por isso este resultado no gráfico.
 - Leve introdução a Manipulação de Dados com o Power Query. (Substituindo valores 1 e 0 por Sim e Não)
 - Em relatórios é importante entender que as vezes em um pode se ter 5,6 gráficos, em outro somente 2. Para saber quando aplicar mais gráficos, deve-se ter em mente que quanto mais informações em um gráfico menos gráficos se deve ter, pois a consequência é um relatório complexo que adicionar mais gráficos irá gerar confusão e deslocamento da ideia principal. O equilíbrio é tudo, em alguns dashboards precisamos de gráficos com informações complexas para entender, em outro, simples gráficos já respondem perguntas de negócio. (Exemplo no Dashboard de Padrões de Compra Por Ponto de Venda)
+
+---
 
 ### | 📚 Capítulo 05
 
@@ -193,6 +199,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
         - **Discreta:** Números inteiros, contáveis (Ex: Quantidade de Jogos Jogados)
         - **Contínua:** Número com casas decimais, dentro de uma faixa. (Ex: Valor de uma venda (149,50), altura de um jogador (1,78cm), etc)
 
+---
+
 ### | 📚 Capítulo 06 Part 1
 
 #### **Dia 29 — 30 (20/09/26 há 22/09/26)**
@@ -227,6 +235,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 #### OBS: Nesta primeira parte do capítulo 6 sobre limpeza e manipulação de dados somente utilizamos Power BI puro. Por este motivo inconsistências como "Cidades que Pertencem a Estados Errados" não são resolvidas nesta parte.
 
+---
+
 ### | 📚 Capítulo 06 Part 2
 
 #### **Dia 31 (24/09/26)**
@@ -251,5 +261,14 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - **Funções Personalizadas:** A linguagem M permite que você crie funções personalizadas
     para atender às suas necessidades específicas de transformação de dados.
 
+- ***O Que é Engenharia de Atributos (Feature Engineering)***
+
+    - É quando melhoramos as colunas de uma tabela (adicionando colunas, modificando colunas ou removendo), com o objetivo de os dados transmitirem uma informação mais útil.  O conceito vem de *Machine Learning* onde colunas melhores geram modelos melhores.
+    - As práticas utilizadas são:
+      - **Seleção**: ficar só com as colunas que ajudam e descartar as repetidas ou inúteis.
+      - **Transformação**: mudar o formato de uma coluna para ela ficar comparável ou mais fácil de usar.
+      - **Criação**: fazer colunas novas a partir das existentes.
+      - **Valores ausentes**: preencher os buracos (nulos) com a média, a mediana ou o valor mais comum.
+      - **Codificação de categorias**: transformar texto em número, porque os modelos só entendem número.
 
   
