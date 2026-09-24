@@ -270,5 +270,12 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
       - **Criação**: fazer colunas novas a partir das existentes.
       - **Valores ausentes**: preencher os buracos (nulos) com a média, a mediana ou o valor mais comum.
       - **Codificação de categorias**: transformar texto em número, porque os modelos só entendem número.
+- Inconcistências Que Precisam Ser Solucionadas:
+  - **Inconsistência:** Cidades que Pertencem a Estados Errados. (Ex: São Paulo, RS (Linha 12))
+    - **Como Foi Resolvido:**
+  - **Inconsistência:** Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
+	  - **Como Foi Resolvido:**
+  - **Inconsistência:** Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
+	  - **Como Foi Resolvido:**
 
   
