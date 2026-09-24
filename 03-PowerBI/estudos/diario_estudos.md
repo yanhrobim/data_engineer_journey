@@ -232,4 +232,24 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 #### **Dia 31 (24/09/26)**
 
 **🖋️ Tópicos da Aula:**
+- Linguagem M
+- Engenharia de Atributo (Features Engineering)
 - Limpeza e Manipulação de Dados com Power Query M Languange
+
+**🧠 Aprendizados da aula:**
+
+- ***O Que é Power Query M Language?***
+  - O Power Query M Language (Ou Linguagem M) é uma linguagem de programação (Assim como Python, C#) que foi criada pela Microsoft, baseada nas fórmulas do **Power Query**, criada com o objetivo de ser fácil de aprender principalmente com quem tem familiaridade com o Excel.
+
+  - Antes de entender o que podemos e fazemos com a Linguagem M, é preciso ter em vista que é uma linguagem simples e concisa, simples por não ter um grande volume de regras e concisa pelo fato de escrever poucas linhas e conseguir fazer muito, o que levaria muitas linhas em outra linguagem, a linguagem M pode fazer com pouco.
+  - Funcionalidades e Características da Linguagem M:
+    - **Integração com o Power Query:** A linguagem M é totalmente integrada ao Power Query
+    Editor no Power BI, Excel e outras ferramentas da Microsoft,
+    - **Extração de Dados:** A linguagem M permite extrair dados de várias fontes, como bancos
+    de dados, arquivos de texto, APIs da web, etc
+    - **Transformação de Dados:** Com a linguagem M, você pode transformar e manipular dados, como filtrar, classificar, agrupar, mesclar, unir, dividir colunas, etc.
+    - **Funções Personalizadas:** A linguagem M permite que você crie funções personalizadas
+    para atender às suas necessidades específicas de transformação de dados.
+
+
+  
