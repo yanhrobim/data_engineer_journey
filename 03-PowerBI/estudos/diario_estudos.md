@@ -272,7 +272,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
       - **Codificação de categorias**: transformar texto em número, porque os modelos só entendem número.
 - Inconcistências Que Precisam Ser Solucionadas:
   - **Inconsistência:** Cidades que Pertencem a Estados Errados. (Ex: São Paulo, RS (Linha 12))
-    - **Como Foi Resolvido:**
+    - **Como Foi Resolvido:** ![cidade_estado_errado_codigo](6.%20Limpeza%20e%20Manipulação%20de%20Dados/Solução%20Inconsistências/cidade_estado_errado.png)
   - **Inconsistência:** Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
 	  - **Como Foi Resolvido:**
   - **Inconsistência:** Taxas de Desconto Não Batem com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
