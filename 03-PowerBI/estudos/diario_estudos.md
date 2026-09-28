@@ -276,8 +276,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - **Inconsistência:** Valores negativos em uma coluna que precisa ser postiva. (Coluna Limite de Crédito)
     - **Como Foi Resolvido:** ![numero_negativo_para_positivo](6.%20Limpeza%20e%20Manipulação%20de%20Dados/Solução%20Inconsistências/numero_negativo_onde_precisa_ser_positivo.png)
   - **Inconsistência:** Cargo Errado Para Tipo de Cliente. (Ex: Cliente Possuí Cargo Diamante Com um Limite de Apenas R$581)
-	  - **Como Foi Resolvido:** ![numero_negativo_para_positivo](6.%20Limpeza%20e%20Manipulação%20de%20Dados/Solução%20Inconsistências/tipo_de_cliente_errado.png)
+	  - **Como Foi Resolvido:** ![tipo_de_cliente_solucao](6.%20Limpeza%20e%20Manipulação%20de%20Dados/Solução%20Inconsistências/tipo_de_cliente_errado.png)
   - **Inconsistência:** Taxas de Desconto Não Batem Com o Tipo de Cliente. (Ex: Cliente Cargo Diamante com Desconto 3)
-	  - **Como Foi Resolvido:**
+	  - **Como Foi Resolvido:** ![taxas_de_desconto_por_cargo](6.%20Limpeza%20e%20Manipulação%20de%20Dados/Solução%20Inconsistências/desconto_errado.png)
 
   
