@@ -282,7 +282,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ---
 
-### | 📚 Capítulo 06
+### | 📚 Capítulo 07
 
 #### **Dia 34 (29/09/26)**
 
