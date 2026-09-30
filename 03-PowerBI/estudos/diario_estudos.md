@@ -303,7 +303,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
   - **Banco de Dados NoSQL:** São banco de dados não relacionais, ou seja, não organizados no modelo de tabela. Foram criados com o objetivo de serem escaláveis e distribuídos.
 
- - **O que são SGBDs?**
+- **O que são SGBDs?**
 
     - Os **SGBDs**  (Sistemas Gerenciadores de Bancos de Dados), resumidamente, são softwares que  gerenciam e administram bancos de dados. Possuem um conjunto de ferramentas que nos possibilitam criar, consultar, manipular, proteger e otimizar o acesso que temos aos dados armazenados. Com eles, conseguimos interagir com os bancos de dados, permitindo operações como inserção, atualização, exclusão e consulta aos dados.
 
@@ -317,3 +317,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
       - **Chave-Valor (Redis):** Mesmo conceito de um dicionário python `"chave": "valor"`.
       - **Colunas  (Cassandra):** Feito para volumes gigantes. Ideia simples, em vez de um servidor só guardando tudo, os dados ficam espalhados em vários computadores.
       - **Grafo (Neo4j):** rede de conexões, tipo "quem passou a bola pra quem".
+-  Existe uma diferença entre SGBDs, Bancos de Dados e SQL. Parecem ser a mesma coisa, mas não são:
+	- **SGBDs:** Softwares feitos para gerenciar e administrar bancos de dados.
+	- **Bancos de Dados:** Os dados em sí, organizados.
+	- **SQL:** Linguagem que utilizamos para conversar com o SGBD Relacional e acessar os dados, seja para manipular, analisar, excluir, etc.
