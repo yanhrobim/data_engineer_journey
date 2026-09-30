@@ -288,7 +288,18 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🖋️ Tópicos da Aula:**
 - Integração do Power BI com Banco de Dados
-  - O que é são SGDBs?
+  - O que é são SGBDs?
   - O que é um Banco de Dados?
   - Power BI e Banco de Dados Para Extração e Análise de Dados
   - O que é um OBDC?
+
+**🧠 Aprendizados da aula:**
+
+- **O que São Bancos de Dados?**
+
+  - Foram criados com o objetivo de armazenar e recuperar informações de forma fácil e estruturada. Eles permitem o armazenamento de um grande volume de dados, e facilitam a busca, análise e manipulação.
+
+  - **Bancos de Dados Relacionais:** São organizados no modelo relacional, onde os dados são armazenados em tabelas, e as ligações entre elas são feitas por chaves primárias e chaves estrangeiras.
+
+  - **Banco de Dados NoSQL:** São banco de dados não relacionais, ou seja, não organizados no modelo de tabela. Foram criados com o objetivo de serem escaláveis e distribuídos.
+
