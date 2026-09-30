@@ -288,8 +288,8 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 **🖋️ Tópicos da Aula:**
 - Integração do Power BI com Banco de Dados
-  - O que é são SGBDs?
   - O que é um Banco de Dados?
+  - O que é são SGBDs?
   - Power BI e Banco de Dados Para Extração e Análise de Dados
   - O que é um OBDC?
 
