@@ -284,7 +284,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 ### | 📚 Capítulo 07
 
-#### **Dia 34 (29/09/26)**
+#### **Dia 34 — 36 (29/09/26 há 06/10/26)**
 
 **🖋️ Tópicos da Aula:**
 - Integração do Power BI com Banco de Dados
@@ -326,3 +326,5 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
   - **ODBC (Open Database Connectivity)** é uma API padrão, que nos permite conexão de programas (Como Power BI) com SGBDs através de drivers. Cada SGBD possui o seu driver específico e o driver é quem traduz as chamadas de API para a linguagem do SGBD.
   - **Qual o Problema Que Ele Resolve?**
     - Cada SGBD possui um ***"dialeto"*** próprio de conexão, então consequentemente se temos um código que fala com o **PostgreSQL**, precisamos de um código diferente para se comunicar com o **MySQL** por conta do ***"dialeto"***. O **ODBC (Open Database Connectivity)** resolve justamente este problema, por ser uma API padrão, cria uma forma única de se comunicar.
+
+---
