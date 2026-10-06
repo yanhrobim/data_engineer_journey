@@ -321,3 +321,6 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 	- **SGBDs:** Softwares feitos para gerenciar e administrar bancos de dados.
 	- **Bancos de Dados:** Os dados em sí, organizados.
 	- **SQL:** Linguagem que utilizamos para conversar com o SGBD Relacional e acessar os dados, seja para manipular, analisar, excluir, etc.
+
+- **O que é um OBDC?**
+  - **ODBC (Open Database Connectivity)** é uma API padrão, que nos permite conexão de programas (Como Power BI) com SGBDs através de drivers. Cada SGBD possui o seu driver específico e o driver é quem traduz as chamadas de API para a linguagem do SGBD.
