@@ -328,3 +328,12 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
     - Cada SGBD possui um ***"dialeto"*** próprio de conexão, então consequentemente se temos um código que fala com o **PostgreSQL**, precisamos de um código diferente para se comunicar com o **MySQL** por conta do ***"dialeto"***. O **ODBC (Open Database Connectivity)** resolve justamente este problema, por ser uma API padrão, cria uma forma única de se comunicar.
 
 ---
+
+### | 📚 Capítulo 08
+
+#### **Dia 37 (07/10/26)**
+
+**🖋️ Tópicos da Aula:**
+- SQL Analytics & Power BI
+
+
