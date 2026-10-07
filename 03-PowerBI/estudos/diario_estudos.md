@@ -336,4 +336,7 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 **🖋️ Tópicos da Aula:**
 - SQL Analytics & Power BI
 
+**🧠 Aprendizados da aula:**
 
+- **O que é a Linguagem SQL?**
+  - [Data Engineer Journey (SQL)](https://github.com/yanhrobim/data_engineer_journey/tree/main/01-SQL)
