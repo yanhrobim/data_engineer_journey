@@ -340,3 +340,11 @@ Um exemplo fora da  área: Planta da casa, muito semelhante a um modelo de dados
 
 - **O que é a Linguagem SQL?**
   - [Data Engineer Journey (SQL)](https://github.com/yanhrobim/data_engineer_journey/tree/main/01-SQL)
+- **O que é o SQL Analytics?**
+  - O SQL Analytics é um termo que se refere à análise de dados usando a linguagem SQL em conjunção com técnicas de análise de dados e ferramentas de visualização. O objetivo do SQL Analytics é ajudar as organizações a tomar decisões informadas com base em insights extraídos de grandes volumes de dados.
+- **Principais características do SQL Analytics:**
+  - Análise de Dados
+  - Agregação e Transformação de Dados
+  - Integração Com Ferramentas de BI (Business Intelligence) e Visualização
+  - Otimização de Desempenho
+  - Escalabilidade
