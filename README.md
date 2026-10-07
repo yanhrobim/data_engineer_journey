@@ -72,7 +72,7 @@ Direcionado aos fundamentos essenciais da ferramenta para atuação como Analist
 - [x] Aprofundamento em DAX
 - [x] Limpeza e Manipulação de Dados com Power BI
 - [x] Power Query M Language
-- [ ] Power BI e Bancos de Dados
+- [x] Power BI e Bancos de Dados
 - [ ] SQL Analytics (aplicado ao Power BI)
 - [ ] Estudo aplicado de domínio (escolha entre Comercial/Vendas ou Financeiro)
 
