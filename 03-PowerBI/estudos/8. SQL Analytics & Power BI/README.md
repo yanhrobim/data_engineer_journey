@@ -15,16 +15,19 @@ Aqui eu fiz diferente. Pedi uma semelhante mensagem de um dia a dia de um engenh
 ## 💬 A Mensagem (Marina)
 
 ```
-Oi, pessoal de dados!
-Na próxima semana tenho reunião de planejamento com o board e preciso chegar lá com uma visão clara de como o negócio está indo. 
+De: Marina, Diretoria Comercial
+Assunto: Entendimento do nosso negócio
 
-Hoje a gente vende para vários mercados, mas sinceramente eu não sei dizer onde estamos bem e onde estamos mal. Tenho a sensação de que alguns clientes e algumas regiões dão mais trabalho do que retorno, mas é só uma sensação.
+Oi, pessoal de dados!
+
+Na próxima semana tenho reunião de planejamento com o board e preciso chegar lá com uma visão clara de como o negócio está indo. Hoje a gente vende para vários mercados, mas sinceramente eu não sei dizer onde estamos bem e onde estamos mal. Tenho a sensação de que algumas regiões dão mais trabalho do que retorno, mas é só uma sensação.
 
 Também queria entender se a gente está dependendo demais de poucas coisas, e se o que estamos fazendo na logística está ajudando ou atrapalhando.
 
 Não preciso de nada muito complexo. Preciso conseguir olhar e responder: “estamos saudáveis? onde devo prestar atenção?”
 
 Consegue pra quinta?
+
 Obrigada!
 
 ```
