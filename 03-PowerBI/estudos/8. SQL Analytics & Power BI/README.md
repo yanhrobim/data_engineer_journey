@@ -75,6 +75,15 @@ Yan
 
 ---
 
+## 📊 Dashboard 
+
+Além da mensagem enviada, decidi criar um Dashboard que complementasse de forma visual as ideias e pontos da mensagem.
+
+![dashboard_cap08](./Dashboard/dashboard_cap08.png)
+
+---
+
+
 ## 📈 Tabela e Métricas
 
 Para a criação da mensagem e solução de forma analítica das dúvidas da Marina foram feitas mas que somente uma tabela. Além de uma tabela que mostra em dados o desempenho de Mercado/Região, foram feitas mais queries para dar respostas concretas na mensagem.
